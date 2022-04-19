@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/drawable/header_style.xml" value="0.1" />
+        <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/drawable/menu_badge.xml" value="0.1" />
+        <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/drawable/searchview_drawable.xml" value="0.1" />
+        <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/drawable/textview_style.xml" value="0.1" />
+        <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/layout/custom_action_item_layout.xml" value="0.10520833333333333" />
+        <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/layout/drawer_header.xml" value="0.18802083333333333" />
+        <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/layout/fragment_account.xml" value="0.16822916666666668" />
+        <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/layout/fragment_categories.xml" value="0.14" />
+        <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/layout/fragment_home_.xml" value="0.15364583333333334" />
+        <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/layout/row_item_categories.xml" value="0.18854166666666666" />
+        <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/layout/row_item_items.xml" value="0.18854166666666666" />
+        <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/menu/category_menu.xml" value="0.16822916666666668" />
+        <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/menu/menu_bottom_nav.xml" value="0.15364583333333334" />
+        <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/menu/menu_nav_drawer.xml" value="0.18802083333333333" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
