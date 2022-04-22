@@ -16,4 +16,37 @@
     <string name="nav_close">Close</string>
     <string name="username">UserName</string>
     <string name="userid">UserId</string>
+    <string name="items_in_your_wish_list">Items in your wish list</string>
+    <string name="recently_viewed">Recently Viewed</string>
+    <string name="_12">+12</string>
+    <string name="apple_galaxy">Apple Galaxy Watches 46mm (New)</string>
+    <string name="add_to_cart">Add to Cart</string>
+    <string name="exclusive">EXCLUSIVE</string>
+    <string name="pre_order">PRE-ORDER</string>
+    <string name="_1959_qar">1959 QAR</string>
+    <string name="sign_in_or_create_an_account">Sign-in or Create an Account</string>
+    <string name="you_can_sign_in_or_create_an_new_account">You Can sign in or create an new Account</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="sign_in">SIGN IN</string>
+    <string name="celeste_wright">Celeste Wright</string>
+    <string name="celeste_wright_gmail_com">celeste_wright@gmail.com</string>
+    <string name="my_n_order">My \nOrder</string>
+    <string name="my_ntickets">My \nTickets</string>
+    <string name="your_point_balance">Your point balance</string>
+    <string name="b_3000_b_worth_6oo_qar"><b>3000</b> worth 600 QAR</string>
+    <string name="lorem_ipsun">Lorem ipsun</string>
+    <string name="lorem_ipsum_set_amet">lorem ipsum set amet lorem ipsum set amet lorem ipsum set amet</string>
+    <string name="your_store_credit_is">Your Store Credit is :</string>
+    <string name="b_30_b_qar"><b>30</b> QAR</string>
+    
+    <string name="Personal_Information">Personal Information</string>
+    <string name="Loyalty_Programme">Loyalty Programme</string>
+    <string name="Address_Book">Address Book</string>
+    <string name="Saved_Cards">Saved Cards</string>
+    <string name="My_Reviews">My Reviews</string>
+    <string name="My_Returns">My Returns</string>
+    <string name="Services">Services</string>
+    <string name="Live_Support">Live Support</string>
+    <string name="go">Go</string>
+
 </resources>

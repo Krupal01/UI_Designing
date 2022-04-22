@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragment.UserDetailsFragment"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@color/yellow"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:background="@drawable/null_item_drawable">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="5dp">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvCelesteTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:text="@string/celeste_wright"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"/>
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvCelesteId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:text="@string/celeste_wright_gmail_com"
+                        app:layout_constraintTop_toBottomOf="@id/tvCelesteTitle"
+                        app:layout_constraintLeft_toLeftOf="parent"/>
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_baseline_settings_24"
+                        android:background="@color/white"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_margin="5dp"
+                        app:tint="@color/teal_500" />
+
+                    <LinearLayout
+                        android:id="@+id/layoutMyOrder"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_margin="10dp"
+                        android:gravity="center"
+                        app:layout_constraintTop_toBottomOf="@id/tvCelesteId"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@id/layoutMyTicket"
+                        >
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/ic_baseline_shopping_bag_24"
+                            app:tint="@color/white"
+                            android:background="@drawable/order_drawable"
+                            android:padding="10dp"/>
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:lines="2"
+                            android:text="@string/my_n_order"
+                            android:gravity="center_vertical"
+                            android:textSize="18sp"
+                            android:textColor="@color/black"
+                            android:layout_marginStart="5dp"/>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layoutMyTicket"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_margin="10dp"
+                        android:gravity="center"
+                        app:layout_constraintTop_toBottomOf="@id/tvCelesteId"
+                        app:layout_constraintLeft_toRightOf="@id/layoutMyOrder"
+                        app:layout_constraintRight_toRightOf="parent"
+                        >
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/ic_baseline_local_offer_24"
+                            app:tint="@color/white"
+                            android:background="@drawable/order_drawable"
+                            android:padding="10dp"/>
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:lines="2"
+                            android:text="@string/my_ntickets"
+                            android:gravity="center_vertical"
+                            android:textSize="18sp"
+                            android:textColor="@color/black"
+                            android:layout_marginStart="5dp"/>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/barcode"
+                        app:layout_constraintTop_toBottomOf="@id/layoutMyOrder"
+                        android:layout_marginVertical="5dp"
+                        android:layout_marginHorizontal="10dp"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/yellow"
+                    android:padding="5dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imgTrophy"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/icon_trophy"
+                        android:scaleType="fitXY"
+                        android:background="@drawable/order_drawable"
+                        android:padding="8dp"
+                        android:layout_margin="5dp"
+                        app:tint="@color/white"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvPointBalanceTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:lines="1"
+                        android:layout_marginStart="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:text="@string/your_point_balance"
+                        app:layout_constraintLeft_toRightOf="@id/imgTrophy"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toTopOf="@id/tvPointBalanceTxt"/>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvPointBalanceTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:lines="1"
+                        android:textColor="@color/black"
+                        android:layout_marginStart="10dp"
+                        android:textSize="18sp"
+                        android:text="@string/b_3000_b_worth_6oo_qar"
+                        app:layout_constraintLeft_toRightOf="@id/imgTrophy"
+                        app:layout_constraintTop_toBottomOf="@id/tvPointBalanceTitle"
+                        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@color/teal_500"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:background="@drawable/null_item_drawable">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="15dp">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvLorem1Title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:text="@string/lorem_ipsun"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"/>
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvLorem1Txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:lines="2"
+                        android:text="@string/lorem_ipsum_set_amet"
+                        app:layout_constraintTop_toBottomOf="@id/tvLorem1Title"
+                        app:layout_constraintLeft_toLeftOf="parent"/>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvLorem2Title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:text="@string/lorem_ipsun"
+                        app:layout_constraintTop_toBottomOf="@id/tvLorem1Txt"
+                        app:layout_constraintLeft_toLeftOf="parent"/>
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvLorem2Txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:lines="2"
+                        android:text="@string/lorem_ipsum_set_amet"
+                        app:layout_constraintTop_toBottomOf="@id/tvLorem2Title"
+                        app:layout_constraintLeft_toLeftOf="parent"/>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/teal_500"
+                    android:padding="5dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imgCreadit"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/icons_get_cash"
+                        android:scaleType="fitXY"
+                        android:background="@drawable/on_cash_drawable"
+                        android:padding="8dp"
+                        android:layout_margin="5dp"
+                        app:tint="@color/white"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvCreaditTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:lines="1"
+                        android:layout_marginStart="10dp"
+                        android:textColor="@color/white"
+                        android:text="@string/your_store_credit_is"
+                        app:layout_constraintLeft_toRightOf="@id/imgCreadit"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toTopOf="@id/tvCreaditTxt"/>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvCreaditTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:lines="1"
+                        android:textColor="@color/white"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/b_30_b_qar"
+                        app:layout_constraintLeft_toRightOf="@id/imgCreadit"
+                        app:layout_constraintTop_toBottomOf="@id/tvCreaditTitle"
+                        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcvAccountFunctions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+
+</LinearLayout>

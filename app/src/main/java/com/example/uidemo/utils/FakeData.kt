@@ -3,8 +3,11 @@ package com.example.uidemo.utils
 import android.content.Context
 import android.graphics.BitmapFactory
 import android.util.Log
+import com.example.uidemo.Model.AccountFunctionModel
 import com.example.uidemo.Model.CategoryModel
 import com.example.uidemo.Model.ItemsModel
+import com.example.uidemo.Model.WishListItemModel
+import com.example.uidemo.R
 import java.io.IOException
 import java.io.InputStream
 
@@ -47,6 +50,14 @@ class FakeData {
             Log.i("assets",e.toString())
         }
         return items
+    }
+
+    companion object{
+        val data : ArrayList<WishListItemModel> = arrayListOf(
+            WishListItemModel("k","20 qar",23,null,null,false),
+            WishListItemModel("k","20 qar",23,null,"EXCLUSIVE",true),
+            WishListItemModel("k","20 qar",23,null,"PRE-ORDER",false)
+        )
     }
 
 }

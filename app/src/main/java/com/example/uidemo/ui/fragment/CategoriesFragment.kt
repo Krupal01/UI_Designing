@@ -42,7 +42,6 @@ class CategoriesFragment : Fragment(), CategoryAdapter.CategoryClickListener {
     private lateinit var binding: FragmentCategoriesBinding
     private lateinit var categoryAdapter: CategoryAdapter
     private lateinit var itemsAdapter: ItemsAdapter
-    private lateinit var textCartItemCount : TextView
     private lateinit var catlayoutManager: LinearLayoutManager
     private val fakeData = FakeData()
     override fun onCreateView(
@@ -50,14 +49,12 @@ class CategoriesFragment : Fragment(), CategoryAdapter.CategoryClickListener {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentCategoriesBinding.inflate(inflater,container,false)
-        setHasOptionsMenu(true)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        (activity as MainActivity).setToolbar(binding.toolbar)
         (activity as AppCompatActivity).title = ""
         categoryAdapter = CategoryAdapter(this)
         itemsAdapter = ItemsAdapter()
@@ -88,31 +85,6 @@ class CategoriesFragment : Fragment(), CategoryAdapter.CategoryClickListener {
         val gridLayoutManager = GridLayoutManager(context,2)
         binding.rcvItems.layoutManager = gridLayoutManager
         binding.rcvItems.adapter = itemsAdapter
-    }
-
-    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        super.onCreateOptionsMenu(menu, inflater)
-        inflater.inflate(R.menu.category_menu,menu)
-
-        val menuItem : MenuItem = menu.findItem(R.id.category_notifications)
-        val actionView : View = menuItem.actionView
-        textCartItemCount = actionView.findViewById(R.id.cart_badge) as TextView
-
-        setupBadge(2)
-
-    }
-
-    fun setupBadge(i: Int){
-        if (i == 0) {
-            if (textCartItemCount.visibility != View.GONE) {
-                textCartItemCount.visibility = View.GONE;
-            }
-        } else {
-            textCartItemCount.text = i.toString()
-            if (textCartItemCount.visibility != View.VISIBLE) {
-                textCartItemCount.visibility = View.VISIBLE;
-            }
-        }
     }
 
     companion object {

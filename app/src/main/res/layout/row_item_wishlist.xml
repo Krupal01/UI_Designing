@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="200dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="20dp"
+    android:layout_margin="3dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btnItemFavorite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/drawable_like_btn"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="2dp"
+            android:src="@drawable/ic_baseline_favorite_border_24"/>
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvExclusive_Preorder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:textColor="@color/white"/>
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgFavoriteItem"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_baseline_crop_original_24" />
+        <LinearLayout
+            android:id="@+id/layoutDetailsFavoriteItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@id/imgFavoriteItem"
+            android:gravity="center_horizontal"
+            android:layout_marginHorizontal="2dp">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvQuantityFavoriteItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:lines="1"
+                android:drawableEnd="@drawable/circle_chain"
+                android:text="@string/_12"
+                android:gravity="center"/>
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvTitleFavoriteItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="17sp"
+                android:lines="2"
+                android:textColor="@color/black"
+                android:text="@string/apple_galaxy"
+                android:ellipsize="end"
+                android:gravity="center"/>
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvPriceFavoriteItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:lines="2"
+                android:textColor="@color/black"
+                android:text="@string/_1959_qar"
+                android:gravity="center"/>
+        </LinearLayout>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAddToCartFavoriteItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layoutDetailsFavoriteItem"
+            android:backgroundTint="@color/teal_700"
+            android:text="@string/add_to_cart"
+            app:cornerRadius="0dp" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
