@@ -4,7 +4,7 @@ import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.uidemo.Model.ItemsModel
+import com.example.uidemo.model.ItemsModel
 import com.example.uidemo.databinding.RowItemItemsBinding
 
 class ItemsAdapter : RecyclerView.Adapter<ItemsAdapter.ItemViewHolder>() {
@@ -32,8 +32,7 @@ class ItemsAdapter : RecyclerView.Adapter<ItemsAdapter.ItemViewHolder>() {
 
     class ItemViewHolder(var binding: RowItemItemsBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(data : ItemsModel){
-            binding.imgItem.setImageBitmap(data.bitmap)
-            binding.tvItem.text = data.title
+            binding.itemData = data
         }
     }
 

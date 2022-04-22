@@ -1,4 +1,4 @@
-package com.example.uidemo.Model
+package com.example.uidemo.model
 
 data class AccountFunctionModel(
     var name : String,

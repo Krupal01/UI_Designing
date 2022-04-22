@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.RecyclerView
-import com.example.uidemo.Model.WishListItemModel
+import com.example.uidemo.model.WishListItemModel
 import com.example.uidemo.R
 import com.example.uidemo.databinding.RowItemWishlistBinding
 
@@ -43,16 +43,9 @@ class WishListAdapter : RecyclerView.Adapter<WishListAdapter.ItemViewHolder>() {
         @RequiresApi(Build.VERSION_CODES.M)
         fun bind(wishListItemModel: WishListItemModel){
             cardDesign(wishListItemModel.exclusive_preorder,wishListItemModel.isFavorite)
-            if (wishListItemModel.imgBitmap != null){
-                binding.imgFavoriteItem.setImageBitmap(wishListItemModel.imgBitmap)
-            }
-            binding.tvTitleFavoriteItem.text = wishListItemModel.name
-            binding.tvPriceFavoriteItem.text = wishListItemModel.price
-            if (wishListItemModel.quantity>12){
-                binding.tvQuantityFavoriteItem.text = binding.root.context.resources.getString(R.string._12)
-            }else{
-                binding.tvQuantityFavoriteItem.text = wishListItemModel.quantity.toString()
-            }
+
+            binding.wishListItem = wishListItemModel
+
             binding.btnItemFavorite.setOnClickListener {
                 if (wishListItemModel.isFavorite){
                     wishListItemModel.isFavorite = false
@@ -67,12 +60,6 @@ class WishListAdapter : RecyclerView.Adapter<WishListAdapter.ItemViewHolder>() {
         @SuppressLint("UseCompatLoadingForDrawables")
         @RequiresApi(Build.VERSION_CODES.M)
         private fun cardDesign(exclusive_preorder: String?, isFavorite: Boolean) {
-
-            if (isFavorite){
-                binding.btnItemFavorite.setImageResource(R.drawable.ic_baseline_favorite_24)
-            }else{
-                binding.btnItemFavorite.setImageResource(R.drawable.ic_baseline_favorite_border_24)
-            }
 
             if (exclusive_preorder == null){
                 binding.root.background = binding.root.context.resources.getDrawable(R.drawable.null_item_drawable,null)

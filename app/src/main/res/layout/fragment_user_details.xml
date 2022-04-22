@@ -51,6 +51,7 @@
                         app:layout_constraintLeft_toLeftOf="parent"/>
 
                     <ImageButton
+                        android:id="@+id/imgBtnSetting"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/ic_baseline_settings_24"
@@ -127,6 +128,7 @@
                     </LinearLayout>
 
                     <ImageView
+                        android:id="@+id/imgBarcode"
                         android:layout_width="match_parent"
                         android:layout_height="100dp"
                         android:scaleType="fitXY"

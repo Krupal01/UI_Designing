@@ -2,17 +2,14 @@ package com.example.uidemo.ui.fragment
 
 import android.os.Bundle
 import android.view.*
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.uidemo.Model.CategoryModel
-import com.example.uidemo.R
+import com.example.uidemo.model.CategoryModel
 import com.example.uidemo.adapter.CategoryAdapter
 import com.example.uidemo.adapter.ItemsAdapter
 import com.example.uidemo.databinding.FragmentCategoriesBinding
-import com.example.uidemo.ui.activity.MainActivity
 import com.example.uidemo.utils.FakeData
 
 

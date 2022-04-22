@@ -4,7 +4,7 @@ import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.uidemo.Model.AccountFunctionModel
+import com.example.uidemo.model.AccountFunctionModel
 import com.example.uidemo.databinding.RowItemFunctionBinding
 
 class AccountFunctionAdapter : RecyclerView.Adapter<AccountFunctionAdapter.FunctionViewHolder>() {
@@ -38,8 +38,7 @@ class AccountFunctionAdapter : RecyclerView.Adapter<AccountFunctionAdapter.Funct
 
     class FunctionViewHolder(val binding: RowItemFunctionBinding) : RecyclerView.ViewHolder(binding.root){
         fun bind(item: AccountFunctionModel) {
-            binding.imgFunctionIcon.setImageResource(item.iconId)
-            binding.tvFunctionTitle.text = item.name
+            binding.functionItem = item
         }
     }
 

@@ -3,11 +3,9 @@ package com.example.uidemo.utils
 import android.content.Context
 import android.graphics.BitmapFactory
 import android.util.Log
-import com.example.uidemo.Model.AccountFunctionModel
-import com.example.uidemo.Model.CategoryModel
-import com.example.uidemo.Model.ItemsModel
-import com.example.uidemo.Model.WishListItemModel
-import com.example.uidemo.R
+import com.example.uidemo.model.CategoryModel
+import com.example.uidemo.model.ItemsModel
+import com.example.uidemo.model.WishListItemModel
 import java.io.IOException
 import java.io.InputStream
 

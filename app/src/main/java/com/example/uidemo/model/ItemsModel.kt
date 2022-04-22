@@ -1,4 +1,4 @@
-package com.example.uidemo.Model
+package com.example.uidemo.model
 
 import android.graphics.Bitmap
 

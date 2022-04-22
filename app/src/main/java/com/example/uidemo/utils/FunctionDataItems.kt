@@ -1,6 +1,6 @@
 package com.example.uidemo.utils
 
-import com.example.uidemo.Model.AccountFunctionModel
+import com.example.uidemo.model.AccountFunctionModel
 import com.example.uidemo.R
 
 class FunctionDataItems {

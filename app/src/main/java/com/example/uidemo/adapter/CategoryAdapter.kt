@@ -4,7 +4,7 @@ import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.uidemo.Model.CategoryModel
+import com.example.uidemo.model.CategoryModel
 import com.example.uidemo.databinding.RowItemCategoriesBinding
 
 class CategoryAdapter(val listener : CategoryClickListener) : RecyclerView.Adapter<CategoryAdapter.CategoryViewHolder>() {
@@ -43,8 +43,7 @@ class CategoryAdapter(val listener : CategoryClickListener) : RecyclerView.Adapt
     class CategoryViewHolder(val binding: RowItemCategoriesBinding) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(data : CategoryModel){
-            binding.imgCategory.setImageBitmap(data.bitmap)
-            binding.titleCategory.text = data.title
+            binding.data = data
         }
 
     }
