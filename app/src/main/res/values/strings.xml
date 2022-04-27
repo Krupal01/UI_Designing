@@ -38,7 +38,7 @@
     <string name="lorem_ipsum_set_amet">lorem ipsum set amet lorem ipsum set amet lorem ipsum set amet</string>
     <string name="your_store_credit_is">Your Store Credit is :</string>
     <string name="b_30_b_qar"><b>30</b> QAR</string>
-    
+
     <string name="Personal_Information">Personal Information</string>
     <string name="Loyalty_Programme">Loyalty Programme</string>
     <string name="Address_Book">Address Book</string>
@@ -47,6 +47,41 @@
     <string name="My_Returns">My Returns</string>
     <string name="Services">Services</string>
     <string name="Live_Support">Live Support</string>
+
     <string name="go">Go</string>
+    <string name="new_item_available">New Item Available!</string>
+    <string name="lorem_ipsum_dolor_sit_amet_consectetur_adipiscing_elit">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</string>
+    <string name="past_notifications">Past Notifications</string>
+    <string name="search">Search</string>
+    <string name="setting">Setting</string>
+    <string name="language">Language</string>
+    <string name="rate_alif_s_app">Rate Alif\'s App</string>
+    <string name="share_our_app">Share Our App</string>
+    <string name="version">Version</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="_2_factor_authentication">2-Factor Authentication</string>
+    <string name="sms_to">SMS to :</string>
+    <string name="_545">*******545</string>
+    <string name="change_authentication_type">Change Authentication Type</string>
+    <string name="sign_out">SIGN OUT</string>
+    <string name="_2_5_2">2.5.2</string>
+    <string name="add_new_card">Add New Card</string>
+    <string name="please_enter_your_card_details">Please enter your card details</string>
+    <string name="card_number">Card Number</string>
+    <string name="card_holder_name">Card Holder Name</string>
+    <string name="expiry_date">Expiry date</string>
+    <string name="cvc">CVC</string>
+    <string name="save_card_details">SAVE CARD DETAILS</string>
+    <string name="default_payment_card">Default Payment Card</string>
+    <string name="saved_visa_card">Saved Visa Card</string>
+    <string name="_5455">**** **** **** 5455</string>
+    <string name="alternate_payment_card">Alternate Payment Card</string>
+    <string name="add_new">ADD NEW</string>
+    <string name="remove">Remove</string>
+    <string name="set_as_default">Set As Default</string>
+    <string name="_0_cards">0 cards</string>
+    <string name="no_saves_cards">No Saves Cards</string>
+    <string name="save_a_credit_card">Save A Credit Card</string>
+    <string name="add_a_new_card">ADD A NEW CARD</string>
 
 </resources>

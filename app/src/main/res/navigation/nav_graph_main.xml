@@ -30,4 +30,29 @@
         android:name="com.example.uidemo.ui.fragment.DealsFragment"
         android:label="fragment_deals"
         tools:layout="@layout/fragment_deals" />
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="com.example.uidemo.ui.fragment.NotificationFragment"
+        android:label="fragment_notification"
+        tools:layout="@layout/fragment_notification" />
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.example.uidemo.ui.fragment.SettingFragment"
+        android:label="fragment_setting"
+        tools:layout="@layout/fragment_setting" />
+    <fragment
+        android:id="@+id/savedCardsFragment"
+        android:name="com.example.uidemo.ui.fragment.SavedCardsFragment"
+        android:label="fragment_saved_cards"
+        tools:layout="@layout/fragment_saved_cards" />
+    <fragment
+        android:id="@+id/addNewCardFragment"
+        android:name="com.example.uidemo.ui.fragment.AddNewCardFragment"
+        android:label="fragment_add_new_card"
+        tools:layout="@layout/fragment_add_new_card" />
+    <fragment
+        android:id="@+id/cardSettingFragment"
+        android:name="com.example.uidemo.ui.fragment.CardSettingFragment"
+        android:label="fragment_card_setting"
+        tools:layout="@layout/fragment_card_setting" />
 </navigation>

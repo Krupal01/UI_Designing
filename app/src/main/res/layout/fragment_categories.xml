@@ -8,6 +8,45 @@
     android:orientation="vertical"
     android:background="@color/gray">
 
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/layoutAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/teal_200">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginVertical="2dp"
+                android:background="@drawable/searchview_drawable"
+                android:gravity="center_vertical">
+                <androidx.appcompat.widget.SearchView
+                    android:id="@+id/toolbarSearch"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:searchHintIcon="@drawable/ic_baseline_search_24"
+                    app:defaultQueryHint="@string/search_hint"
+                    app:iconifiedByDefault="false"
+                    android:layout_weight="3"/>
+                <ImageButton
+                    android:id="@+id/toolbarSearchBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:src="@drawable/ic_baseline_qr_code_scanner_24"
+                    android:layout_marginHorizontal="2dp"
+                    />
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">

@@ -1,92 +1,138 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.fragment.AccountFragment"
-    android:background="@color/gray">
-    <LinearLayout
+    android:background="@color/gray"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/layoutAppBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:background="@color/teal_200">
 
-        <androidx.fragment.app.FragmentContainerView
-            android:id="@+id/nav_host_account_fragment"
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:name="androidx.navigation.fragment.NavHostFragment"
-            app:navGraph = "@navigation/signup_nav_graph"/>
+            android:padding="2dp">
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginVertical="2dp"
+                android:background="@drawable/searchview_drawable"
+                android:gravity="center_vertical">
+                <androidx.appcompat.widget.SearchView
+                    android:id="@+id/toolbarSearch"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:searchHintIcon="@drawable/ic_baseline_search_24"
+                    app:defaultQueryHint="@string/search_hint"
+                    app:iconifiedByDefault="false"
+                    android:layout_weight="3"/>
+                <ImageButton
+                    android:id="@+id/toolbarSearchBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:src="@drawable/ic_baseline_qr_code_scanner_24"
+                    android:layout_marginHorizontal="2dp"
+                    />
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
+            android:orientation="vertical">
 
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/tvWishListTitle"
-                android:layout_width="0dp"
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/nav_host_account_fragment"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:lines="1"
-                android:text="@string/items_in_your_wish_list"
-                android:ellipsize="end"
-                android:textColor="@color/black"
-                android:textSize="20sp" />
+                android:name="androidx.navigation.fragment.NavHostFragment"
+                app:navGraph = "@navigation/signup_nav_graph"/>
 
-            <Button
-                android:id="@+id/btnWishListAll"
-                style="@style/Widget.MaterialComponents.Button.TextButton"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvWishListTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:lines="1"
+                    android:text="@string/items_in_your_wish_list"
+                    android:ellipsize="end"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/btnWishListAll"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/ic_baseline_arrow_circle_right_24"
+                    android:text="@string/see_all"
+                    android:textColor="@color/black" />
+
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcvWishList"
                 android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:drawableEnd="@drawable/ic_baseline_arrow_circle_right_24"
-                android:text="@string/see_all"
-                android:textColor="@color/black" />
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvRecentListTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:lines="1"
+                    android:text="@string/recently_viewed"
+                    android:textColor="@color/black"
+                    android:ellipsize="end"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/btnRecentListAll"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/ic_baseline_arrow_circle_right_24"
+                    android:text="@string/see_all"
+                    android:textColor="@color/black" />
+
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcvRecentList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
 
 
         </LinearLayout>
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rcvWishList"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+    </ScrollView>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
-
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/tvRecentListTitle"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:lines="1"
-                android:text="@string/recently_viewed"
-                android:textColor="@color/black"
-                android:ellipsize="end"
-                android:textSize="20sp" />
-
-            <Button
-                android:id="@+id/btnRecentListAll"
-                style="@style/Widget.MaterialComponents.Button.TextButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:drawableEnd="@drawable/ic_baseline_arrow_circle_right_24"
-                android:text="@string/see_all"
-                android:textColor="@color/black" />
-
-
-        </LinearLayout>
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rcvRecentList"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-
-    </LinearLayout>
-
-</ScrollView>
+</LinearLayout>

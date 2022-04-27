@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragment.AddNewCardFragment"
+    android:orientation="vertical"
+    android:background="@color/gray">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/layoutNotificationFrgAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_gravity="top">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/Notificationtoolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginVertical="2dp"
+                android:background="@drawable/searchview_drawable"
+                android:gravity="center_vertical">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:text="@string/add_new_card"/>
+
+
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dp">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvCardDetailLable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:text="@string/please_enter_your_card_details"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <LinearLayout
+            android:id="@+id/layCardNumber"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginVertical="5dp"
+            android:background="@drawable/card_number_text_drawable"
+            app:layout_constraintTop_toBottomOf="@id/tvCardDetailLable"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/card_number"
+                android:background="@null"
+                android:layout_weight="1"
+                />
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icons8_visa_24"
+                android:backgroundTint="@color/white"/>
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icons8_mastercard_logo_48"
+                android:backgroundTint="@color/white"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layCardHolder"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginVertical="5dp"
+            android:background="@drawable/card_number_text_drawable"
+            app:layout_constraintTop_toBottomOf="@id/layCardNumber"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/card_holder_name"
+                android:background="@null"
+                android:layout_weight="1"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/layCardHolder"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/layExpireDate"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:layout_marginVertical="5dp"
+                android:layout_marginHorizontal="1dp"
+                android:background="@drawable/card_number_text_drawable"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/expiry_date"
+                    android:layout_margin="2dp"
+                    android:background="@null"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layCVV"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:layout_marginVertical="5dp"
+                android:layout_marginHorizontal="1dp"
+                android:background="@drawable/card_number_text_drawable">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/expiry_date"
+                    android:layout_margin="2dp"
+                    android:background="@null"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSaveCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:backgroundTint="@color/yellow"
+        android:paddingVertical="15dp"
+        android:text="@string/save_card_details"
+        android:textColor="@color/black" />
+
+
+</LinearLayout>

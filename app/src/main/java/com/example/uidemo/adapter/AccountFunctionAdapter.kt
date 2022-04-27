@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.uidemo.model.AccountFunctionModel
 import com.example.uidemo.databinding.RowItemFunctionBinding
 
-class AccountFunctionAdapter : RecyclerView.Adapter<AccountFunctionAdapter.FunctionViewHolder>() {
+class AccountFunctionAdapter(val listener: OnFunctionClick) : RecyclerView.Adapter<AccountFunctionAdapter.FunctionViewHolder>() {
 
     var data : ArrayList<AccountFunctionModel> = arrayListOf()
 
@@ -15,6 +15,10 @@ class AccountFunctionAdapter : RecyclerView.Adapter<AccountFunctionAdapter.Funct
     fun submitData(data : ArrayList<AccountFunctionModel>){
         this.data = data
         notifyDataSetChanged()
+    }
+
+    interface OnFunctionClick{
+        fun setOnFunctionClickListener(accountFunctionModel: AccountFunctionModel)
     }
 
     override fun onCreateViewHolder(
@@ -30,6 +34,9 @@ class AccountFunctionAdapter : RecyclerView.Adapter<AccountFunctionAdapter.Funct
         position: Int
     ) {
         holder.bind(data[position])
+        holder.binding.root.setOnClickListener {
+            listener.setOnFunctionClickListener(data[position])
+        }
     }
 
     override fun getItemCount(): Int {

@@ -3,9 +3,7 @@ package com.example.uidemo.utils
 import android.content.Context
 import android.graphics.BitmapFactory
 import android.util.Log
-import com.example.uidemo.model.CategoryModel
-import com.example.uidemo.model.ItemsModel
-import com.example.uidemo.model.WishListItemModel
+import com.example.uidemo.model.*
 import java.io.IOException
 import java.io.InputStream
 
@@ -13,7 +11,7 @@ import java.io.InputStream
 class FakeData {
 
     fun fakeCategories(context: Context , dir_name : String) : ArrayList<CategoryModel>{
-        var category : ArrayList<CategoryModel> = arrayListOf()
+        val category : ArrayList<CategoryModel> = arrayListOf()
 
         val list: Array<String>
         try {
@@ -55,6 +53,19 @@ class FakeData {
             WishListItemModel("k","20 qar",23,null,null,false),
             WishListItemModel("k","20 qar",23,null,"EXCLUSIVE",true),
             WishListItemModel("k","20 qar",23,null,"PRE-ORDER",false)
+        )
+
+        val pastNotificationData : ArrayList<PastNotificationModel> = arrayListOf(
+            PastNotificationModel("1st","1st Notification"),
+            PastNotificationModel("2nd","2nd Notification"),
+            PastNotificationModel("3rd","3rd Notification"),
+            PastNotificationModel("4th","4th Notification")
+        )
+
+        var cards : ArrayList<DebitCardModel> = arrayListOf(
+            DebitCardModel("5454 5412 8552 5856" , "dfdfdg" , "12/2/2022","684"),
+            DebitCardModel("8484 5623 8563 5233" , "dfdfdg" , "12/2/2022","684"),
+            DebitCardModel("9652 6333 5526 5853" , "dfdfdg" , "12/2/2022","684")
         )
     }
 

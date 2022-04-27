@@ -36,3 +36,12 @@ fun SetQuantity(view: TextView , quantity: Int?){
         view.text = "0"
     }
 }
+
+@BindingAdapter("android:SetDebitCardNumber")
+fun SetDebitCardNumber(view: TextView , number : String?){
+    if(number != null){
+        view.text = "**** **** **** "+ number.split(" ").last()
+    }else{
+        view.text = "0"
+    }
+}

@@ -1,14 +1,19 @@
 package com.example.uidemo.ui.fragment
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.uidemo.R
 import com.example.uidemo.adapter.AccountFunctionAdapter
 import com.example.uidemo.databinding.FragmentUserDetailsBinding
+import com.example.uidemo.model.AccountFunctionModel
+import com.example.uidemo.ui.activity.MainActivity
 import com.example.uidemo.utils.FunctionDataItems
 
 // TODO: Rename parameter arguments, choose names that match
@@ -21,7 +26,7 @@ private const val ARG_PARAM2 = "param2"
  * Use the [UserDetailsFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class UserDetailsFragment : Fragment() {
+class UserDetailsFragment : Fragment(), AccountFunctionAdapter.OnFunctionClick {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -47,10 +52,15 @@ class UserDetailsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        adapter = AccountFunctionAdapter()
+        adapter = AccountFunctionAdapter(this)
 
         setFunctionRecyeler()
         adapter.submitData(FunctionDataItems.FunctionData)
+
+        binding.imgBtnSetting.setOnClickListener {
+            Log.i("clik","clicked")
+            ( activity as MainActivity).findNavController(R.id.nav_host_fragment).navigate(R.id.settingFragment)
+        }
 
     }
 
@@ -77,5 +87,34 @@ class UserDetailsFragment : Fragment() {
                     putString(ARG_PARAM2, param2)
                 }
             }
+    }
+
+    override fun setOnFunctionClickListener(accountFunctionModel: AccountFunctionModel) {
+        when(accountFunctionModel.name){
+            getString(R.string.Personal_Information) ->{
+
+            }
+            getString(R.string.Loyalty_Programme) ->{
+
+            }
+            getString(R.string.Address_Book) ->{
+
+            }
+            getString(R.string.Saved_Cards) ->{
+                ( activity as MainActivity).findNavController(R.id.nav_host_fragment).navigate(R.id.savedCardsFragment)
+            }
+            getString(R.string.My_Reviews) ->{
+
+            }
+            getString(R.string.My_Returns) ->{
+
+            }
+            getString(R.string.Services) ->{
+
+            }
+            getString(R.string.Live_Support) ->{
+
+            }
+        }
     }
 }

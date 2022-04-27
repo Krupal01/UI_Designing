@@ -10,6 +10,7 @@ import com.example.uidemo.model.CategoryModel
 import com.example.uidemo.adapter.CategoryAdapter
 import com.example.uidemo.adapter.ItemsAdapter
 import com.example.uidemo.databinding.FragmentCategoriesBinding
+import com.example.uidemo.ui.activity.MainActivity
 import com.example.uidemo.utils.FakeData
 
 
@@ -52,7 +53,8 @@ class CategoriesFragment : Fragment(), CategoryAdapter.CategoryClickListener {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        (activity as AppCompatActivity).title = ""
+        (activity as MainActivity).setToolbar(binding.toolbar,true)
+
         categoryAdapter = CategoryAdapter(this)
         itemsAdapter = ItemsAdapter()
 

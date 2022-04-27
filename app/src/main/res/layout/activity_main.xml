@@ -13,45 +13,45 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <com.google.android.material.appbar.AppBarLayout
-            android:id="@+id/layoutAppBar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/teal_200"
-            app:layout_constraintTop_toTopOf="parent">
+<!--        <com.google.android.material.appbar.AppBarLayout-->
+<!--            android:id="@+id/layoutAppBar"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="@color/teal_200"-->
+<!--            app:layout_constraintTop_toTopOf="parent">-->
 
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="2dp">
+<!--            <androidx.appcompat.widget.Toolbar-->
+<!--                android:id="@+id/toolbar"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:padding="2dp">-->
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginVertical="2dp"
-                    android:background="@drawable/searchview_drawable"
-                    android:gravity="center_vertical">
-                    <androidx.appcompat.widget.SearchView
-                        android:id="@+id/toolbarSearch"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        app:searchHintIcon="@drawable/ic_baseline_search_24"
-                        app:defaultQueryHint="@string/search_hint"
-                        app:iconifiedByDefault="false"
-                        android:layout_weight="3"/>
-                    <ImageButton
-                        android:id="@+id/toolbarSearchBtn"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@color/white"
-                        android:src="@drawable/ic_baseline_qr_code_scanner_24"
-                        android:layout_marginHorizontal="2dp"
-                        />
-                </LinearLayout>
-            </androidx.appcompat.widget.Toolbar>
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_marginVertical="2dp"-->
+<!--                    android:background="@drawable/searchview_drawable"-->
+<!--                    android:gravity="center_vertical">-->
+<!--                    <androidx.appcompat.widget.SearchView-->
+<!--                        android:id="@+id/toolbarSearch"-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        app:searchHintIcon="@drawable/ic_baseline_search_24"-->
+<!--                        app:defaultQueryHint="@string/search_hint"-->
+<!--                        app:iconifiedByDefault="false"-->
+<!--                        android:layout_weight="3"/>-->
+<!--                    <ImageButton-->
+<!--                        android:id="@+id/toolbarSearchBtn"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:background="@color/white"-->
+<!--                        android:src="@drawable/ic_baseline_qr_code_scanner_24"-->
+<!--                        android:layout_marginHorizontal="2dp"-->
+<!--                        />-->
+<!--                </LinearLayout>-->
+<!--            </androidx.appcompat.widget.Toolbar>-->
 
-        </com.google.android.material.appbar.AppBarLayout>
+<!--        </com.google.android.material.appbar.AppBarLayout>-->
 
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/nav_host_fragment"
@@ -61,7 +61,7 @@
             app:layout_constraintBottom_toTopOf="@+id/main_bottom_nav"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/layoutAppBar"
+            app:layout_constraintTop_toTopOf="parent"
             app:navGraph="@navigation/nav_graph_main" />
 
         <com.google.android.material.bottomnavigation.BottomNavigationView

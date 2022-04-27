@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.UIDemo">
         <activity
+            android:name=".ui.activity.CardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activity.NotificationActivity2"
+            android:exported="false" />
+        <activity
             android:name=".ui.activity.MainActivity"
             android:exported="true">
             <intent-filter>
