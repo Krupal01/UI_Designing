@@ -62,6 +62,10 @@ class UserDetailsFragment : Fragment(), AccountFunctionAdapter.OnFunctionClick {
             ( activity as MainActivity).findNavController(R.id.nav_host_fragment).navigate(R.id.settingFragment)
         }
 
+        binding.layoutMyTicket.setOnClickListener {
+            ( activity as MainActivity).findNavController(R.id.nav_host_fragment).navigate(R.id.myTicketFragment)
+        }
+
     }
 
     private fun setFunctionRecyeler() {
@@ -95,7 +99,7 @@ class UserDetailsFragment : Fragment(), AccountFunctionAdapter.OnFunctionClick {
 
             }
             getString(R.string.Loyalty_Programme) ->{
-
+                ( activity as MainActivity).findNavController(R.id.nav_host_fragment).navigate(R.id.loyaltyProgrammeFragment)
             }
             getString(R.string.Address_Book) ->{
 

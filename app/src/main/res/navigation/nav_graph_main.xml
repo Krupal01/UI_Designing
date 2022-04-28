@@ -55,4 +55,14 @@
         android:name="com.example.uidemo.ui.fragment.CardSettingFragment"
         android:label="fragment_card_setting"
         tools:layout="@layout/fragment_card_setting" />
+    <fragment
+        android:id="@+id/loyaltyProgrammeFragment"
+        android:name="com.example.uidemo.ui.fragment.LoyaltyProgrammeFragment"
+        android:label="fragment_loyalty_programme"
+        tools:layout="@layout/fragment_loyalty_programme" />
+    <fragment
+        android:id="@+id/myTicketFragment"
+        android:name="com.example.uidemo.ui.fragment.MyTicketFragment"
+        android:label="fragment_my_ticket"
+        tools:layout="@layout/fragment_my_ticket" />
 </navigation>

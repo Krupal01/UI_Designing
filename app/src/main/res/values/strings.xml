@@ -83,5 +83,27 @@
     <string name="no_saves_cards">No Saves Cards</string>
     <string name="save_a_credit_card">Save A Credit Card</string>
     <string name="add_a_new_card">ADD A NEW CARD</string>
+    <string name="hi_andrew">Hi, Andrew</string>
+    <string name="member_since_21_jan_2019">Member since 21 Jan 2019</string>
+    <string name="orders">Orders</string>
+    <string name="your_statistics">Your Statistics</string>
+    <string name="latest_transactions">Latest Transactions</string>
+    <string name="spent_point_on_order_no">Spent point on order No </string>
+    <string name="_500_point"> Point</string>
+    <string name="items_for"> Items for </string>
+    <string name="qar"> QAR </string>
+
+    <string name="points_available"> points available</string>
+    <string name="_1_jan_2020_10_29">1 Jan 2020 10:29</string>
+    <string name="view_order">VIEW ORDER</string>
+    <string name="orders_amount">Orders Amount</string>
+    <string name="expiry_30_30_2022">Expiry 30/30/2022</string>
+    <string name="_25">25</string>
+    <string name="_10000_qar">10000 QAR</string>
+    <string name="_266_point">266 point</string>
+    <string name="my_tickets">My Tickets</string>
+    <string name="all">All</string>
+    <string name="events">Events</string>
+    <string name="activities">Activities</string>
 
 </resources>

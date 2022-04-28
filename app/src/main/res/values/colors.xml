@@ -10,7 +10,12 @@
     <color name="white">#FFFFFFFF</color>
     <color name="yellow">#FFC107</color>
     <color name="orange">#FF5722</color>
-    <color name="gray">#EEEEEE</color>
+    <color name="gray">#DDDDDD</color>
+    <color name="gray_BBBBBB">#AAAAAA</color>
+    <color name="light_gray">#EEEEEE</color>
     <color name="dark_gray">#777777</color>
+    <color name="red">#F80404</color>
+    <color name="green">#5DEC05</color>
+
 
 </resources>

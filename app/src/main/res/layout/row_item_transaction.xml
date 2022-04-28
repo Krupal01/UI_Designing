@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="transaction"
+            type="com.example.uidemo.model.TransactionModel" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        android:layout_marginVertical="2dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvTransactionsItemTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:padding="10dp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text='@{@string/spent_point_on_order_no+" "+ transaction.orderNumber}' />
+
+            <LinearLayout
+                android:id="@+id/layPoints"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/light_gray"
+                android:padding="15dp"
+                app:layout_constraintTop_toBottomOf="@id/tvTransactionsItemTitle">
+
+                <TextView
+                    android:id="@+id/tvTransactionsItemPoints"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="20sp"
+                    android:lines="1"
+                    android:ellipsize="end"
+                    android:textColor="@{ (transaction.point &lt; 0) ? @color/red : @color/green}"
+                    android:textStyle="bold"
+                    android:text='@{transaction.point +" "+ @string/_500_point }' />
+
+                <TextView
+                    android:id="@+id/tvTransactionsItemCountWithPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:lines="1"
+                    android:ellipsize="end"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:gravity="end"
+                    android:text='@{transaction.totalItemsCount +" "+ @string/items_for +" "+ transaction.totalItemsQAR +" "+ @string/qar }' />
+            </LinearLayout>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvTransactionsItemAvailablePoint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:padding="10dp"
+                android:text='@{transaction.availablePoint +" "+@string/points_available }'
+                app:layout_constraintTop_toBottomOf="@id/layPoints"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvTransactionsItemDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:padding="10dp"
+                android:textSize="18sp"
+                android:text='@{transaction.date +" "+ transaction.time}'
+                app:layout_constraintTop_toBottomOf="@id/tvTransactionsItemAvailablePoint"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/view_order"
+                style="?attr/materialButtonOutlinedStyle"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="@id/tvTransactionsItemAvailablePoint"
+                app:layout_constraintBottom_toBottomOf="@id/tvTransactionsItemDate"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginEnd="10dp" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

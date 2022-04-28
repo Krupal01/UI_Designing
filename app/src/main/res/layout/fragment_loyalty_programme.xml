@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragment.LoyaltyProgrammeFragment"
+    android:orientation="vertical"
+    android:background="@color/gray">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/layoutNotificationFrgAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/Notificationtoolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginVertical="2dp"
+                android:background="@drawable/searchview_drawable"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:text="@string/Loyalty_Programme"/>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:background="@drawable/null_item_drawable"
+                app:cardCornerRadius="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="5dp">
+
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tvCelesteId"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:text="@string/hi_andrew"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"/>
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tvCelesteTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:text="@string/member_since_21_jan_2019"
+                            app:layout_constraintTop_toBottomOf="@id/tvCelesteId"
+                            app:layout_constraintLeft_toLeftOf="parent"/>
+
+
+                        <ImageView
+                            android:id="@+id/imgBarcode"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/barcode"
+                            app:layout_constraintTop_toBottomOf="@id/tvCelesteTitle"
+                            android:layout_marginVertical="5dp"
+                            android:layout_marginHorizontal="10dp"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/yellow"
+                        android:padding="5dp">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/imgTrophy"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/icon_trophy"
+                            android:scaleType="fitXY"
+                            android:background="@drawable/order_drawable"
+                            android:padding="8dp"
+                            android:layout_margin="5dp"
+                            app:tint="@color/white"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tvPointBalanceTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:lines="1"
+                            android:layout_marginStart="10dp"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            android:text="@string/your_point_balance"
+                            app:layout_constraintLeft_toRightOf="@id/imgTrophy"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toTopOf="@id/tvPointBalanceTxt"/>
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tvPointBalanceTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:lines="1"
+                            android:textColor="@color/black"
+                            android:layout_marginStart="10dp"
+                            android:textSize="18sp"
+                            android:text="@string/b_3000_b_worth_6oo_qar"
+                            app:layout_constraintLeft_toRightOf="@id/imgTrophy"
+                            app:layout_constraintTop_toBottomOf="@id/tvPointBalanceTitle"
+                            app:layout_constraintBottom_toBottomOf="parent" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_marginHorizontal="10dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvStatisticsTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:lines="1"
+                    android:text="@string/your_statistics"
+                    android:ellipsize="end"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/btnStatisticsAll"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/ic_baseline_arrow_circle_right_24"
+                    android:text="@string/see_all"
+                    android:textColor="@color/black" />
+
+
+            </LinearLayout>
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_margin="15dp"
+                android:clipToOutline="true"
+                android:background="@drawable/corner_5">
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="1dp">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvOrderLable"
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:text="@string/orders"
+                        android:layout_column="1"
+                        android:paddingVertical="15dp"
+                        android:layout_weight="1"
+                        android:layout_margin="1dp"
+                        android:background="@color/white"/>
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvOrderAmountLable"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/orders_amount"
+                        android:paddingVertical="15dp"
+                        android:layout_column="2"
+                        android:layout_weight="1"
+                        android:layout_margin="1dp"
+                        android:background="@color/white"/>
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvOrderExpiryLable"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/expiry_30_30_2022"
+                        android:paddingVertical="15dp"
+                        android:layout_column="3"
+                        android:layout_weight="1"
+                        android:layout_margin="1dp"
+                        android:background="@color/white"/>
+
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="1dp">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvOrderText"
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:text="@string/_25"
+                        android:layout_column="1"
+                        android:paddingVertical="15dp"
+                        android:layout_weight="1"
+                        android:layout_margin="1dp"
+                        android:background="@color/white"/>
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvOrderAmountText"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/_10000_qar"
+                        android:paddingVertical="15dp"
+                        android:layout_column="2"
+                        android:layout_weight="1"
+                        android:layout_margin="1dp"
+                        android:background="@color/white"/>
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvOrderExpiryText"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/_266_point"
+                        android:paddingVertical="15dp"
+                        android:layout_column="3"
+                        android:layout_weight="1"
+                        android:layout_margin="1dp"
+                        android:background="@color/white"/>
+
+
+                </TableRow>
+            </TableLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_marginHorizontal="10dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvTransactionsTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:lines="1"
+                    android:text="@string/latest_transactions"
+                    android:ellipsize="end"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/btnTransactionsAll"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/ic_baseline_arrow_circle_right_24"
+                    android:text="@string/see_all"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rcvTransactions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="15dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_marginHorizontal="10dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvLoyaltyRecentListTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:lines="1"
+                    android:text="@string/recently_viewed"
+                    android:textColor="@color/black"
+                    android:ellipsize="end"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/btnLoyaltyRecentListAll"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/ic_baseline_arrow_circle_right_24"
+                    android:text="@string/see_all"
+                    android:textColor="@color/black" />
+
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcvLoyaltyRecentList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

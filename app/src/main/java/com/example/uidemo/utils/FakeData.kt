@@ -67,6 +67,12 @@ class FakeData {
             DebitCardModel("8484 5623 8563 5233" , "dfdfdg" , "12/2/2022","684"),
             DebitCardModel("9652 6333 5526 5853" , "dfdfdg" , "12/2/2022","684")
         )
+
+        var transactions : ArrayList<TransactionModel> = arrayListOf(
+            TransactionModel("358056182",-500,3,2520,2251,"1 Jan 2020","10:29"),
+            TransactionModel("358056182",+500,3,2520,2251,"1 Jan 2020","10:29"),
+            TransactionModel("358056182",-500,3,2520,2251,"1 Jan 2020","10:29")
+        )
     }
 
 }

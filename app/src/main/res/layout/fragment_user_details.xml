@@ -107,7 +107,8 @@
                         app:layout_constraintTop_toBottomOf="@id/tvCelesteId"
                         app:layout_constraintLeft_toRightOf="@id/layoutMyOrder"
                         app:layout_constraintRight_toRightOf="parent"
-                        >
+                        android:clickable="true"
+                        android:focusable="true">
                         <androidx.appcompat.widget.AppCompatImageView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
