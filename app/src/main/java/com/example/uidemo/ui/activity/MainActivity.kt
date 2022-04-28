@@ -29,6 +29,16 @@ class MainActivity : AppCompatActivity() {
 
         setCartBadges(2)
 
+        navHostFragment.navController.addOnDestinationChangedListener{_, destination, _ ->
+            if(destination.id == R.id.addNewCardFragment ||
+                    destination.id == R.id.cardSettingFragment) {
+                binding.mainBottomNav.visibility = View.GONE
+            } else {
+                binding.mainBottomNav.visibility = View.VISIBLE
+            }
+
+        }
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
