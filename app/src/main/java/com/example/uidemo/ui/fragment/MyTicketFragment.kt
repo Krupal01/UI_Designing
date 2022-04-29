@@ -4,9 +4,12 @@ import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.uidemo.R
+import com.example.uidemo.adapter.TicketAdapter
 import com.example.uidemo.databinding.FragmentMyTicketBinding
 import com.example.uidemo.ui.activity.MainActivity
+import com.example.uidemo.utils.FakeData
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -32,6 +35,7 @@ class MyTicketFragment : Fragment() {
     }
 
     private lateinit var binding : FragmentMyTicketBinding
+    private var ticketAdapter = TicketAdapter()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -50,6 +54,9 @@ class MyTicketFragment : Fragment() {
         (activity as MainActivity).supportActionBar?.setDisplayHomeAsUpEnabled(true)
         (activity as MainActivity).supportActionBar?.setDisplayShowHomeEnabled(true)
 
+        binding.rcvTicket.layoutManager = LinearLayoutManager(requireContext())
+        binding.rcvTicket.adapter = ticketAdapter
+        ticketAdapter.submitData(FakeData.tickets)
 
 
     }

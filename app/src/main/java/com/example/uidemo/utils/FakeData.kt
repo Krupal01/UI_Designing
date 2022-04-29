@@ -73,6 +73,12 @@ class FakeData {
             TransactionModel("358056182",+500,3,2520,2251,"1 Jan 2020","10:29"),
             TransactionModel("358056182",-500,3,2520,2251,"1 Jan 2020","10:29")
         )
+
+        var tickets : ArrayList<TicketModel> = arrayListOf(
+            TicketModel(null,2,55,"#123456789","ProductCon London : The Product Management Conference","02 Dec 2019","02 Feb 2019","3 PM" ,"7 PM"),
+            TicketModel(null,2,55,"#123456789","ProductCon London : The Product Management Conference","02 Dec 2019","02 Feb 2019","3 PM" ,"7 PM"),
+            TicketModel(null,2,55,"#123456789","ProductCon London : The Product Management Conference","02 Dec 2019","02 Feb 2019","3 PM" ,"7 PM")
+        )
     }
 
 }

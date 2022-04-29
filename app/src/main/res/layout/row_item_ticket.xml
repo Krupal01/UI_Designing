@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="ticket"
+            type="com.example.uidemo.model.TicketModel" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="20dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.example.uidemo.view.TicketViewLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:setBitmap="@{ticket.ticketImage}"
+                    android:scaleType="fitXY" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/corner_5"
+                    android:backgroundTint="@color/gray"
+                    android:padding="5dp"
+                    android:text='@{ticket.adult + " "+ @string/adult__+ " "+ticket.adultQAR+ " "+ @string/qar}' />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginBottom="20dp"
+                    android:padding="5dp"
+                    android:textColor="@color/gray"
+                    android:text="@{ticket.hashNumber}" />
+
+            </com.example.uidemo.view.TicketViewLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:orientation="vertical"
+                android:background="@color/white">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvTicketTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lines="2"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:layout_marginVertical="10dp"
+                    android:text="@{ticket.title}" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tvTicketDateLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/date"
+                            android:textStyle="bold"
+                            android:textColor="@color/black" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tvTicketDateFrom"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text='@{@string/from_+" "+ticket.fromDate}' />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tvTicketDateTo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text='@{@string/to_+" "+ticket.toDate}' />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tvTicketTimeLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/time"
+                            android:textStyle="bold"
+                            android:textColor="@color/black" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tvTicketTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text='@{ticket.fromTime+" - "+ticket.toDate}' />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/download_ticket"
+                    android:drawableStart="@drawable/icons8_ticket_24"
+                    app:icon="@drawable/icons8_ticket_24"
+                    app:iconGravity="textStart"
+                    app:iconTint="@color/white"
+                    app:cornerRadius="10dp" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

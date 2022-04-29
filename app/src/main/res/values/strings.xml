@@ -106,4 +106,14 @@
     <string name="events">Events</string>
     <string name="activities">Activities</string>
 
+    <string name="adult__">ADULT | </string>
+    <string name="_123456789">#123456789</string>
+    <string name="date">Date</string>
+    <string name="productcon_london_the_product_management_conference">ProductCon London : The Product Management Conference</string>
+    <string name="from_">From: </string>
+    <string name="to_">TO: </string>
+    <string name="time">Time</string>
+    <string name="_3_pm_7pm">3 PM - 7PM</string>
+    <string name="download_ticket">DOWNLOAD TICKET</string>
+
 </resources>
