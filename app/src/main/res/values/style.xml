@@ -7,4 +7,25 @@
         <item name="android:textColor">@color/chip_text_color</item>
     </style>
 
+    <style name="custom_rating_bar">
+        <item name="android:scaleX">.5</item>
+        <item name="android:scaleY">.5</item>
+        <item name="android:transformPivotY">15dp</item>
+        <item name="android:transformPivotX">0dp</item>
+        <item name="android:max">5</item>
+        <item name="android:numStars">5</item>
+        <item name="android:thumb">@null</item>
+
+    </style>
+
+    <style name="EnabledBtnTicketDownload">
+        <item name="icon">@drawable/icons8_ticket_24</item>
+        <item name="iconGravity">textStart</item>
+        <item name="iconTint">@color/white</item>
+    </style>
+
+    <style name="DisableBtnTicketDownload" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="strokeColor">@color/gray</item>
+    </style>
+
 </resources>

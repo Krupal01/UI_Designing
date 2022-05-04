@@ -11,5 +11,6 @@ data class TicketModel(
     var fromDate : String,
     var toDate : String,
     var fromTime : String,
-    var toTime : String
+    var toTime : String,
+    var isDownloaded : Boolean? = false
 )

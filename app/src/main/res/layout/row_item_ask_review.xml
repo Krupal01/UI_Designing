@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="reviewModel"
+            type="com.example.uidemo.model.ReviewModel" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        android:clipToOutline="true"
+        android:layout_margin="3dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/btnReviewItemFavorite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/drawable_like_btn"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="2dp"
+                android:src="@{reviewModel.isFavourite ? @drawable/ic_baseline_favorite_24 : @drawable/ic_baseline_favorite_border_24}" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgReviewItem"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:scaleType="fitXY"
+                android:setBitmap="@{reviewModel.image}" />
+
+            <LinearLayout
+                android:id="@+id/layoutDetailsFavoriteItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@id/imgReviewItem"
+                android:gravity="center_horizontal"
+                android:layout_marginHorizontal="2dp">
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvTitleReviewItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="17sp"
+                    android:lines="2"
+                    android:textColor="@color/black"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:text="@{reviewModel.name}"/>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvPriceReviewItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp"
+                    android:lines="1"
+                    android:text='@{reviewModel.price +" "+ @string/small_qar}'
+                    android:textColor="@color/black"
+                    android:gravity="center" />
+            </LinearLayout>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnReviewItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layoutDetailsFavoriteItem"
+                android:backgroundTint="@color/teal_200"
+                android:text="@string/review"
+                app:cornerRadius="0dp" />
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</layout>

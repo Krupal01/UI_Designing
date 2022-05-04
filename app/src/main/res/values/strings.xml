@@ -115,5 +115,20 @@
     <string name="time">Time</string>
     <string name="_3_pm_7pm">3 PM - 7PM</string>
     <string name="download_ticket">DOWNLOAD TICKET</string>
+    <string name="small_qar"><small>QAR</small></string>
+    <string name="review">Review</string>
+    <string name="my_orders">My Orders</string>
+    <string name="look_below_and_go_to_ordered_items_to_review">look below and go to ordered items to review</string>
+    <string name="you_haven_t_given_any_reviews">You haven\'t given any reviews</string>
+    <string name="_2_reviews">2 reviews</string>
+    <string name="review_more_purchases">Review More Purchases</string>
+    <string name="view_details">View Details</string>
+    <string name="rating">Rating</string>
+    <string name="created">created</string>
+    <string name="by_date_added">By date added</string>
+    <string name="qty">QTY :</string>
+    <string name="price">Price :</string>
+    <string name="total">Total :</string>
+    <string name="past_event">PAST EVENT</string>
 
 </resources>

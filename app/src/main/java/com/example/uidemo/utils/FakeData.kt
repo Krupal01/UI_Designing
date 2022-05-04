@@ -49,6 +49,8 @@ class FakeData {
     }
 
     companion object{
+
+
         val data : ArrayList<WishListItemModel> = arrayListOf(
             WishListItemModel("k","20 qar",23,null,null,false),
             WishListItemModel("k","20 qar",23,null,"EXCLUSIVE",true),
@@ -75,9 +77,15 @@ class FakeData {
         )
 
         var tickets : ArrayList<TicketModel> = arrayListOf(
-            TicketModel(null,2,55,"#123456789","ProductCon London : The Product Management Conference","02 Dec 2019","02 Feb 2019","3 PM" ,"7 PM"),
-            TicketModel(null,2,55,"#123456789","ProductCon London : The Product Management Conference","02 Dec 2019","02 Feb 2019","3 PM" ,"7 PM"),
-            TicketModel(null,2,55,"#123456789","ProductCon London : The Product Management Conference","02 Dec 2019","02 Feb 2019","3 PM" ,"7 PM")
+            TicketModel(null,2,55,"#123456789","ProductCon London : The Product Management Conference","02 Dec 2019","02 Feb 2019","3 PM" ,"7 PM",false),
+            TicketModel(null,2,55,"#123456789","ProductCon London : The Product Management Conference","02 Dec 2019","02 Feb 2019","3 PM" ,"7 PM",false),
+            TicketModel(null,2,55,"#123456789","ProductCon London : The Product Management Conference","02 Dec 2019","02 Feb 2019","3 PM" ,"7 PM",true)
+        )
+
+        var askReviewlIST : ArrayList<ReviewModel> = arrayListOf(
+            ReviewModel(null,"Apple Galaxy Watches 46mm (New)",25,1,2.5F,"very good",false,"1/1/2022"),
+            ReviewModel(null,"Apple Galaxy Watches 46mm (New)",25,2,2.5F,null,true,"1/1/2022"),
+            ReviewModel(null,"Apple Galaxy Watches 46mm (New)",25,1,null,null,null,"1/1/2022")
         )
     }
 

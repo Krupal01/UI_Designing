@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_my_review"
+    app:startDestination="@id/noReviewFragment">
+
+    <fragment
+        android:id="@+id/noReviewFragment"
+        android:name="com.example.uidemo.ui.fragment.NoReviewFragment"
+        android:label="fragment_no_review"
+        tools:layout="@layout/fragment_no_review" />
+    <fragment
+        android:id="@+id/reviewListFragment"
+        android:name="com.example.uidemo.ui.fragment.ReviewListFragment"
+        android:label="fragment_review_list"
+        tools:layout="@layout/fragment_review_list" />
+</navigation>

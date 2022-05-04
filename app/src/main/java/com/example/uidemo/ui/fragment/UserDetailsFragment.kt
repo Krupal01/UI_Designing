@@ -108,7 +108,7 @@ class UserDetailsFragment : Fragment(), AccountFunctionAdapter.OnFunctionClick {
                 ( activity as MainActivity).findNavController(R.id.nav_host_fragment).navigate(R.id.savedCardsFragment)
             }
             getString(R.string.My_Reviews) ->{
-
+                ( activity as MainActivity).findNavController(R.id.nav_host_fragment).navigate(R.id.myReviewFragment)
             }
             getString(R.string.My_Returns) ->{
 

@@ -65,4 +65,14 @@
         android:name="com.example.uidemo.ui.fragment.MyTicketFragment"
         android:label="fragment_my_ticket"
         tools:layout="@layout/fragment_my_ticket" />
+    <fragment
+        android:id="@+id/myReviewFragment"
+        android:name="com.example.uidemo.ui.fragment.MyReviewFragment"
+        android:label="fragment_my_review"
+        tools:layout="@layout/fragment_my_review" />
+    <fragment
+        android:id="@+id/reviewDetailsFragment"
+        android:name="com.example.uidemo.ui.fragment.ReviewDetailsFragment"
+        android:label="fragment_review_details"
+        tools:layout="@layout/fragment_review_details" />
 </navigation>
