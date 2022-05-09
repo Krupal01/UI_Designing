@@ -130,5 +130,27 @@
     <string name="price">Price :</string>
     <string name="total">Total :</string>
     <string name="past_event">PAST EVENT</string>
+    <string name="default_shipping_address">Default Shipping Address</string>
+    <string name="edit">Edit</string>
+    <string name="tvusername">tvUserName</string>
+    <string name="alternate_shipping_address">Alternate Shipping Address</string>
+    <string name="address_book">Address Book</string>
+    <string name="default_addresses">Default Addresses</string>
+    <string name="alternate_addresses">Alternate Addresses</string>
+    <string name="add_new_address">ADD NEW ADDRESS</string>
+    <string name="edit_shipping_address">Edit Shipping Address</string>
+    <string name="save_address">SAVE ADDRESS</string>
+    <string name="contact_information">Contact Information</string>
+    <string name="last_name">Last Name</string>
+    <string name="first_name">First Name</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="street_address_2">Street Address 2</string>
+    <string name="street_address">Street Address</string>
+    <string name="shipping_address">Shipping Address</string>
+    <string name="zone_number">Zone Number</string>
+    <string name="country">Country</string>
+    <string name="search_by_zone_number">search by zone number</string>
+    <string name="search_by_country_name">search by country name</string>
+    <string name="blank"> </string>
 
 </resources>

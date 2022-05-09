@@ -75,4 +75,14 @@
         android:name="com.example.uidemo.ui.fragment.ReviewDetailsFragment"
         android:label="fragment_review_details"
         tools:layout="@layout/fragment_review_details" />
+    <fragment
+        android:id="@+id/addressBookFragment"
+        android:name="com.example.uidemo.ui.fragment.AddressBookFragment"
+        android:label="fragment_address_book"
+        tools:layout="@layout/fragment_address_book" />
+    <fragment
+        android:id="@+id/editAddressFragment"
+        android:name="com.example.uidemo.ui.fragment.EditAddressFragment"
+        android:label="fragment_edit_address"
+        tools:layout="@layout/fragment_edit_address" />
 </navigation>

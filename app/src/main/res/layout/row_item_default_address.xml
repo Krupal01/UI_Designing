@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="Address"
+            type="com.example.uidemo.model.AddressCardModel" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        android:layout_marginVertical="1dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="10dp"
+                android:background="@drawable/shape_table_cell">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvAddressType"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:lines="1"
+                    android:text="@{Address.addressType}"
+                    android:ellipsize="end"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/btnAddressEdit"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/ic_baseline_arrow_circle_right_24"
+                    android:text="@string/edit"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvUserName"
+                style="@style/row_item_address_tv"
+                android:text="@{Address.username}"
+                android:textStyle="bold"
+                android:textSize="18sp" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvUserEmail"
+                style="@style/row_item_address_tv"
+                android:text="@{Address.userEmail}" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvUserAddress"
+                style="@style/row_item_address_tv"
+                android:text="@{Address.address}" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvUserPOBox"
+                style="@style/row_item_address_tv"
+                android:text="@{Address.PObox}" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvUserMobile"
+                style="@style/row_item_address_tv"
+                android:text="@{Address.mobileNumber}" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>

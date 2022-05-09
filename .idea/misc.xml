@@ -8,6 +8,9 @@
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/drawable/corner_5.xml" value="0.1" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/drawable/disable_btn_ticket_download.xml" value="0.1" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/drawable/drawable_like_btn.xml" value="0.1" />
+        <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/drawable/dropdown_icon_selector.xml" value="0.1375" />
+        <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/drawable/dropdown_selector.xml" value="0.1375" />
+        <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/drawable/edit_address_textfeild.xml" value="0.1185" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/drawable/enabled_btn_ticket_download.xml" value="0.1" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/drawable/even_card_drawable.xml" value="0.1" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/drawable/exlusive_item_drawable.xml" value="0.1" />
@@ -22,6 +25,7 @@
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/drawable/shape_table_cell.xml" value="0.131" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/drawable/textview_style.xml" value="0.1" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/drawable/ticket_shape.xml" value="0.1095" />
+        <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/drawable/zone_number_edittext.xml" value="0.1375" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/layout-v31/fragment_loyalty_programme.xml" value="0.16041666666666668" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/layout/activity_card.xml" value="0.18333333333333332" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/layout/activity_main.xml" value="0.1" />
@@ -30,10 +34,12 @@
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/layout/drawer_header.xml" value="0.18802083333333333" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/layout/fragment_account.xml" value="0.16822916666666668" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/layout/fragment_add_new_card.xml" value="0.15572916666666667" />
+        <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/layout/fragment_address_book.xml" value="0.19791666666666666" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/layout/fragment_card_setting.xml" value="0.17889492753623187" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/layout/fragment_cart.xml" value="0.20416666666666666" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/layout/fragment_categories.xml" value="0.14" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/layout/fragment_deals.xml" value="0.18854166666666666" />
+        <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/layout/fragment_edit_address.xml" value="0.25" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/layout/fragment_home_.xml" value="0.15364583333333334" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/layout/fragment_login.xml" value="0.20416666666666666" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/layout/fragment_loyalty_programme.xml" value="0.22" />
@@ -41,16 +47,18 @@
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/layout/fragment_my_ticket.xml" value="0.25" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/layout/fragment_no_review.xml" value="0.17447916666666666" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/layout/fragment_notification.xml" value="0.18854166666666666" />
-        <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/layout/fragment_review_details.xml" value="0.33" />
+        <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/layout/fragment_review_details.xml" value="0.2" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/layout/fragment_review_list.xml" value="0.16041666666666668" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/layout/fragment_saved_cards.xml" value="0.17889492753623187" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/layout/fragment_setting.xml" value="0.2" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/layout/fragment_setting_screen.xml" value="0.19010416666666666" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/layout/fragment_user_details.xml" value="0.22" />
+        <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/layout/row_item_alternate_address.xml" value="0.25" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/layout/row_item_ask_review.xml" value="0.20193637621023514" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/layout/row_item_categories.xml" value="0.18854166666666666" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/layout/row_item_customcard.xml" value="0.18854166666666666" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/layout/row_item_debit_card.xml" value="0.20416666666666666" />
+        <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/layout/row_item_default_address.xml" value="0.19791666666666666" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/layout/row_item_function.xml" value="0.16" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/layout/row_item_items.xml" value="0.18854166666666666" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/layout/row_item_notification_cart_items.xml" value="0.18854166666666666" />
@@ -60,6 +68,7 @@
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/layout/row_item_transaction.xml" value="0.1" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/layout/row_item_wishlist.xml" value="0.20416666666666666" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/menu/category_menu.xml" value="0.16822916666666668" />
+        <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/menu/menu_address_item.xml" value="0.20416666666666666" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/menu/menu_bottom_nav.xml" value="0.15364583333333334" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/menu/menu_card_item.xml" value="0.20416666666666666" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/menu/menu_nav_drawer.xml" value="0.18802083333333333" />

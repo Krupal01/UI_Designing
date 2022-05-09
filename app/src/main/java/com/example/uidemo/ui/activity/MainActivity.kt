@@ -30,8 +30,9 @@ class MainActivity : AppCompatActivity() {
         setCartBadges(2)
 
         navHostFragment.navController.addOnDestinationChangedListener{_, destination, _ ->
-            if(destination.id == R.id.addNewCardFragment ||
-                    destination.id == R.id.cardSettingFragment) {
+            if(destination.id == R.id.addNewCardFragment
+                || destination.id == R.id.cardSettingFragment
+                || destination.id == R.id.editAddressFragment) {
                 binding.mainBottomNav.visibility = View.GONE
             } else {
                 binding.mainBottomNav.visibility = View.VISIBLE

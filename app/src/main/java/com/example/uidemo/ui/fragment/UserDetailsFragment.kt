@@ -102,7 +102,7 @@ class UserDetailsFragment : Fragment(), AccountFunctionAdapter.OnFunctionClick {
                 ( activity as MainActivity).findNavController(R.id.nav_host_fragment).navigate(R.id.loyaltyProgrammeFragment)
             }
             getString(R.string.Address_Book) ->{
-
+                ( activity as MainActivity).findNavController(R.id.nav_host_fragment).navigate(R.id.addressBookFragment)
             }
             getString(R.string.Saved_Cards) ->{
                 ( activity as MainActivity).findNavController(R.id.nav_host_fragment).navigate(R.id.savedCardsFragment)

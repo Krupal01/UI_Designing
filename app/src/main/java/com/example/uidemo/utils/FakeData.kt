@@ -87,6 +87,20 @@ class FakeData {
             ReviewModel(null,"Apple Galaxy Watches 46mm (New)",25,2,2.5F,null,true,"1/1/2022"),
             ReviewModel(null,"Apple Galaxy Watches 46mm (New)",25,1,null,null,null,"1/1/2022")
         )
+
+        var defaultAddress : ArrayList<AddressCardModel> = arrayListOf(
+            AddressCardModel("Default Shipping Address","celeste wright","celeste_wright@gmail.com","36/4, Abdullah Bin Mohamed, Zone 14","1120,Doha,Qatar","+974 4499 5900"),
+            AddressCardModel("Default Billing Address","celeste wright","celeste_wright@gmail.com","36/4, Abdullah Bin Mohamed, Zone 14","1120,Doha,Qatar","+974 4499 5900")
+        )
+
+        var alternateAddress : ArrayList<AddressCardModel> = arrayListOf(
+            AddressCardModel("Alternate Shipping Address","celeste wright","celeste_wright@gmail.com","36/4, Abdullah Bin Mohamed, Zone 14","1120,Doha,Qatar","+974 4499 5900")
+        )
+
+        var zoneNumber = arrayOf("52 Al Khisa","52 Al Khisa","52 Al Khisa","52 Al Khisa","52 Al Khisa")
+
+        var country = arrayOf("india", "qatar","usa", "uk","japan")
+
     }
 
 }

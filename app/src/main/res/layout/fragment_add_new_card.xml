@@ -167,6 +167,7 @@
         android:layout_gravity="bottom"
         android:backgroundTint="@color/yellow"
         android:paddingVertical="15dp"
+        android:insetBottom="0dp"
         android:text="@string/save_card_details"
         android:textColor="@color/black" />
 
