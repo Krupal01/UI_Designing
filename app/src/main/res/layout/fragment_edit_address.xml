@@ -43,175 +43,184 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:padding="10dp">
-
-        <LinearLayout
+        android:layout_weight="1">
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="wrap_content">
 
-            <com.google.android.material.textview.MaterialTextView
-                style="@style/AddressFragment_rcv_label"
-                android:lines="1"
-                android:text="@string/contact_information"
-                android:ellipsize="end"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:textSize="20sp" />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_alignParentTop="true"
+                android:scaleType="fitXY"
+                android:alpha="0.4"
+                android:src="@drawable/user_atteraction_edit_address_scr" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginVertical="3dp">
+                android:orientation="vertical"
+                android:layout_margin="10dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/AddressFragment_rcv_label"
+                    android:lines="1"
+                    android:text="@string/contact_information"
+                    android:ellipsize="end"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="20sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginVertical="3dp">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/first_name"
+                        app:expandedHintEnabled="false"
+                        android:layout_marginEnd="3dp"
+                        android:layout_weight="1"
+                        android:elevation="5dp"
+                        style="@style/textlayout_edit_address_fragment"
+                        >
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etFirstName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/last_name"
+                        android:layout_marginStart="3dp"
+                        app:expandedHintEnabled="false"
+                        android:layout_weight="1"
+                        style="@style/textlayout_edit_address_fragment">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etLstName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="3dp"
-                    android:hint="@string/first_name"
+                    android:layout_marginVertical="3dp"
+                    android:hint="@string/last_name"
                     app:expandedHintEnabled="false"
-                    android:layout_weight="1"
-                    app:boxStrokeWidth="0dp"
-                    app:boxStrokeWidthFocused="0dp"
-                    app:boxStrokeColor="#FFF"
-                    app:boxBackgroundColor="#FFF">
+                    style="@style/textlayout_edit_address_fragment">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/etFirstName"
+                        android:id="@+id/etMobileNumber"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
 
                 </com.google.android.material.textfield.TextInputLayout>
 
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/AddressFragment_rcv_label"
+                    android:lines="1"
+                    android:text="@string/shipping_address"
+                    android:ellipsize="end"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:paddingTop="30dp"/>
+
                 <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="3dp"
-                    android:hint="@string/last_name"
-                    app:expandedHintEnabled="false"
-                    android:layout_weight="1"
+                    android:layout_marginVertical="3dp"
+                    android:hint="@string/street_address"
+                    style="@style/textlayout_edit_address_fragment"
+                    app:expandedHintEnabled="false">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etStreetAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="3dp"
+                    android:hint="@string/street_address_2"
+                    style="@style/textlayout_edit_address_fragment"
+                    app:expandedHintEnabled="false">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etStreetAddress2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layoutZoneNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     app:boxStrokeWidth="0dp"
                     app:boxStrokeWidthFocused="0dp"
                     app:boxStrokeColor="#FFF"
-                    app:boxBackgroundColor="#FFF">
+                    app:boxBackgroundColor="#FFF"
+                    app:boxCornerRadiusTopStart="5dp"
+                    app:boxCornerRadiusTopEnd="5dp"
+                    app:boxCornerRadiusBottomStart="5dp"
+                    app:boxCornerRadiusBottomEnd="5dp"
+                    android:layout_marginVertical="3dp"
+                    android:hint="@string/zone_number"
+                    app:expandedHintEnabled="false"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu">
 
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/etLstName"
+                    <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                        android:id="@+id/etZoneNumber"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layoutCountry"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:boxStrokeWidth="0dp"
+                    app:boxStrokeWidthFocused="0dp"
+                    app:boxStrokeColor="#FFF"
+                    app:boxBackgroundColor="#FFF"
+                    app:boxCornerRadiusTopStart="5dp"
+                    app:boxCornerRadiusTopEnd="5dp"
+                    app:boxCornerRadiusBottomStart="5dp"
+                    app:boxCornerRadiusBottomEnd="5dp"
+                    android:layout_marginVertical="3dp"
+                    android:hint="@string/country"
+                    app:expandedHintEnabled="false"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu">
+
+                    <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                        android:id="@+id/etCountry"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
             </LinearLayout>
+        </RelativeLayout>
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginVertical="3dp"
-                android:hint="@string/last_name"
-                app:expandedHintEnabled="false"
-                app:boxStrokeWidth="0dp"
-                app:boxStrokeWidthFocused="0dp"
-                app:boxStrokeColor="#FFF"
-                app:boxBackgroundColor="#FFF">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/etMobileNumber"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textview.MaterialTextView
-                style="@style/AddressFragment_rcv_label"
-                android:lines="1"
-                android:text="@string/shipping_address"
-                android:ellipsize="end"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:textSize="20sp" />
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginVertical="3dp"
-                android:hint="@string/street_address"
-                app:boxStrokeWidth="0dp"
-                app:boxStrokeWidthFocused="0dp"
-                app:boxStrokeColor="#FFF"
-                app:boxBackgroundColor="#FFF"
-                app:expandedHintEnabled="false">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/etStreetAddress"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginVertical="3dp"
-                android:hint="@string/street_address_2"
-                app:boxStrokeWidth="0dp"
-                app:boxStrokeWidthFocused="0dp"
-                app:boxStrokeColor="#FFF"
-                app:boxBackgroundColor="#FFF"
-                app:expandedHintEnabled="false">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/etStreetAddress2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/layoutZoneNumber"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:boxStrokeWidth="0dp"
-                app:boxStrokeWidthFocused="0dp"
-                app:boxStrokeColor="#FFF"
-                app:boxBackgroundColor="#FFF"
-                android:layout_marginVertical="3dp"
-                android:hint="@string/zone_number"
-                app:expandedHintEnabled="false"
-                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu">
-
-                <com.google.android.material.textfield.MaterialAutoCompleteTextView
-                    android:id="@+id/etZoneNumber"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/layoutCountry"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:boxStrokeWidth="0dp"
-                app:boxStrokeWidthFocused="0dp"
-                app:boxStrokeColor="#FFF"
-                app:boxBackgroundColor="#FFF"
-                android:layout_marginVertical="3dp"
-                android:hint="@string/country"
-                app:expandedHintEnabled="false"
-                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu">
-
-                <com.google.android.material.textfield.MaterialAutoCompleteTextView
-                    android:id="@+id/etCountry"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-        </LinearLayout>
 
     </ScrollView>
 

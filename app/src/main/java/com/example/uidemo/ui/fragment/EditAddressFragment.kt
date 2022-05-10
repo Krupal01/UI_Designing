@@ -49,7 +49,7 @@ class EditAddressFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         (activity as MainActivity).setToolbar(binding.Notificationtoolbar,false)
         (activity as MainActivity).supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        (activity as MainActivity).supportActionBar?.setDisplayShowHomeEnabled(true)
+
 
         val adapter1 = ArrayAdapter(requireContext(),android.R.layout.simple_dropdown_item_1line,FakeData.zoneNumber)
         binding.etZoneNumber.setAdapter(adapter1)
@@ -60,32 +60,36 @@ class EditAddressFragment : Fragment() {
         binding.etZoneNumber.setOnFocusChangeListener { view, b ->
             if(b){
                 binding.etZoneNumber.setHint(R.string.search_by_zone_number)
-                binding.etZoneNumber.setBackgroundResource(R.color.gray)
+                binding.etZoneNumber.setBackgroundResource(R.drawable.dropdown_search_drawable)
                 binding.layoutZoneNumber.setStartIconDrawable(R.drawable.ic_baseline_search_24)
                 binding.layoutZoneNumber.setBackgroundResource(R.color.white)
                 binding.layoutZoneNumber.setPadding(15,10,15,10)
+                binding.layoutZoneNumber.setBackgroundResource(R.drawable.card_number_text_drawable)
 
             }else{
                 binding.etZoneNumber.setHint(R.string.blank)
-                binding.etZoneNumber.setBackgroundResource(R.color.white)
+                binding.etZoneNumber.setBackgroundResource(R.drawable.card_number_text_drawable)
                 binding.layoutZoneNumber.setStartIconDrawable(0)
                 binding.layoutZoneNumber.setPadding(0,0,0,0)
+                binding.layoutZoneNumber.setBackgroundResource(R.drawable.card_number_text_drawable)
             }
         }
 
         binding.etCountry.setOnFocusChangeListener { view, b ->
             if(b){
                 binding.etCountry.setHint(R.string.search_by_country_name)
-                binding.etCountry.setBackgroundResource(R.color.gray)
+                binding.etCountry.setBackgroundResource(R.drawable.dropdown_search_drawable)
                 binding.layoutCountry.setStartIconDrawable(R.drawable.ic_baseline_search_24)
                 binding.layoutCountry.setBackgroundResource(R.color.white)
                 binding.layoutCountry.setPadding(15,10,15,10)
+                binding.layoutCountry.setBackgroundResource(R.drawable.card_number_text_drawable)
 
             }else{
                 binding.etCountry.setHint(R.string.blank)
-                binding.etCountry.setBackgroundResource(R.color.white)
+                binding.etCountry.setBackgroundResource(R.drawable.card_number_text_drawable)
                 binding.layoutCountry.setStartIconDrawable(0)
                 binding.layoutCountry.setPadding(0,0,0,0)
+                binding.layoutCountry.setBackgroundResource(R.drawable.card_number_text_drawable)
             }
         }
 

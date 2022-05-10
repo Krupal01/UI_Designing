@@ -9,18 +9,22 @@
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/drawable/disable_btn_ticket_download.xml" value="0.1" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/drawable/drawable_like_btn.xml" value="0.1" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/drawable/dropdown_icon_selector.xml" value="0.1375" />
+        <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/drawable/dropdown_search_drawable.xml" value="0.121" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/drawable/dropdown_selector.xml" value="0.1375" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/drawable/edit_address_textfeild.xml" value="0.1185" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/drawable/enabled_btn_ticket_download.xml" value="0.1" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/drawable/even_card_drawable.xml" value="0.1" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/drawable/exlusive_item_drawable.xml" value="0.1" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/drawable/header_style.xml" value="0.1" />
+        <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.121" />
+        <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/drawable/ic_baseline_arrow_circle_right_24.xml" value="0.121" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/drawable/menu_badge.xml" value="0.1" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/drawable/null_item_drawable.xml" value="0.1" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/drawable/on_cash_drawable.xml" value="0.1" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/drawable/order_drawable.xml" value="0.1" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/drawable/pre_order_item_drawable.xml" value="0.1" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/drawable/searchview_drawable.xml" value="0.1" />
+        <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/drawable/shadow.xml" value="0.1125" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/drawable/shape_circle.xml" value="0.129" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/drawable/shape_table_cell.xml" value="0.131" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/drawable/textview_style.xml" value="0.1" />

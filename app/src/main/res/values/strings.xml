@@ -152,5 +152,6 @@
     <string name="search_by_zone_number">search by zone number</string>
     <string name="search_by_country_name">search by country name</string>
     <string name="blank"> </string>
+    <string name="more">more</string>
 
 </resources>

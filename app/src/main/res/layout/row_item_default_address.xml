@@ -25,8 +25,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
-                android:paddingHorizontal="10dp"
-                android:background="@drawable/shape_table_cell">
+                android:paddingHorizontal="10dp">
 
                 <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/tvAddressType"
@@ -49,34 +48,42 @@
                     android:textColor="@color/black" />
 
             </LinearLayout>
+            <View style="@style/Divider"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="10dp">
 
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/tvUserName"
-                style="@style/row_item_address_tv"
-                android:text="@{Address.username}"
-                android:textStyle="bold"
-                android:textSize="18sp" />
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvUserName"
+                    style="@style/row_item_address_tv"
+                    android:text="@{Address.username}"
+                    android:textStyle="bold"
+                    android:textSize="18sp" />
 
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/tvUserEmail"
-                style="@style/row_item_address_tv"
-                android:text="@{Address.userEmail}" />
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvUserEmail"
+                    style="@style/row_item_address_tv"
+                    android:text="@{Address.userEmail}" />
 
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/tvUserAddress"
-                style="@style/row_item_address_tv"
-                android:text="@{Address.address}" />
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvUserAddress"
+                    style="@style/row_item_address_tv"
+                    android:text="@{Address.address}" />
 
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/tvUserPOBox"
-                style="@style/row_item_address_tv"
-                android:text="@{Address.PObox}" />
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvUserPOBox"
+                    style="@style/row_item_address_tv"
+                    android:text="@{Address.PObox}" />
 
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/tvUserMobile"
-                style="@style/row_item_address_tv"
-                android:text="@{Address.mobileNumber}" />
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvUserMobile"
+                    style="@style/row_item_address_tv"
+                    android:text="@{Address.mobileNumber}" />
 
+
+            </LinearLayout>
         </LinearLayout>
 
     </com.google.android.material.card.MaterialCardView>
