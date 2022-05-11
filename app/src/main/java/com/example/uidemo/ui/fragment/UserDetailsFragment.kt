@@ -114,7 +114,7 @@ class UserDetailsFragment : Fragment(), AccountFunctionAdapter.OnFunctionClick {
 
             }
             getString(R.string.Services) ->{
-
+                ( activity as MainActivity).findNavController(R.id.nav_host_fragment).navigate(R.id.serviceFragment)
             }
             getString(R.string.Live_Support) ->{
 

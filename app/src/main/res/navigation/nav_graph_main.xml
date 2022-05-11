@@ -85,4 +85,13 @@
         android:name="com.example.uidemo.ui.fragment.EditAddressFragment"
         android:label="fragment_edit_address"
         tools:layout="@layout/fragment_edit_address" />
+    <fragment
+        android:id="@+id/serviceFragment"
+        android:name="com.example.uidemo.ui.fragment.ServiceFragment"
+        android:label="fragment_service"
+        tools:layout="@layout/fragment_service" />
+    <fragment
+        android:id="@+id/serviceDetailFragment"
+        android:name="com.example.uidemo.ui.fragment.ServiceDetailFragment"
+        android:label="ServiceDetailFragment" />
 </navigation>

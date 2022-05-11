@@ -76,6 +76,7 @@ class MainActivity : AppCompatActivity() {
     fun setToolbar(toolbar: Toolbar? , IsDrawerAvailable : Boolean) {
         if (toolbar != null) {
             setSupportActionBar(toolbar)
+            supportActionBar?.setDisplayShowTitleEnabled(false)
             if (IsDrawerAvailable){
                 val toggle = ActionBarDrawerToggle(this,
                     binding.layoutDrawer,

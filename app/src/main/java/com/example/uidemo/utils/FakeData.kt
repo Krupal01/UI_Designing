@@ -101,6 +101,15 @@ class FakeData {
 
         var country = arrayOf("india", "qatar","usa", "uk","japan")
 
+        var serviceItems : ArrayList<ServiceItemModel> = arrayListOf(
+            ServiceItemModel(null,"Samsung Galaxy S10 (new color -space gray ); anther new color","1 jan 2020 10:29","Under Maintenance",null,null),
+            ServiceItemModel(null,"Samsung Galaxy S10 (new color -space gray ); anther new color","1 jan 2020 10:29","Under Maintenance","january 15, 2020",
+                arrayListOf(
+                    ServiceItemUpdates("11:11","Your order has successfully verified"),
+                    ServiceItemUpdates("11:11","Your order has successfully verified")
+                )
+            ),
+            ServiceItemModel(null,"Samsung Galaxy S10 (new color -space gray ); anther new color","1 jan 2020 10:29","Under Maintenance",null)
+        )
     }
-
 }

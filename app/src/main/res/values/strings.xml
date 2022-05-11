@@ -154,4 +154,16 @@
     <string name="blank"> </string>
     <string name="more">more</string>
 
+    <string name="item">Item : <![CDATA[<b>%s</b>]]></string>
+    <string name="sent_date">Sent Date : <![CDATA[<b>%s</b>]]></string>
+    <string name="status">Status : <![CDATA[<b>%s</b>]]></string>
+    <string name="repaired_items">Repaired Items</string>
+    <string name="under_maintenance">Under maintenance</string>
+    <string name="_12_12">12:12</string>
+    <string name="your_order_has_successfully_verified">Your order has successfully verified</string>
+    <string name="latest_updates">Latest updates</string>
+    <string name="write_yut_comment_here">Write yut Comment here</string>
+    <string name="submit_comment">Submit comment</string>
+
+
 </resources>
