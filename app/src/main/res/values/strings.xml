@@ -164,6 +164,25 @@
     <string name="latest_updates">Latest updates</string>
     <string name="write_yut_comment_here">Write yut Comment here</string>
     <string name="submit_comment">Submit comment</string>
+    <string name="edit_your_info">Edit Your Information</string>
+    <string name="date_of_birth">Date of Birth</string>
+    <string name="name">Name</string>
+    <string name="email_address">Email Address</string>
+    <string name="change_password">Change Password</string>
+    <string name="old_password">Old Password</string>
+    <string name="new_password">New Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="leading_and_trailing_spaces_will_be_ignored">Leading and trailing spaces will be ignored</string>
+    <string name="password_length_should_be_not_less_than_8_symbols">Password length should be not less than 8 symbols.</string>
+    <string name="don_t_remember_old_password">Don\'t remember old password ?</string>
+    <string name="reset_your_password_with_otp">Reset your password with OTP</string>
+    <string name="edit_personal_information">Edit Personal information</string>
+    <string name="confirm_and_save">Confirm and save</string>
+    <string name="confirm_your_mobile_number_with_the_otp">Confirm your mobile number with the OTP</string>
+    <string name="please_enter_4_digit_code_just_sent_to_this_number">Please enter 4-digit code just sent to this number</string>
+    <string name="did_not_receive_an_sms">Did not receive an SMS?</string>
+    <string name="resend_code">Resend code</string>
+    <string name="big_black_dot">⚫</string>
 
 
 </resources>

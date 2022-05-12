@@ -111,5 +111,7 @@ class FakeData {
             ),
             ServiceItemModel(null,"Samsung Galaxy S10 (new color -space gray ); anther new color","1 jan 2020 10:29","Under Maintenance",null)
         )
+
+        var FakeUser = UserPersonalInfoModel("Celeste","Wright","celeste_wright@gmail.com","+974 3435 5456","10/10/1910")
     }
 }

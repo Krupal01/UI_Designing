@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/menuEditPersonalInfo"
+        android:icon="@drawable/ic_baseline_edit_24"
+        android:iconTint="@color/teal_500"
+        app:showAsAction="always"
+        android:title="@string/edit_your_info"/>
+</menu>

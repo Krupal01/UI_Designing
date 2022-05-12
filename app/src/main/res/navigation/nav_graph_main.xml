@@ -94,4 +94,24 @@
         android:id="@+id/serviceDetailFragment"
         android:name="com.example.uidemo.ui.fragment.ServiceDetailFragment"
         android:label="ServiceDetailFragment" />
+    <fragment
+        android:id="@+id/personalInformationFragment"
+        android:name="com.example.uidemo.ui.fragment.PersonalInformationFragment"
+        android:label="fragment_personal_information"
+        tools:layout="@layout/fragment_personal_information" />
+    <fragment
+        android:id="@+id/changePasswordFragment"
+        android:name="com.example.uidemo.ui.fragment.ChangePasswordFragment"
+        android:label="fragment_change_password"
+        tools:layout="@layout/fragment_change_password" />
+    <fragment
+        android:id="@+id/editPersonalInformationFragment"
+        android:name="com.example.uidemo.ui.fragment.EditPersonalInformationFragment"
+        android:label="fragment_edit_personal_information"
+        tools:layout="@layout/fragment_edit_personal_information" />
+    <fragment
+        android:id="@+id/confirmEditPersonalInfoFragment"
+        android:name="com.example.uidemo.ui.fragment.ConfirmEditPersonalInfoFragment"
+        android:label="fragment_confirm_edit_personal_info"
+        tools:layout="@layout/fragment_confirm_edit_personal_info" />
 </navigation>

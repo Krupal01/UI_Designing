@@ -96,7 +96,7 @@ class UserDetailsFragment : Fragment(), AccountFunctionAdapter.OnFunctionClick {
     override fun setOnFunctionClickListener(accountFunctionModel: AccountFunctionModel) {
         when(accountFunctionModel.name){
             getString(R.string.Personal_Information) ->{
-
+                ( activity as MainActivity).findNavController(R.id.nav_host_fragment).navigate(R.id.personalInformationFragment)
             }
             getString(R.string.Loyalty_Programme) ->{
                 ( activity as MainActivity).findNavController(R.id.nav_host_fragment).navigate(R.id.loyaltyProgrammeFragment)
