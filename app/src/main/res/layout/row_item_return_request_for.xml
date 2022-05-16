@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="android.text.Html"/>
+        <variable
+            name="item"
+            type="com.example.uidemo.model.ItemsModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/drawable_corner5_stroke1_gray">
+
+        <LinearLayout
+            android:id="@+id/layoutRequestMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imgService"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:padding="5dp"
+                    android:setBitmap="@{item.bitmap}"/>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    style="@style/Divider" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:padding="8dp">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvItemName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text='@{Html.fromHtml(@string/item_hp_pavilion_gaming_15_bc504(item.title))}'
+                        android:lines="1"
+                        android:layout_marginVertical="5dp"
+                        android:ellipsize="end" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvSKU"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text='@{Html.fromHtml(@string/sku_00006432662(item.returnParam.return_SKU))}'
+                        android:lines="1"
+                        android:layout_marginVertical="5dp"
+                        android:ellipsize="end" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvResolution"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text='@{Html.fromHtml(@string/resolution_refund(item.returnParam.return_resolution))}'
+                        android:lines="1"
+                        android:layout_marginVertical="5dp"
+                        android:ellipsize="end" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvReturnAmount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text='@{Html.fromHtml(@string/sku_00006432662(item.returnParam.return_amount))}'
+                        android:lines="1"
+                        android:layout_marginVertical="5dp"
+                        android:ellipsize="end" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                style="@style/Divider" />
+
+
+
+        </LinearLayout>
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/dark_green"
+            android:padding="10dp"
+            android:text="@{item.returnParam.return_status}"
+            android:drawableStart='@{item.returnParam.return_status == "Complete"?@drawable/ic_baseline_check_24 : @drawable/ic_baseline_null_24}'
+            app:drawableTint="@color/dark_green"
+            android:drawablePadding="5dp"
+            app:layout_constraintTop_toBottomOf="@id/layoutRequestMain"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text='@{@string/qty+" "+item.returnParam.return_qty}'
+            app:layout_constraintTop_toBottomOf="@id/layoutRequestMain"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -18,6 +18,9 @@
     <color name="_CC000000">#CC000000</color>
     <color name="red">#F80404</color>
     <color name="green">#5DEC05</color>
+    <color name="dark_green">#4CAF50</color>
+    <color name="light_red">#F6E0E0</color>
+    <color name="light_green">#DDF4D0</color>
 
     <color name="transparentColor">#00000000</color>
 

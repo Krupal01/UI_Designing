@@ -39,13 +39,60 @@ class FakeData {
                 for (fileName in list) {
                     val istr: InputStream = context.assets.open("$dir_name/$fileName")
                     val bitmap = BitmapFactory.decodeStream(istr)
-                    items.add(ItemsModel(fileName.split(".")[0],bitmap))
+                    items.add(ItemsModel(fileName.split(".")[0],bitmap,null,2520))
                 }
             }
         } catch (e: IOException) {
             Log.i("assets",e.toString())
         }
         return items
+    }
+
+    fun fakeRequestForReturn(context: Context , dir_name : String) : ArrayList<ItemsModel>{
+        var items : ArrayList<ItemsModel> = arrayListOf()
+
+        val list: Array<String>
+        try {
+            list = context.assets.list(dir_name) as Array<String>
+            if (list.isNotEmpty()) {
+                for (fileName in list) {
+                    val istr: InputStream = context.assets.open("$dir_name/$fileName")
+                    val bitmap = BitmapFactory.decodeStream(istr)
+                    items.add(ItemsModel(fileName.split(".")[0],bitmap, ReturnParam("00006432662","Refund",15355,"Complete",1)))
+                }
+            }
+        } catch (e: IOException) {
+            Log.i("assets",e.toString())
+        }
+        return items
+    }
+
+    fun fakeReturnItemsInformation(context: Context): ArrayList<ItemsModel> {
+        return fakeItems(context,"Computers and Accessory")
+    }
+
+    fun fakeReturns(context: Context): ArrayList<MyReturnItemModel> {
+        return arrayListOf<MyReturnItemModel>(
+            MyReturnItemModel(10023649,
+                "01/11/2014",
+                "00006432662",
+                15990,
+                "Placeberg",
+                fakeRequestForReturn(context,"Computers and Accessory"),
+                "Processing","celeste_wright@gmail.com",
+                AddressCardModel("Alternate Shipping Address","celeste wright","celeste_wright@gmail.com","36/4, Abdullah Bin Mohamed, Zone 14","1120,Doha,Qatar","+974 4499 5900")
+            ),
+            MyReturnItemModel(10023649,
+                "01/11/2014",
+                "00006432662",
+                15990,
+                "Placeberg",
+                fakeRequestForReturn(context,"Computers and Accessory"),
+                "Complete",
+                "celeste_wright@gmail.com",
+                AddressCardModel("Alternate Shipping Address","celeste wright","celeste_wright@gmail.com","36/4, Abdullah Bin Mohamed, Zone 14","1120,Doha,Qatar","+974 4499 5900")
+            )
+        )
     }
 
     companion object{
@@ -113,5 +160,6 @@ class FakeData {
         )
 
         var FakeUser = UserPersonalInfoModel("Celeste","Wright","celeste_wright@gmail.com","+974 3435 5456","10/10/1910")
+
     }
 }

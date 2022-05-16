@@ -162,7 +162,7 @@
     <string name="_12_12">12:12</string>
     <string name="your_order_has_successfully_verified">Your order has successfully verified</string>
     <string name="latest_updates">Latest updates</string>
-    <string name="write_yut_comment_here">Write yut Comment here</string>
+    <string name="write_yut_comment_here">Write your Comment here</string>
     <string name="submit_comment">Submit comment</string>
     <string name="edit_your_info">Edit Your Information</string>
     <string name="date_of_birth">Date of Birth</string>
@@ -183,6 +183,41 @@
     <string name="did_not_receive_an_sms">Did not receive an SMS?</string>
     <string name="resend_code">Resend code</string>
     <string name="big_black_dot">⚫</string>
+    <string name="view_return">View Return</string>
+    <string name="rma">RMA</string>
+    <string name="order">Order #</string>
+    <string name="amount">Amount</string>
+    <string name="shipping_source">Shipping Source</string>
+    <string name="return_status">Return Status</string>
+    <string name="rma_358056182">RMA: </string>
+    <string name="processing">Processing</string>
+    <string name="our_customer_service_will_be_in_touch_soon">Our customer service will be in touch soon</string>
+    <string name="order_shipping_address">Order Shipping Address</string>
+    <string name="order_id">Order ID:</string>
+    <string name="date_requested">Date Requested:</string>
+    <string name="items_return_requested_for">Items Return Requested For</string>
+    <string name="comments">Comments</string>
+    <string name="customer_service">Customer Service</string>
+
+    <string name="item_hp_pavilion_gaming_15_bc504">Item : <![CDATA[<b>%s</b>]]></string>
+    <string name="sku_00006432662">SKU: <![CDATA[<b>%s</b>]]></string>
+    <string name="return_amount_15335_qar">Return Amount: <![CDATA[<b>%s</b>]]> QAR</string>
+    <string name="resolution_refund">Resolution: <![CDATA[<b>%s</b>]]></string>
+    <string name="comment1">sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem</string>
+    <string name="create_new_return">Create New Return</string>
+    <string name="return_items_information">Return Items Information</string>
+    <string name="item_to_return">Item to return<font color='#FF0000'>*</font></string>
+    <string name="samsung_galaxy_watch_46mm_new_edition">samsung galaxy watch 46mm (new edition)</string>
+    <string name="quantity_to_return">Quantity To Return<font color='#FF0000'>*</font></string>
+    <string name="resolution_">Resolution<font color='#FF0000'>*</font></string>
+    <string name="item_condition">Item Condition<font color='#FF0000'>*</font></string>
+    <string name="reason_for_return">Reason For Return<font color='#FF0000'>*</font></string>
+    <string name="add_new_return">Add New Return</string>
+
+    <string name="abdullah_ain_mohamed">36/4, Abdullah Bin Mohamed, Zone 14</string>
+    <string name="po_box">1120,Doha,Qatar</string>
+    <string name="mobileNo_97444995900">+974 4499 5900</string>
+    <string name="submit_request_2_items">Submit Request (%s items)</string>
 
 
 </resources>

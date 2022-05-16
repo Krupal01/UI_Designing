@@ -9,4 +9,33 @@
         <item>52 Al Khisa</item>
         <item>52 Al Khisa</item>
     </string-array>
+
+    <string-array name="Quantity">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+    <string-array name="resolution">
+        <item>Refund</item>
+        <item>Replace</item>
+        <item>Warranty</item>
+    </string-array>
+
+    <string-array name="reasonForReturn">
+        <item>unmet expectations</item>
+        <item>damaged</item>
+        <item>defective product</item>
+        <item>incorrect fit</item>
+    </string-array>
+
+    <string-array name="itemCondition">
+        <item>excellent</item>
+        <item>very good</item>
+        <item>good</item>
+        <item>average</item>
+        <item>poor</item>
+    </string-array>
 </resources>

@@ -114,4 +114,18 @@
         android:name="com.example.uidemo.ui.fragment.ConfirmEditPersonalInfoFragment"
         android:label="fragment_confirm_edit_personal_info"
         tools:layout="@layout/fragment_confirm_edit_personal_info" />
+    <fragment
+        android:id="@+id/myReturnsFragment"
+        android:name="com.example.uidemo.ui.fragment.MyReturnsFragment"
+        android:label="fragment_my_returns"
+        tools:layout="@layout/fragment_my_returns" />
+    <fragment
+        android:id="@+id/returnStatusFragment"
+        android:name="com.example.uidemo.ui.fragment.ReturnStatusFragment"
+        android:label="fragment_return_status"
+        tools:layout="@layout/fragment_return_status" />
+    <fragment
+        android:id="@+id/createNewRetrunFragment"
+        android:name="com.example.uidemo.ui.fragment.CreateNewRetrunFragment"
+        android:label="CreateNewRetrunFragment" />
 </navigation>

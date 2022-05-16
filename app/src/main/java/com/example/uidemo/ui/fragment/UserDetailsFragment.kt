@@ -111,7 +111,7 @@ class UserDetailsFragment : Fragment(), AccountFunctionAdapter.OnFunctionClick {
                 ( activity as MainActivity).findNavController(R.id.nav_host_fragment).navigate(R.id.myReviewFragment)
             }
             getString(R.string.My_Returns) ->{
-
+                ( activity as MainActivity).findNavController(R.id.nav_host_fragment).navigate(R.id.myReturnsFragment)
             }
             getString(R.string.Services) ->{
                 ( activity as MainActivity).findNavController(R.id.nav_host_fragment).navigate(R.id.serviceFragment)

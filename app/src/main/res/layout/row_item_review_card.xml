@@ -156,7 +156,6 @@
             <TableRow
                 android:layout_width="fill_parent"
                 android:layout_height="100dp"
-                android:layout_margin="1dp"
                 android:gravity="end"
                 android:background="@drawable/shape_table_cell">
 
@@ -164,12 +163,12 @@
                     android:id="@+id/btnReviewDetails"
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
-                    android:gravity="end"
+                    android:gravity="end|center_vertical"
+                    android:drawablePadding="5dp"
                     android:text="@string/view_details"
                     android:paddingVertical="15dp"
                     android:layout_weight="1"
                     android:drawableEnd="@drawable/ic_baseline_arrow_circle_right_24"
-                    android:background="@color/white"
                     android:clickable="true"
                     android:focusable="true" />
             </TableRow>

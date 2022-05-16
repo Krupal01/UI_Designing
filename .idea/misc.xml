@@ -6,8 +6,17 @@
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/drawable/card_number_text_drawable.xml" value="0.1" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/drawable/chip_background.xml" value="0.1165" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/drawable/corner_5.xml" value="0.1" />
+        <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/drawable/custom_check_button.xml" value="0.1615" />
+        <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/drawable/custom_checkbox.xml" value="0.1615" />
+        <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/drawable/custom_checked_layout.xml" value="0.1115" />
+        <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/drawable/custom_unchecked_layout.xml" value="0.1115" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/drawable/disable_btn_ticket_download.xml" value="0.1" />
+        <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/drawable/drawable_circle_shape.xml" value="0.1785" />
+        <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/drawable/drawable_corner5_stroke1_gray.xml" value="0.1055" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/drawable/drawable_like_btn.xml" value="0.1" />
+        <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/drawable/drawable_return_status_completed.xml" value="0.1405" />
+        <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/drawable/drawable_return_status_processing.xml" value="0.1405" />
+        <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/drawable/drawable_tooltip.xml" value="0.105" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/drawable/dropdown_icon_selector.xml" value="0.1375" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/drawable/dropdown_search_drawable.xml" value="0.121" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/drawable/dropdown_selector.xml" value="0.1375" />
@@ -18,9 +27,12 @@
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/drawable/header_style.xml" value="0.1" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.121" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/drawable/ic_baseline_arrow_circle_right_24.xml" value="0.121" />
+        <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/drawable/ic_baseline_check_box_24.xml" value="0.1115" />
+        <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/drawable/ic_baseline_check_box_outline_blank_24.xml" value="0.1615" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/drawable/ic_baseline_date_range_24.xml" value="0.1065" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/drawable/ic_baseline_edit_24.xml" value="0.1065" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/drawable/ic_baseline_mail_outline_24.xml" value="0.1065" />
+        <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/drawable/ic_baseline_null_24.xml" value="0.1035" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/drawable/ic_baseline_perm_identity_24.xml" value="0.1065" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.1065" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/drawable/ic_baseline_phone_android_24.xml" value="0.1065" />
@@ -50,19 +62,23 @@
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/layout/fragment_categories.xml" value="0.14" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/layout/fragment_change_password.xml" value="0.22" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/layout/fragment_confirm_edit_personal_info.xml" value="0.12" />
+        <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/layout/fragment_create_new_retrun.xml" value="0.25" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/layout/fragment_deals.xml" value="0.18854166666666666" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/layout/fragment_edit_address.xml" value="0.25" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/layout/fragment_edit_personal_information.xml" value="0.21" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/layout/fragment_home_.xml" value="0.15364583333333334" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/layout/fragment_login.xml" value="0.20416666666666666" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/layout/fragment_loyalty_programme.xml" value="0.22" />
+        <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/layout/fragment_my_returns.xml" value="0.1838768115942029" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/layout/fragment_my_review.xml" value="0.17447916666666666" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/layout/fragment_my_ticket.xml" value="0.25" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/layout/fragment_no_review.xml" value="0.17447916666666666" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/layout/fragment_notification.xml" value="0.18854166666666666" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/layout/fragment_personal_information.xml" value="0.22" />
+        <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/layout/fragment_return_status.xml" value="0.25" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/layout/fragment_review_details.xml" value="0.2" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/layout/fragment_review_list.xml" value="0.16041666666666668" />
+        <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/layout/fragment_review_status.xml" value="0.11458333333333333" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/layout/fragment_saved_cards.xml" value="0.17889492753623187" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/layout/fragment_service.xml" value="0.2" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/layout/fragment_service_detail.xml" value="0.1" />
@@ -77,10 +93,13 @@
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/layout/row_item_default_address.xml" value="0.19791666666666666" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/layout/row_item_function.xml" value="0.16" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/layout/row_item_items.xml" value="0.18854166666666666" />
+        <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/layout/row_item_my_returns.xml" value="0.22" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/layout/row_item_notification_cart_items.xml" value="0.18854166666666666" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/layout/row_item_past_notification.xml" value="0.18854166666666666" />
+        <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/layout/row_item_return_item_information.xml" value="0.35258964143426297" />
+        <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/layout/row_item_return_request_for.xml" value="0.25" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/layout/row_item_review_card.xml" value="0.22" />
-        <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/layout/row_item_service_card.xml" value="0.1" />
+        <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/layout/row_item_service_card.xml" value="0.37817258883248733" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/layout/row_item_service_update_comment.xml" value="0.12578616352201258" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/layout/row_item_ticket.xml" value="0.25" />
         <entry key="..\:/Tatvasoft_Kotlin/UIDemo/app/src/main/res/layout/row_item_transaction.xml" value="0.1" />
