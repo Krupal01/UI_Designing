@@ -128,4 +128,14 @@
         android:id="@+id/createNewRetrunFragment"
         android:name="com.example.uidemo.ui.fragment.CreateNewRetrunFragment"
         android:label="CreateNewRetrunFragment" />
+    <fragment
+        android:id="@+id/myOrderFragment"
+        android:name="com.example.uidemo.ui.fragment.MyOrderFragment"
+        android:label="fragment_my_order"
+        tools:layout="@layout/fragment_my_order" />
+    <fragment
+        android:id="@+id/myOrderDetailsFragment"
+        android:name="com.example.uidemo.ui.fragment.MyOrderDetailsFragment"
+        android:label="fragment_my_order_details"
+        tools:layout="@layout/fragment_my_order_details" />
 </navigation>

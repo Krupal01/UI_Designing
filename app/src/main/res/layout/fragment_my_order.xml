@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragment.MyOrderFragment"
+    android:orientation="vertical"
+    android:background="@color/gray">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/layoutNotificationFrgAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/Notificationtoolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="2dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginVertical="2dp"
+                android:background="@drawable/searchview_drawable"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/toolbarTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:text="@string/my_orders" />
+
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipgrp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipAll"
+            style="@style/CustomChipChoiceStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:chipStrokeColor="@color/gray_BBBBBB"
+            app:chipStrokeWidth="1sp"
+            android:text="@string/all"/>
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipCompleted"
+            style="@style/CustomChipChoiceStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/dark_green"
+            android:textColor="@color/white"
+            android:text="@string/completed"/>
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipPending"
+            style="@style/CustomChipChoiceStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/light_gray"
+            android:textColor="@color/black"
+            android:text="@string/pending"/>
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipProcessing"
+            style="@style/CustomChipChoiceStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/orange"
+            android:textColor="@color/white"
+            android:text="@string/processing"/>
+
+    </com.google.android.material.chip.ChipGroup>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcvOrders"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"/>
+
+
+
+</LinearLayout>

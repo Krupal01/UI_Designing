@@ -219,5 +219,16 @@
     <string name="mobileNo_97444995900">+974 4499 5900</string>
     <string name="submit_request_2_items">Submit Request (%s items)</string>
 
+    <string name="no">No</string>
+    <string name="item_for">Item for</string>
+    <string name="completed">Completed</string>
+    <string name="pending">Pending</string>
+    <string name="order_placed">Order Placed:</string>
+    <string name="delivery">Delivery:</string>
+    <string name="items">Items</string>
+
+    <string name="qty_1">QTY : <![CDATA[<b>%s</b>]]></string>
+    <string name="_1959_QAR"><![CDATA[<big>%s</big>]]> QAR</string>
+
 
 </resources>

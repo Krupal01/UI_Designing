@@ -62,6 +62,11 @@ class UserDetailsFragment : Fragment(), AccountFunctionAdapter.OnFunctionClick {
             ( activity as MainActivity).findNavController(R.id.nav_host_fragment).navigate(R.id.settingFragment)
         }
 
+        binding.layoutMyOrder.setOnClickListener {
+            ( activity as MainActivity).findNavController(R.id.nav_host_fragment).navigate(R.id.myOrderFragment)
+
+        }
+
         binding.layoutMyTicket.setOnClickListener {
             ( activity as MainActivity).findNavController(R.id.nav_host_fragment).navigate(R.id.myTicketFragment)
         }

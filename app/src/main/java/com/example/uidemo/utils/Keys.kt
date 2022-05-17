@@ -7,5 +7,6 @@ class Keys {
         var USER_DATA_KEY = "userData"
         var USER_NUMBER_KEY = "user number"
         var MY_RETURN_KEY = "my return key"
+        var MY_ORDER_KEY = "my order key"
     }
 }

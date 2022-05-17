@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="android.text.Html"/>
+        <variable
+            name="ordersitem"
+            type="com.example.uidemo.model.MyOrderItemModel" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="2dp"
+        android:layout_margin="3dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/itemImage"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:setBitmap="@{ordersitem.itemImage}"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvItemName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{ordersitem.itemName}"
+                android:textSize="18sp"
+                android:lines="2"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                android:ellipsize="end"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_toRightOf="@id/itemImage" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvItemColor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text='@{"Color : "+ordersitem.itemColor}'
+                android:lines="1"
+                android:layout_marginHorizontal="10dp"
+                android:layout_toRightOf="@id/itemImage"
+                android:layout_below="@id/tvItemName" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAddReview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+                android:text="Add Review"
+                android:layout_below="@id/tvItemColor"
+                android:layout_alignParentEnd="true"
+                app:icon="@drawable/ic_baseline_rate_review_24" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/divider1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/btnAddReview" />
+
+            <LinearLayout
+                android:id="@+id/layoutBottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/divider1">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:textColor="@color/black"
+                    android:padding="8dp"
+                    android:text='@{Html.fromHtml(@string/_1959_QAR(ordersitem.itemPrice))}' />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:textColor="@color/black"
+                    android:text='@{Html.fromHtml(@string/qty_1(ordersitem.itemQuantity))}' />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:textColor="@color/black"
+                    android:padding="8dp"
+                    android:text='@{Html.fromHtml(@string/_1959_QAR(ordersitem.totalPrice))}' />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

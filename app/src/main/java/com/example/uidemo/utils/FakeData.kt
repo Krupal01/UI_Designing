@@ -161,5 +161,69 @@ class FakeData {
 
         var FakeUser = UserPersonalInfoModel("Celeste","Wright","celeste_wright@gmail.com","+974 3435 5456","10/10/1910")
 
+        var FakeOrders = arrayListOf(
+            MyOrderModel(
+                358056182,
+                "1 jan 2020 10:29",
+                "Processing",
+                arrayListOf(
+                    MyOrderItemModel(null,"Samsung Galaxy Watch 46mm (new Edition)","Space Gray",1959,1),
+                    MyOrderItemModel(null,"Samsung Galaxy Watch 46mm (new Edition)","Space Gray",1959,1),
+                    MyOrderItemModel(null,"Samsung Galaxy Watch 46mm (new Edition)","Space Gray",1959,1)
+                ),
+                "15 jan 2020 10:29",
+                "Free",
+                2820,
+                -300,
+                20,
+                -20,
+                -20,
+                -20,
+                2520,
+                100
+            ),
+            MyOrderModel(
+                358056182,
+                "1 jan 2020 10:29",
+                "Complete",
+                arrayListOf(
+                    MyOrderItemModel(null,"Samsung Galaxy Watch 46mm (new Edition)","Space Gray",1959,1),
+                    MyOrderItemModel(null,"Samsung Galaxy Watch 46mm (new Edition)","Space Gray",1959,1),
+                    MyOrderItemModel(null,"Samsung Galaxy Watch 46mm (new Edition)","Space Gray",1959,1)
+                ),
+                "15 jan 2020 10:29",
+                "Free",
+                2820,
+                -300,
+                20,
+                -20,
+                -20,
+                -20,
+                2520,
+                100
+            ),
+            MyOrderModel(
+                358056182,
+                "1 jan 2020 10:29",
+                "Cancelled",
+                arrayListOf(
+                    MyOrderItemModel(null,"Samsung Galaxy Watch 46mm (new Edition)","Space Gray",1959,1),
+                    MyOrderItemModel(null,"Samsung Galaxy Watch 46mm (new Edition)","Space Gray",1959,1),
+                    MyOrderItemModel(null,"Samsung Galaxy Watch 46mm (new Edition)","Space Gray",1959,1)
+                ),
+                "15 jan 2020 10:29",
+                "Free",
+                2820,
+                -300,
+                20,
+                -20,
+                -20,
+                -20,
+                2520,
+                100
+            )
+        )
+
+
     }
 }
