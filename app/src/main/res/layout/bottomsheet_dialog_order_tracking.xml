@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="orderItem"
+            type="com.example.uidemo.model.MyOrderModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        style="?attr/bottomSheetStyle">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/labelSheetTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Order Tracking"
+            android:textSize="22sp"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Refresh"
+            android:textColor="@color/teal_500"
+            android:padding="5dp"
+            app:layout_constraintLeft_toRightOf="@id/labelSheetTitle"
+            app:layout_constraintTop_toTopOf="@id/labelSheetTitle"
+            app:layout_constraintBottom_toBottomOf="@id/labelSheetTitle"
+            android:layout_marginHorizontal="15dp"
+            android:drawableStart="@drawable/ic_baseline_autorenew_24"
+            android:drawablePadding="5dp"
+            android:drawableTint="@color/teal_500"
+            android:gravity="center_vertical" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btnClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_clear_24"
+            android:backgroundTint="@color/white"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/layoutOrderNumber"
+            style="@style/fragmentOrderDetails_paramLayout"
+            android:padding="5dp"
+            app:layout_constraintTop_toBottomOf="@id/labelSheetTitle"
+            app:layout_constraintLeft_toLeftOf="parent">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/labelOrderNumber"
+                style="@style/fragmentOrderDetails_paramTextLabel"
+                android:text="Order Number :" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvOrderNumber"
+                style="@style/fragmentOrderDetails_paramText"
+                android:text='@{""+orderItem.orderNumber}'/>
+        </LinearLayout>
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/dividerOrderName"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginHorizontal="4dp"
+            app:layout_constraintTop_toBottomOf="@id/layoutOrderNumber" />
+
+        <LinearLayout
+            android:id="@+id/layoutOrderPurchaseDate"
+            style="@style/fragmentOrderDetails_paramLayout"
+            android:padding="5dp"
+            app:layout_constraintTop_toBottomOf="@id/dividerOrderName"
+            app:layout_constraintLeft_toLeftOf="parent">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/labelOrderPurchaseDate"
+                style="@style/fragmentOrderDetails_paramTextLabel"
+                android:text="Purchase Date :" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvOrderPurchaseDate"
+                style="@style/fragmentOrderDetails_paramText"
+                android:text='@{orderItem.orderDeliveryDate}'
+                />
+        </LinearLayout>
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/dividerPurchaseDate"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginHorizontal="4dp"
+            app:layout_constraintTop_toBottomOf="@id/layoutOrderPurchaseDate" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/labelLatestUpdates"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Latest updates"
+            android:textSize="18sp"
+            android:padding="5dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/dividerPurchaseDate"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvUpdateDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{orderItem.orderLatestUpdateDate}"
+            android:padding="5dp"
+            app:layout_constraintLeft_toRightOf="@id/labelLatestUpdates"
+            app:layout_constraintTop_toTopOf="@id/labelLatestUpdates"
+            app:layout_constraintBottom_toBottomOf="@id/labelLatestUpdates" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcvUpdates"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            app:layout_constraintTop_toBottomOf="@id/labelLatestUpdates" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/labelDeliveryInformation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delivery Information :"
+            android:textSize="18sp"
+            android:padding="5dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/rcvUpdates"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/layoutOrderTTNNumber"
+            style="@style/fragmentOrderDetails_paramLayout"
+            android:padding="5dp"
+            app:layout_constraintTop_toBottomOf="@id/labelDeliveryInformation"
+            app:layout_constraintLeft_toLeftOf="parent">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/labelOrderOrderTTNNumber"
+                style="@style/fragmentOrderDetails_paramTextLabel"
+                android:text="TTN Number :" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvOrderOrderTTNNumber"
+                style="@style/fragmentOrderDetails_paramText"
+                android:text="@{orderItem.orderDeliveryInfo.TTNnumber}"/>
+        </LinearLayout>
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/dividerOrderTTNNumber"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginHorizontal="4dp"
+            app:layout_constraintTop_toBottomOf="@id/layoutOrderTTNNumber" />
+
+        <LinearLayout
+            android:id="@+id/layoutOrderRoute"
+            style="@style/fragmentOrderDetails_paramLayout"
+            android:padding="5dp"
+            app:layout_constraintTop_toBottomOf="@id/dividerOrderTTNNumber"
+            app:layout_constraintLeft_toLeftOf="parent">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/labelOrderRoute"
+                style="@style/fragmentOrderDetails_paramTextLabel"
+                android:text="Route :" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvOrderRoute"
+                style="@style/fragmentOrderDetails_paramText"
+                android:text="@{orderItem.orderDeliveryInfo.route}"/>
+        </LinearLayout>
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/dividerRoute"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginHorizontal="4dp"
+            app:layout_constraintTop_toBottomOf="@id/layoutOrderRoute" />
+
+        <LinearLayout
+            android:id="@+id/layoutOrderDeliveryAddress"
+            style="@style/fragmentOrderDetails_paramLayout"
+            android:padding="5dp"
+            app:layout_constraintTop_toBottomOf="@id/dividerRoute"
+            app:layout_constraintLeft_toLeftOf="parent">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/labelOrderDeliveryAddress"
+                style="@style/fragmentOrderDetails_paramTextLabel"
+                android:text="Delivery Address :" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvOrderDeliveryAddress"
+                style="@style/fragmentOrderDetails_paramText"
+                android:text="@{orderItem.orderDeliveryInfo.deliveryAddress}"/>
+        </LinearLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/labelSendUsMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Send us message"
+            android:textSize="18sp"
+            android:padding="5dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/layoutOrderDeliveryAddress"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutWriteComment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:layout_constraintTop_toBottomOf="@id/labelSendUsMessage"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etComment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/write_yut_comment_here"
+                android:gravity="start"
+                android:lines="6" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSubmitComment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/yellow"
+            android:text="@string/submit"
+            android:textColor="@color/black"
+            android:layout_margin="10dp"
+            app:layout_constraintTop_toBottomOf="@id/layoutWriteComment" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

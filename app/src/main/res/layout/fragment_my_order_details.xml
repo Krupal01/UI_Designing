@@ -66,7 +66,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="3dp"
-                    android:background='@{orderItem.orderStatus == "Complete"?@drawable/drawable_return_status_completed : @drawable/drawable_return_status_processing}'
+                    android:background='@{orderItem.orderStatus == "Complete"?@drawable/drawable_return_status_completed : @drawable/drawable_my_order_processing}'
                     app:layout_constraintTop_toTopOf="parent">
 
                     <com.google.android.material.textview.MaterialTextView
@@ -80,6 +80,13 @@
                         android:padding="5dp"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintLeft_toLeftOf="parent" />
+
+                    <com.google.android.material.divider.MaterialDivider
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/white"
+                        android:visibility='@{orderItem.orderStatus == "Complete"? View.GONE : View.VISIBLE}'
+                        app:layout_constraintTop_toBottomOf="@id/tvRMANumber"/>
 
                     <com.google.android.material.textview.MaterialTextView
                         android:id="@+id/tvReturnStatus"
@@ -99,7 +106,7 @@
                         android:id="@+id/tvProcessingMsg"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/our_customer_service_will_be_in_touch_soon"
+                        android:text="@string/please_be_aware_this_is_a_preorder_the_products_will_be_shipped_to_you_once_they_become_available"
                         android:textColor="@color/white"
                         android:padding="5dp"
                         android:visibility='@{orderItem.orderStatus == "Complete"? View.GONE : View.VISIBLE}'
@@ -353,6 +360,7 @@
                             android:layout_height="wrap_content"
                             android:text="Return"
                             android:layout_margin="1dp"
+                            android:visibility='@{orderItem.orderStatus == "Complete"? View.VISIBLE : View.GONE }'
                             android:layout_weight="1" />
 
                         <com.google.android.material.button.MaterialButton
@@ -363,7 +371,19 @@
                             android:backgroundTint="@color/yellow"
                             android:textColor="@color/black"
                             android:layout_margin="1dp"
+                            android:visibility='@{orderItem.orderStatus == "Complete"? View.VISIBLE : View.GONE }'
                             android:layout_weight="1" />
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnCancle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Cancle"
+                            android:backgroundTint="@color/red"
+                            android:textColor="@color/white"
+                            android:visibility='@{orderItem.orderStatus == "Complete"? View.GONE : View.VISIBLE}'
+                            android:layout_margin="1dp"
+                            android:layout_weight="1" />
+
                     </LinearLayout>
 
                     <com.google.android.material.card.MaterialCardView

@@ -229,6 +229,11 @@
 
     <string name="qty_1">QTY : <![CDATA[<b>%s</b>]]></string>
     <string name="_1959_QAR"><![CDATA[<big>%s</big>]]> QAR</string>
+    <string name="order_number">Order Number</string>
+    <string name="submit">Submit</string>
+
+    <string name="orderUpdateMsgData"><![CDATA[<font color= "#03DAC5" >%1$s</font>]]> <![CDATA[<font color= "#000000" >%2$s</font>]]></string>
+    <string name="please_be_aware_this_is_a_preorder_the_products_will_be_shipped_to_you_once_they_become_available">Please be aware this is a preorder. The products will be shipped to you once they become available</string>
 
 
 </resources>

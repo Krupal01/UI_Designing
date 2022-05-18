@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <import type="android.text.Html"/>
+        <variable
+            name="orderUpdate"
+            type="com.example.uidemo.model.OrderUpdate" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="10dp"
+            android:gravity="start"
+            android:text="@{orderUpdate.time}"
+            android:textColor="@color/black" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="10dp"
+            android:gravity="start"
+            android:lines="2"
+            android:text='@{Html.fromHtml(@string/orderUpdateMsgData(orderUpdate.MsgBy,orderUpdate.Msg))}'
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+</layout>

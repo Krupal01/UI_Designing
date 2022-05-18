@@ -3,10 +3,12 @@ package com.example.uidemo.ui.fragment
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.uidemo.R
 import com.example.uidemo.adapter.MyOrderItemParentAdapter
+import com.example.uidemo.adapter.MyOrderProcessingItemAdapter
 import com.example.uidemo.databinding.FragmentMyOrderDetailsBinding
 import com.example.uidemo.model.MyOrderItemModel
 import com.example.uidemo.model.MyOrderModel
@@ -38,6 +40,7 @@ class MyOrderDetailsFragment : Fragment() {
 
     private lateinit var binding : FragmentMyOrderDetailsBinding
     private var myOrderItemParentAdapter = MyOrderItemParentAdapter()
+    private var myOrderProcessingItemAdapter = MyOrderProcessingItemAdapter()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -57,9 +60,23 @@ class MyOrderDetailsFragment : Fragment() {
         val orderDetails = requireArguments().get(Keys.MY_ORDER_KEY) as MyOrderModel
         binding.orderItem = orderDetails
 
-        setOrderItemRecycler(orderDetails.orderItems)
+        if (orderDetails.orderStatus == "Complete"){
+            setOrderItemRecycler(orderDetails.orderItems)
+        }else{
+            setOrderProcessingRecycler(orderDetails.orderItems)
+        }
 
+        binding.btnTracking.setOnClickListener {
+            val bundle = Bundle()
+            bundle.putSerializable(Keys.MY_ORDER_KEY,orderDetails)
+            (activity as MainActivity).findNavController(R.id.nav_host_fragment).navigate(R.id.orderTrackingBottomSheetFragment,bundle)
+        }
+    }
 
+    private fun setOrderProcessingRecycler(orderItems: ArrayList<MyOrderItemModel>){
+        binding.rcvOrderItems.layoutManager = LinearLayoutManager(context)
+        binding.rcvOrderItems.adapter = myOrderProcessingItemAdapter
+        myOrderProcessingItemAdapter.submitData(orderItems)
     }
 
     private fun setOrderItemRecycler(orderItems: ArrayList<MyOrderItemModel>) {

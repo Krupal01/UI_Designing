@@ -18,6 +18,9 @@ data class MyOrderModel(
     var orderLoyalityPoint : Long,
     var orderTotal : Long,
     var orderRefund : Long,
+    var orderLatestUpdates : ArrayList<OrderUpdate>? = arrayListOf(),
+    var orderLatestUpdateDate : String ? = orderDeliveryDate,
+    var orderDeliveryInfo: DeliveryInfo
 
 ):Serializable{
 
@@ -35,9 +38,32 @@ data class MyOrderItemModel(
  var itemName : String,
  var itemColor : String,
  var itemPrice : Long,
- var itemQuantity : Long
+ var itemQuantity : Int,
+ var itemTime : String? = "00:00:00",
+ var isFavorite : Boolean = false
 ):Serializable{
     fun getTotalPrice():Long{
         return itemPrice * itemQuantity
     }
+    fun getHour(): String {
+        return itemTime?.split(":")?.get(0) ?: "00"
+    }
+    fun getMinute(): String {
+        return itemTime?.split(":")?.get(1) ?: "00"
+    }
+    fun getSecond(): String {
+        return itemTime?.split(":")?.get(2) ?: "00"
+    }
 }
+
+data class OrderUpdate(
+    var time:String,
+    var MsgBy : String,
+    var Msg : String
+) : Serializable{}
+
+data class DeliveryInfo(
+    var TTNnumber : String,
+    var route : String,
+    var DeliveryAddress : String
+): Serializable{}

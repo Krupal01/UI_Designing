@@ -167,9 +167,9 @@ class FakeData {
                 "1 jan 2020 10:29",
                 "Processing",
                 arrayListOf(
-                    MyOrderItemModel(null,"Samsung Galaxy Watch 46mm (new Edition)","Space Gray",1959,1),
-                    MyOrderItemModel(null,"Samsung Galaxy Watch 46mm (new Edition)","Space Gray",1959,1),
-                    MyOrderItemModel(null,"Samsung Galaxy Watch 46mm (new Edition)","Space Gray",1959,1)
+                    MyOrderItemModel(null,"Samsung Galaxy Watch 46mm (new Edition)","Space Gray",1959,1,"15:22:22",false),
+                    MyOrderItemModel(null,"Samsung Galaxy Watch 46mm (new Edition)","Space Gray",1959,1,"15:22:22",true),
+                    MyOrderItemModel(null,"Samsung Galaxy Watch 46mm (new Edition)","Space Gray",1959,1,"15:22:22",false)
                 ),
                 "15 jan 2020 10:29",
                 "Free",
@@ -180,7 +180,14 @@ class FakeData {
                 -20,
                 -20,
                 2520,
-                100
+                100,
+                arrayListOf(
+                    OrderUpdate("23:22","Alif:","Your order has been successfully verified"),
+                    OrderUpdate("19:29","Alif:","Your order Received"),
+                    OrderUpdate("18:02","Customer Name:","Your order has been successfully verified"),
+                ),
+                "15 jan 2020 10:29",
+                DeliveryInfo("20400157513600","Al Wakrah - Doha","ibn Abdul Mutaib Street 21")
             ),
             MyOrderModel(
                 358056182,
@@ -200,16 +207,23 @@ class FakeData {
                 -20,
                 -20,
                 2520,
-                100
+                100,
+                arrayListOf(
+                    OrderUpdate("23:22","Alif:","Your order has been successfully verified"),
+                    OrderUpdate("19:29","Alif:","Your order Received"),
+                    OrderUpdate("18:02","Customer Name:","Your order has been successfully verified"),
+                ),
+                "15 jan 2020 10:29",
+                DeliveryInfo("20400157513600","Al Wakrah - Doha","ibn Abdul Mutaib Street 21")
             ),
             MyOrderModel(
                 358056182,
                 "1 jan 2020 10:29",
                 "Cancelled",
                 arrayListOf(
-                    MyOrderItemModel(null,"Samsung Galaxy Watch 46mm (new Edition)","Space Gray",1959,1),
-                    MyOrderItemModel(null,"Samsung Galaxy Watch 46mm (new Edition)","Space Gray",1959,1),
-                    MyOrderItemModel(null,"Samsung Galaxy Watch 46mm (new Edition)","Space Gray",1959,1)
+                    MyOrderItemModel(null,"Samsung Galaxy Watch 46mm (new Edition)","Space Gray",1959,1,"15:22:22",false),
+                    MyOrderItemModel(null,"Samsung Galaxy Watch 46mm (new Edition)","Space Gray",1959,1,"15:22:22",true),
+                    MyOrderItemModel(null,"Samsung Galaxy Watch 46mm (new Edition)","Space Gray",1959,1,"15:22:22",false)
                 ),
                 "15 jan 2020 10:29",
                 "Free",
@@ -220,7 +234,14 @@ class FakeData {
                 -20,
                 -20,
                 2520,
-                100
+                100,
+                arrayListOf(
+                    OrderUpdate("23:22","Alif:","Your order has been successfully verified"),
+                    OrderUpdate("19:29","Alif:","Your order Received"),
+                    OrderUpdate("18:02","Customer Name:","Your order has been successfully verified"),
+                ),
+                "15 jan 2020 10:29",
+                DeliveryInfo("20400157513600","Al Wakrah - Doha","ibn Abdul Mutaib Street 21")
             )
         )
 

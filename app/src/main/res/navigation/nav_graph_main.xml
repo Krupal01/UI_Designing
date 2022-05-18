@@ -138,4 +138,8 @@
         android:name="com.example.uidemo.ui.fragment.MyOrderDetailsFragment"
         android:label="fragment_my_order_details"
         tools:layout="@layout/fragment_my_order_details" />
+    <dialog
+        android:id="@+id/orderTrackingBottomSheetFragment"
+        android:name="com.example.uidemo.ui.bottomsheet.OrderTrackingBottomSheetFragment"
+        android:label="OrderTrackingBottomSheetFragment" />
 </navigation>
