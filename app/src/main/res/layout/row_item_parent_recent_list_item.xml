@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="wishlistItem"
+            type="com.example.uidemo.model.WishListItemModel" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/btnItemFavorite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/drawable_like_btn"
+                android:padding="3dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="2dp"
+                android:tint="@color/red"
+                android:src="@{wishlistItem.favorite ? @drawable/ic_baseline_favorite_24 : @drawable/ic_baseline_favorite_border_24 }"  />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvExclusive_Preorder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:padding="3dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:textColor="@color/white" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgFavoriteItem"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:scaleType="fitXY"
+                android:setBitmap="@{wishlistItem.imgBitmap}" />
+
+            <LinearLayout
+                android:id="@+id/layoutDetailsFavoriteItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@id/imgFavoriteItem"
+                android:gravity="center_horizontal"
+                android:layout_marginHorizontal="2dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvQuantityFavoriteItem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:scaleX="0.7"
+                    android:scaleY="0.7"
+                    android:lines="1"
+                    android:drawableEnd="@drawable/circle_chain"
+                    android:SetQuantity="@{wishlistItem.quantity}"
+                    android:gravity="center" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvTitleFavoriteItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="17sp"
+                    android:lines="2"
+                    android:textColor="@color/black"
+                    android:text="@{wishlistItem.name}"
+                    android:ellipsize="end"
+                    android:gravity="center" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvMainPriceFavoriteItem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text='@{""+wishlistItem.mainPrice}'
+                    android:textSize="17sp"
+                    android:textColor="@color/gray" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvPriceFavoriteItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:textSize="22sp"
+                    android:lines="1"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:text="@{wishlistItem.price}"
+                    android:gravity="center" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvLeftFavoriteItem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text='@{@string/only__left(wishlistItem.leftItem)}'
+                    android:textColor="@color/red" />
+
+                <LinearLayout
+                    android:id="@+id/layoutTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:layout_below="@id/tvQuantityFavoriteItem"
+                    android:layout_alignParentStart="true">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="@{wishlistItem.hour}"
+                        android:textSize="18sp"
+                        android:paddingHorizontal="5dp"
+                        android:gravity="center_vertical"
+                        android:layout_margin="1dp"
+                        android:textColor="@color/black"
+                        android:background="@drawable/drawable_time_text" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text=":"
+                        android:textSize="18sp"
+                        android:gravity="center_vertical"
+                        android:textStyle="bold"
+                        android:layout_margin="1dp"
+                        android:textColor="@color/black" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="@{wishlistItem.minute}"
+                        android:textSize="18sp"
+                        android:paddingHorizontal="5dp"
+                        android:gravity="center_vertical"
+                        android:layout_margin="1dp"
+                        android:textColor="@color/black"
+                        android:background="@drawable/drawable_time_text" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text=":"
+                        android:textSize="18sp"
+                        android:gravity="center_vertical"
+                        android:textStyle="bold"
+                        android:layout_margin="1dp"
+                        android:textColor="@color/black" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="@{wishlistItem.second}"
+                        android:textSize="18sp"
+                        android:paddingHorizontal="5dp"
+                        android:gravity="center_vertical"
+                        android:layout_margin="1dp"
+                        android:textColor="@color/black"
+                        android:background="@drawable/drawable_time_text" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAddToCartFavoriteItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layoutDetailsFavoriteItem"
+                android:backgroundTint="@color/teal_700"
+                android:text="@string/add_to_cart"
+                android:insetBottom="0dp"
+                app:cornerRadius="0dp" />
+
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>

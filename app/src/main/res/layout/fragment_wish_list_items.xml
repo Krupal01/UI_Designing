@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragment.WishListItemsFragment"
+    android:orientation="vertical"
+    android:background="@color/gray">
+
+
+    <LinearLayout
+        android:id="@+id/layoutTopButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnFilter"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:cornerRadius="0dp"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:gravity="center"
+            app:icon="@drawable/ic_baseline_tune_24"
+            app:iconTint="@color/teal_500"
+            android:textSize="15sp"
+            app:strokeColor="@color/gray_BBBBBB"
+            android:text="@string/not_selected"/>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSort"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:textSize="15sp"
+            android:text="@string/by_date_added"
+            app:icon="@drawable/ic_baseline_swap_vert_24"
+            app:iconTint="@color/teal_500"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            app:strokeColor="@color/gray_BBBBBB"
+            app:cornerRadius="0dp"/>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcvWishListItems"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layoutTopButtons"
+        android:layout_margin="3dp"/>
+
+</RelativeLayout>

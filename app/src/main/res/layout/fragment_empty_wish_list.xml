@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragment.EmptyWishListFragment"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="30dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:src="@drawable/ic_baseline_favorite_24"
+        app:tint="@color/dark_gray" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="@string/your_wishlist_is_empty"
+        android:textColor="@color/black"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text="@string/to_add_some_items_see_our_categories"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnShopCategories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/shop_categories"
+        android:backgroundTint="@color/yellow"
+        app:elevation="10dp"
+        app:cornerRadius="5dp"
+        android:textColor="@color/black"
+        android:paddingHorizontal="40dp"/>
+
+</LinearLayout>

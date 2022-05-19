@@ -23,6 +23,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/drawable_like_btn"
+                android:padding="3dp"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
                 android:layout_margin="2dp"
@@ -33,6 +34,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="12sp"
+                android:padding="3dp"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentStart="true"
                 android:textColor="@color/white" />
@@ -59,7 +61,9 @@
                     android:id="@+id/tvQuantityFavoriteItem"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="12sp"
+                    android:textSize="20sp"
+                    android:scaleY="0.7"
+                    android:scaleX="0.7"
                     android:lines="1"
                     android:drawableEnd="@drawable/circle_chain"
                     android:SetQuantity="@{wishListItem.quantity}"
@@ -71,6 +75,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="17sp"
                     android:lines="2"
+                    android:layout_marginHorizontal="2dp"
                     android:textColor="@color/black"
                     android:text="@{wishListItem.name}"
                     android:ellipsize="end"
@@ -95,7 +100,8 @@
                 android:layout_below="@id/layoutDetailsFavoriteItem"
                 android:backgroundTint="@color/teal_700"
                 android:text="@string/add_to_cart"
-                app:cornerRadius="0dp" />
+                app:cornerRadius="0dp"
+                android:insetBottom="0dp"/>
 
         </RelativeLayout>
 

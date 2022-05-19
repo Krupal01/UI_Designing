@@ -142,4 +142,14 @@
         android:id="@+id/orderTrackingBottomSheetFragment"
         android:name="com.example.uidemo.ui.bottomsheet.OrderTrackingBottomSheetFragment"
         android:label="OrderTrackingBottomSheetFragment" />
+    <fragment
+        android:id="@+id/whishListFragment"
+        android:name="com.example.uidemo.ui.fragment.WhishListFragment"
+        android:label="fragment_whish_list"
+        tools:layout="@layout/fragment_whish_list" />
+    <fragment
+        android:id="@+id/recentlyViewedFragment"
+        android:name="com.example.uidemo.ui.fragment.RecentlyViewedFragment"
+        android:label="fragment_recently_viewed"
+        tools:layout="@layout/fragment_recently_viewed" />
 </navigation>

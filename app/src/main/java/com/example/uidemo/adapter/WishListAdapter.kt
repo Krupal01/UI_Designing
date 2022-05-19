@@ -31,7 +31,7 @@ class WishListAdapter : RecyclerView.Adapter<WishListAdapter.ItemViewHolder>() {
 
     @RequiresApi(Build.VERSION_CODES.M)
     override fun onBindViewHolder(holder: WishListAdapter.ItemViewHolder, position: Int) {
-        holder.bind(data[position])
+        holder.bind(data[position],position)
     }
 
     override fun getItemCount(): Int {
@@ -41,7 +41,7 @@ class WishListAdapter : RecyclerView.Adapter<WishListAdapter.ItemViewHolder>() {
     class ItemViewHolder(private val binding:RowItemWishlistBinding) : RecyclerView.ViewHolder(binding.root) {
 
         @RequiresApi(Build.VERSION_CODES.M)
-        fun bind(wishListItemModel: WishListItemModel){
+        fun bind(wishListItemModel: WishListItemModel, position: Int){
             cardDesign(wishListItemModel.exclusive_preorder,wishListItemModel.isFavorite)
 
             binding.wishListItem = wishListItemModel
@@ -60,27 +60,26 @@ class WishListAdapter : RecyclerView.Adapter<WishListAdapter.ItemViewHolder>() {
         @SuppressLint("UseCompatLoadingForDrawables")
         @RequiresApi(Build.VERSION_CODES.M)
         private fun cardDesign(exclusive_preorder: String?, isFavorite: Boolean) {
-
-            if (exclusive_preorder == null){
-                binding.root.background = binding.root.context.resources.getDrawable(R.drawable.null_item_drawable,null)
-                binding.btnAddToCartFavoriteItem.setBackgroundColor(binding.root.context.resources.getColor(R.color.teal_700,null))
-                binding.tvExclusivePreorder.visibility = View.INVISIBLE
-            }else{
-                binding.tvExclusivePreorder.visibility = View.VISIBLE
-                if (exclusive_preorder == binding.root.context.resources.getString(R.string.exclusive)){
-                    binding.root.background = binding.root.context.resources.getDrawable(R.drawable.exlusive_item_drawable,null)
-                    binding.btnAddToCartFavoriteItem.setBackgroundColor(binding.root.context.resources.getColor(R.color.black,null))
-                    binding.tvExclusivePreorder.setBackgroundColor(binding.root.context.resources.getColor(R.color.black,null))
-                    binding.tvExclusivePreorder.text = binding.root.context.resources.getString(R.string.exclusive)
-                }else{
-                    binding.root.background = binding.root.context.resources.getDrawable(R.drawable.pre_order_item_drawable,null)
-                    binding.btnAddToCartFavoriteItem.setBackgroundColor(binding.root.context.resources.getColor(R.color.teal_700,null))
-                    binding.tvExclusivePreorder.setBackgroundColor(binding.root.context.resources.getColor(R.color.orange,null))
-                    binding.tvExclusivePreorder.text = binding.root.context.resources.getString(R.string.pre_order)
+            binding.tvExclusivePreorder.text = exclusive_preorder
+            when(exclusive_preorder){
+                null ->{
+                    binding.btnAddToCartFavoriteItem.setBackgroundColor(binding.root.context.resources.getColor(R.color.teal_500, null))
+                    binding.root.background = binding.root.context.resources.getDrawable(R.drawable.null_item_drawable,null)
+                    binding.tvExclusivePreorder.visibility = View.INVISIBLE
                 }
-
+                binding.root.context.resources.getString(R.string.exclusive) ->{
+                    binding.btnAddToCartFavoriteItem.setBackgroundColor(binding.root.context.resources.getColor(R.color.black, null))
+                    binding.tvExclusivePreorder.visibility = View.VISIBLE
+                    binding.root.background = binding.root.context.resources.getDrawable(R.drawable.exlusive_item_drawable,null)
+                    binding.tvExclusivePreorder.setBackgroundColor(binding.root.context.resources.getColor(R.color.black,null))
+                }
+                binding.root.context.resources.getString(R.string.pre_order) ->{
+                    binding.btnAddToCartFavoriteItem.setBackgroundColor(binding.root.context.resources.getColor(R.color.teal_500, null))
+                    binding.tvExclusivePreorder.visibility = View.VISIBLE
+                    binding.root.background = binding.root.context.resources.getDrawable(R.drawable.pre_order_item_drawable,null)
+                    binding.tvExclusivePreorder.setBackgroundColor(binding.root.context.resources.getColor(R.color.orange,null))
+                }
             }
-
         }
     }
 }

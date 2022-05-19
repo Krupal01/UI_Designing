@@ -99,9 +99,27 @@ class FakeData {
 
 
         val data : ArrayList<WishListItemModel> = arrayListOf(
-            WishListItemModel("k","20 qar",23,null,null,false),
-            WishListItemModel("k","20 qar",23,null,"EXCLUSIVE",true),
-            WishListItemModel("k","20 qar",23,null,"PRE-ORDER",false)
+            WishListItemModel("samsung galaxy watch 46mm (new edition)","20 qar",23,null,null,false,25000,4,"07:12:33"),
+            WishListItemModel("samsung galaxy watch 46mm (new edition)","1959 qar",23,null,"EXCLUSIVE",true,25000,4,"07:12:33"),
+            WishListItemModel("samsung galaxy watch 46mm (new edition)","1959 qar",23,null,"PRE-ORDER",false,25000,4,"07:12:33")
+        )
+
+        val wishListParentItems = arrayListOf(
+            WishListItemModel("samsung galaxy watch 46mm (new edition)","1959 qar",23,null,"25% off",false,25000,4,"07:12:33"),
+            WishListItemModel("samsung galaxy watch 46mm (new edition)","1959 qar",23,null,"NEW",true,25000,4,"07:12:33"),
+            WishListItemModel("samsung galaxy watch 46mm (new edition)","1959 qar",23,null,"OFFER",false,25000,4,"07:12:33"),
+            WishListItemModel("samsung galaxy watch 46mm (new edition)","1959 qar",23,null,"PRE-ORDER",false,25000,4,"07:12:33")
+        )
+
+        val recentListParentItems = arrayListOf(
+            WishListItemModel("samsung galaxy watch 46mm (new edition)","1959 qar",23,null,null,false,25000,4,"07:12:33"),
+            WishListItemModel("samsung galaxy watch 46mm (new edition)","1959 qar",23,null,null,false,25000,4,"07:12:33"),
+            WishListItemModel("samsung galaxy watch 46mm (new edition)","1959 qar",23,null,"🎁",false,25000,4,"07:12:33"),
+            WishListItemModel("samsung galaxy watch 46mm (new edition)","1959 qar",23,null,"EXCLUSIVE",false,25000,4,"07:12:33"),
+            WishListItemModel("samsung galaxy watch 46mm (new edition)","1959 qar",23,null,"25% off",false,25000,4,"07:12:33"),
+            WishListItemModel("samsung galaxy watch 46mm (new edition)","1959 qar",23,null,"NEW",true,25000,4,"07:12:33"),
+            WishListItemModel("samsung galaxy watch 46mm (new edition)","1959 qar",23,null,"OFFER",false,25000,4,"07:12:33"),
+            WishListItemModel("samsung galaxy watch 46mm (new edition)","1959 qar",23,null,"PRE-ORDER",false,25000,4,"07:12:33")
         )
 
         val pastNotificationData : ArrayList<PastNotificationModel> = arrayListOf(

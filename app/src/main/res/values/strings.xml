@@ -234,6 +234,15 @@
 
     <string name="orderUpdateMsgData"><![CDATA[<font color= "#03DAC5" >%1$s</font>]]> <![CDATA[<font color= "#000000" >%2$s</font>]]></string>
     <string name="please_be_aware_this_is_a_preorder_the_products_will_be_shipped_to_you_once_they_become_available">Please be aware this is a preorder. The products will be shipped to you once they become available</string>
+    <string name="wishlist">Wishlist</string>
+    <string name="your_wishlist_is_empty">Your Wishlist is empty</string>
+    <string name="to_add_some_items_see_our_categories">To add some items see our categories</string>
+    <string name="shop_categories">Shop Categories</string>
+    <string name="not_selected">Not Selected</string>
+    <string name="only__left">Only %s left</string>
+
+    <string name="offer">OFFER</string>
+    <string name="_new">NEW</string>
 
 
 </resources>
