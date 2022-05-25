@@ -1,10 +1,12 @@
 package com.example.uidemo.bindingAdapter
 
+import android.annotation.SuppressLint
 import android.graphics.Bitmap
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.databinding.BindingAdapter
 import com.example.uidemo.R
+
 
 @BindingAdapter("android:setBitmap")
 fun setBitmap(view: ImageView , bitmap: Bitmap?){
@@ -37,6 +39,7 @@ fun SetQuantity(view: TextView , quantity: Int?){
     }
 }
 
+@SuppressLint("SetTextI18n")
 @BindingAdapter("android:SetDebitCardNumber")
 fun SetDebitCardNumber(view: TextView , number : String?){
     if(number != null){
@@ -45,4 +48,5 @@ fun SetDebitCardNumber(view: TextView , number : String?){
         view.text = "0"
     }
 }
+
 

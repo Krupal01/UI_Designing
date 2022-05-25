@@ -243,6 +243,36 @@
 
     <string name="offer">OFFER</string>
     <string name="_new">NEW</string>
+    <string name="the_societies_2020_london_photo_convention_amp_trade_show"><![CDATA[The Societies 2020 London Photo Convention & Trade Show]]></string>
+    <string name="alif_store_doha_qatar">Alif Store, Doha, Qatar</string>
+    <string name="venue">Venue</string>
+    <string name="event_activities">"Event &amp; Activities"</string>
+    <string name="adult_25qar"><b>Adult</b> (25 QAR )</string>
+    <string name="child_20qar"><b>Child</b> (20 QAR )</string>
+    <string name="_99_qar"><![CDATA[<b>%s</b>]]> QAR</string>
+    <string name="_2jan2020_25fab2020_">%1$s - %2$s</string>
+    <string name="buy_ticket">Buy Ticket</string>
+    <string name="event_details">Event Details</string>
+    <string name="about_the_event">About the Event</string>
+    <string name="first_floor_office_108_n_building_b_gate_3_n_salwa_road_n_wolesale_market_r_a_ndoha_qatar">First Floor, Office 108, Building#B Gate 3, Salwa Road, Wolesale Market R/A, Doha, Qatar</string>
+    <string name="get_direction">Get Direction</string>
+    <string name="speakers">Speakers</string>
+    <string name="_5_stars">5 stars</string>
+    <string name="_1_stars">1 stars</string>
+    <string name="_2_stars">2 stars</string>
+    <string name="_3_stars">3 stars</string>
+    <string name="_4_stars">4 stars</string>
+    <string name="really_liteweight_i_like_it">Really Liteweight - i like it</string>
+    <string name="write_a_review">Write A Review</string>
+    <string name="view_all_reviews">View All Reviews</string>
+    <string name="_14_reviews">%s reviews</string>
+    <string name="reviewed_by_alex_01_04_2020">Reviewed by %1$s %2$s</string>
+    <string name="book_your_ticket">Book Your Ticket</string>
+    <string name="select_date">Select Date</string>
+    <string name="select_time">Select Time</string>
+    <string name="total_amount">Total Amount</string>
+    <string name="_90_qar">90 QAR</string>
+    <string name="customer_reviews">Customer Reviews</string>
 
 
 </resources>

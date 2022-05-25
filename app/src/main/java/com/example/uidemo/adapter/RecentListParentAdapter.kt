@@ -57,24 +57,24 @@ class RecentListParentAdapter : RecyclerView.Adapter<RecentListParentAdapter.Rec
             binding.tvExclusivePreorder.text = exclusivePreorder
             when(exclusivePreorder){
                 null ->{
-                    setItemView(View.INVISIBLE,View.INVISIBLE,View.INVISIBLE,View.INVISIBLE,View.INVISIBLE,R.color.teal_500,R.drawable.null_item_drawable,R.color.black)
+                    setItemView(View.INVISIBLE,View.INVISIBLE,View.INVISIBLE,View.INVISIBLE,View.INVISIBLE,R.color.teal_500,R.drawable.null_item_drawable,R.color.black,binding.root.context.resources.getString(R.string.add_to_cart))
                 }
                 binding.root.context.resources.getString(R.string.exclusive) ->{
-                    setItemView(View.VISIBLE,View.INVISIBLE,View.INVISIBLE,View.INVISIBLE,View.INVISIBLE,R.color.black,R.drawable.exlusive_item_drawable,R.color.black)
+                    setItemView(View.VISIBLE,View.INVISIBLE,View.INVISIBLE,View.INVISIBLE,View.INVISIBLE,R.color.black,R.drawable.exlusive_item_drawable,R.color.black,binding.root.context.resources.getString(R.string.add_to_cart))
                 }
                 binding.root.context.resources.getString(R.string.pre_order) ->{
-                    setItemView(View.VISIBLE,View.INVISIBLE,View.INVISIBLE,View.VISIBLE,View.VISIBLE,R.color.teal_500,R.drawable.pre_order_item_drawable,R.color.orange)
+                    setItemView(View.VISIBLE,View.INVISIBLE,View.INVISIBLE,View.VISIBLE,View.VISIBLE,R.color.teal_500,R.drawable.pre_order_item_drawable,R.color.orange,binding.root.context.resources.getString(R.string.pre_order))
                 }
                 binding.root.context.resources.getString(R.string.offer) ->{
-                    setItemView(View.VISIBLE,View.VISIBLE,View.VISIBLE,View.VISIBLE,View.VISIBLE,R.color.red_F36969,R.drawable.drawable_wishlist_offer,R.color.red_F36969)
+                    setItemView(View.VISIBLE,View.VISIBLE,View.VISIBLE,View.VISIBLE,View.VISIBLE,R.color.red_F36969,R.drawable.drawable_wishlist_offer,R.color.red_F36969,binding.root.context.resources.getString(R.string.add_to_cart))
                 }
                 binding.root.context.resources.getString(R.string._new) ->{
-                    setItemView(View.VISIBLE,View.INVISIBLE,View.INVISIBLE,View.INVISIBLE,View.INVISIBLE,R.color.teal_500,R.drawable.drawable_wishlist_new,R.color.light_coffee)
+                    setItemView(View.VISIBLE,View.INVISIBLE,View.INVISIBLE,View.INVISIBLE,View.INVISIBLE,R.color.teal_500,R.drawable.drawable_wishlist_new,R.color.light_coffee,binding.root.context.resources.getString(R.string.add_to_cart))
                 }
                 else -> if(exclusivePreorder.contains("off")){
-                    setItemView(View.VISIBLE,View.VISIBLE,View.VISIBLE,View.VISIBLE,View.VISIBLE,R.color.red_F36969,R.drawable.pre_order_item_drawable,R.color.red_F36969)
+                    setItemView(View.VISIBLE,View.VISIBLE,View.VISIBLE,View.VISIBLE,View.VISIBLE,R.color.red_F36969,R.drawable.pre_order_item_drawable,R.color.red_F36969,binding.root.context.resources.getString(R.string.add_to_cart))
                 }else{
-                    setItemView(View.VISIBLE,View.INVISIBLE,View.INVISIBLE,View.INVISIBLE,View.INVISIBLE,R.color.teal_500,R.drawable.drawable_wishlist_gift,R.color.teal_500)
+                    setItemView(View.VISIBLE,View.INVISIBLE,View.INVISIBLE,View.INVISIBLE,View.INVISIBLE,R.color.teal_500,R.drawable.drawable_wishlist_gift,R.color.teal_500,binding.root.context.resources.getString(R.string.add_to_cart))
                 }
             }
         }
@@ -89,17 +89,20 @@ class RecentListParentAdapter : RecyclerView.Adapter<RecentListParentAdapter.Rec
             layoutTimeVisible3: Int,
             btnAddToCartColor: Int,
             RootBackground: Int,
-            tvExclusiveBlack1: Int
+            tvExclusiveBlack1: Int,
+            btnAddToCartText : String
         ) {
             binding.tvExclusivePreorder.visibility = tvExclusivePreorderVisible
             binding.tvMainPriceFavoriteItem.visibility = tvMainPriceFavoriteItemVisible1
             binding.tvLeftFavoriteItem.visibility = tvLeftFavoriteItemVisible2
             binding.layoutTime.visibility = layoutTimeVisible3
+            binding.tvQuantityFavoriteItem.visibility = tvQuantityVisibility
             binding.btnAddToCartFavoriteItem.setBackgroundColor(binding.root.context.resources.getColor(
                 btnAddToCartColor, null))
             binding.root.background = binding.root.context.resources.getDrawable(RootBackground,null)
             binding.tvExclusivePreorder.setBackgroundColor(binding.root.context.resources.getColor(
                 tvExclusiveBlack1,null))
+            binding.btnAddToCartFavoriteItem.text = btnAddToCartText
         }
     }
 

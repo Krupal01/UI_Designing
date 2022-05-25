@@ -117,6 +117,19 @@
         <item name="endIconDrawable">@drawable/ic_baseline_keyboard_arrow_down_24</item>
         <item name="endIconTint">@color/teal_500</item>
     </style>
+    <style name="custom_dropdown_layout_Ticket" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxBackgroundColor">#FFF</item>
+        <item name="boxCornerRadiusTopStart">5dp</item>
+        <item name="boxCornerRadiusTopEnd">5dp</item>
+        <item name="boxCornerRadiusBottomStart">5dp</item>
+        <item name="boxCornerRadiusBottomEnd">5dp</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="endIconDrawable">@drawable/ic_baseline_keyboard_arrow_down_24</item>
+        <item name="endIconTint">@color/teal_500</item>
+    </style>
 
     <style name="CheckboxStyle" >
         <item name="colorAccent">@color/white</item>
@@ -162,5 +175,16 @@
     <style name="AppModalStyle"
         parent="Widget.Design.BottomSheet.Modal">
         <item name="android:background">@drawable/drawable_top_corners</item>
+    </style>
+
+    <style name="Rating_quantity_progressbar">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="trackThickness">10dp</item>
+        <item name="trackColor">@color/gray_FEFEFE</item>
+        <item name="indicatorColor">@color/Brown</item>
+        <item name="trackCornerRadius">360dp</item>
+        <item name="android:max">50</item>
     </style>
 </resources>

@@ -152,4 +152,18 @@
         android:name="com.example.uidemo.ui.fragment.RecentlyViewedFragment"
         android:label="fragment_recently_viewed"
         tools:layout="@layout/fragment_recently_viewed" />
+    <dialog
+        android:id="@+id/bookMyTicketBottomSheetFragment"
+        android:name="com.example.uidemo.ui.bottomsheet.BookMyTicketBottomSheetFragment"
+        android:label="BookMyTicketBottomSheetFragment" />
+    <fragment
+        android:id="@+id/eventAndActionFragment"
+        android:name="com.example.uidemo.ui.fragment.EventAndActionFragment"
+        android:label="fragment_event_and_action"
+        tools:layout="@layout/fragment_event_and_action" />
+    <fragment
+        android:id="@+id/eventAndActivitiesDetailsFragment"
+        android:name="com.example.uidemo.ui.fragment.EventAndActivitiesDetailsFragment"
+        android:label="fragment_event_and_activities_details"
+        tools:layout="@layout/fragment_event_and_activities_details" />
 </navigation>

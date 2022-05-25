@@ -14,6 +14,7 @@ class FunctionDataItems {
             AccountFunctionModel("My Returns", R.drawable.ic_baseline_assignment_return_24),
             AccountFunctionModel("Services", R.drawable.ic_baseline_construction_24),
             AccountFunctionModel("Live Support", R.drawable.ic_baseline_headset_mic_24),
+            AccountFunctionModel("Event & Activities", R.drawable.ic_baseline_event_note_24)
         )
     }
 }

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="speaker"
+            type="com.example.uidemo.model.EventSpeaker" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="5dp"
+        android:layout_margin="5dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imgSpeaker"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/ic_launcher_background"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:setBitmap="@{speaker.speakerImage}"
+                app:shapeAppearanceOverlay="@style/ShapeAppearance.Image.PILL"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvSpeakerName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{speaker.speakerName}"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_margin="10dp"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/imgSpeaker" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvSpeakerIntro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{speaker.speakerIntro}"
+                android:lines="5"
+                android:ellipsize="end"
+                android:layout_margin="10dp"
+                app:layout_constraintTop_toBottomOf="@id/tvSpeakerName"
+                app:layout_constraintLeft_toRightOf="@id/imgSpeaker" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>

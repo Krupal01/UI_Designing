@@ -7,7 +7,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.findNavController
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.uidemo.R
 import com.example.uidemo.adapter.AccountFunctionAdapter
@@ -123,6 +122,9 @@ class UserDetailsFragment : Fragment(), AccountFunctionAdapter.OnFunctionClick {
             }
             getString(R.string.Live_Support) ->{
 
+            }
+            getString(R.string.event_activities) ->{
+                ( activity as MainActivity).findNavController(R.id.nav_host_fragment).navigate(R.id.eventAndActionFragment)
             }
         }
     }

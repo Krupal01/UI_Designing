@@ -8,5 +8,6 @@ class Keys {
         var USER_NUMBER_KEY = "user number"
         var MY_RETURN_KEY = "my return key"
         var MY_ORDER_KEY = "my order key"
+        var EVENT_AND_ACTIVITIES_KEY = "EVENT_AND_ACTIVITIES_KEY"
     }
 }

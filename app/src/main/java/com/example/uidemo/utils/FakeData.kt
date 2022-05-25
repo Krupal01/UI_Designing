@@ -263,6 +263,90 @@ class FakeData {
             )
         )
 
+        var FakeDateAndTime = arrayListOf(
+            "12 Jan 2019 to 31 Jan 2019",
+            "12 Jan 2019 to 31 Jan 2019",
+            "12 Jan 2019 to 31 Jan 2019",
+            "12 Jan 2019 to 31 Jan 2019",
+        )
+
+        var fakeEvents = arrayListOf(
+            EventAndActivitiesModel(
+                null,
+                "Amazing Climbing Wall",
+                "2 jan 2020",
+                "23 fab 2020",
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+                99,
+                true,
+                "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium , totam rem aperiam , eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo . Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit , sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt . Neque porro quisquam est , qui dolorem ipsum quia dolor sit amet , consectetur .",
+                arrayListOf(
+                    EventSpeaker(null,"Dr. Ahmed Moamen","Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium , totam rem aperiam , eaque ipsa quae ab illo inventore"),
+                    EventSpeaker(null,"Dr. Samy Ahmed","Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium , totam rem aperiam , eaque ipsa quae ab illo inventore")
+                ),
+                CustomerReviews(
+                    4f,
+                    42,
+                    5,
+                    3,
+                    0,
+                    1,
+                    arrayListOf(
+                        EventReview("Really Liteweight - i like it",4f,"A good laptop for the money . The screen is excellent , it doesn't make much noise , it doesn't get very hot , there is a button to turn on all the fans at once to the full , then it buy a cooling pad . makes noise , but I don't need it . In extreme cases , you can buy a cooling pad","Alex","01/04/2020")
+                    )
+                )
+               ,
+                "Alif Store, Doha, Qatar",
+                "First Floor, Office 108, Building#B Gate 3,  Salwa Road,  Wolesale Market R/A, Doha, Qatar"
+            ),
+            EventAndActivitiesModel(
+                null,
+                "Amazing Climbing Wall",
+                "2 jan 2020",
+                "23 fab 2020",
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+                99,
+                true,
+                "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium , totam rem aperiam , eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo . Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit , sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt . Neque porro quisquam est , qui dolorem ipsum quia dolor sit amet , consectetur .",
+                arrayListOf(
+                    EventSpeaker(null,"Dr. Ahmed Moamen","Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium , totam rem aperiam , eaque ipsa quae ab illo inventore"),
+                    EventSpeaker(null,"Dr. Samy Ahmed","Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium , totam rem aperiam , eaque ipsa quae ab illo inventore")
+                ),
+                CustomerReviews(
+                    4f,
+                    42,
+                    5,
+                    3,
+                    0,
+                    1,
+                    arrayListOf(
+                        EventReview("Really Liteweight - i like it",4f,"A good laptop for the money . The screen is excellent , it doesn't make much noise , it doesn't get very hot , there is a button to turn on all the fans at once to the full , then it buy a cooling pad . makes noise , but I don't need it . In extreme cases , you can buy a cooling pad","Alex","01/04/2020")
+                    )
+                )
+                ,
+                "Alif Store, Doha, Qatar",
+                null
+            ),
+            EventAndActivitiesModel(
+                null,
+                "Amazing Climbing Wall",
+                "2 jan 2020",
+                "23 fab 2020",
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+                99,
+                true,
+                "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium , totam rem aperiam , eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo . Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit , sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt . Neque porro quisquam est , qui dolorem ipsum quia dolor sit amet , consectetur .",
+                arrayListOf(
+                    EventSpeaker(null,"Dr. Ahmed Moamen","Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium , totam rem aperiam , eaque ipsa quae ab illo inventore"),
+                    EventSpeaker(null,"Dr. Samy Ahmed","Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium , totam rem aperiam , eaque ipsa quae ab illo inventore")
+                ),
+                null,
+                "Alif Store, Doha, Qatar",
+                "First Floor, Office 108, Building#B Gate 3,  Salwa Road,  Wolesale Market R/A, Doha, Qatar"
+            ),
+
+        )
+
 
     }
 }

@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="?attr/bottomSheetStyle">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/labelSheetTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/book_your_ticket"
+            android:textSize="22sp"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btnClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_clear_24"
+            android:backgroundTint="@color/white"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/layoutTicketTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/btnClose">
+
+            <View
+                android:id="@+id/viewDecoration"
+                android:layout_width="5dp"
+                android:layout_height="match_parent"
+                android:background="@color/Brown"/>
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvTicketTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/the_societies_2020_london_photo_convention_amp_trade_show"
+                android:textSize="18sp"
+                android:padding="5dp"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutTicketVenue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp"
+            app:layout_constraintTop_toBottomOf="@+id/layoutTicketTitle">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_baseline_location_on_24"
+                android:drawableTint="@color/teal_500"
+                android:text="@string/venue"
+                android:gravity="center_vertical"
+                android:drawablePadding="5dp"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvTicketVenue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="5dp"
+                android:drawableStart="@drawable/ic_baseline_null_24"
+                android:text="@string/alif_store_doha_qatar" />
+        </LinearLayout>
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/dividerVenue"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            app:layout_constraintTop_toBottomOf="@id/layoutTicketVenue"/>
+
+        <LinearLayout
+            android:id="@+id/layoutDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp"
+            app:layout_constraintTop_toBottomOf="@+id/layoutTicketVenue">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_baseline_date_range_24"
+                android:drawableTint="@color/teal_500"
+                android:text="@string/select_date"
+                android:gravity="center_vertical"
+                android:drawablePadding="5dp"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/custom_dropdown_layout_Ticket">
+
+                <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                    android:id="@+id/etSelectDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/dividerDate"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            app:layout_constraintTop_toBottomOf="@id/layoutDate"/>
+
+        <LinearLayout
+            android:id="@+id/layoutTicketTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp"
+            app:layout_constraintTop_toBottomOf="@+id/layoutDate">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_baseline_access_time_24"
+                android:drawableTint="@color/teal_500"
+                android:text="@string/select_time"
+                android:gravity="center_vertical"
+                android:drawablePadding="5dp"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/custom_dropdown_layout_Ticket">
+
+                <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                    android:id="@+id/etSelectTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/dividerTime"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            app:layout_constraintTop_toBottomOf="@id/layoutTicketTime"/>
+
+        <LinearLayout
+            android:id="@+id/layoutTicketAdultQuantity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="15dp"
+            android:gravity="center_vertical"
+            android:padding="5dp"
+            android:background="@drawable/drawable_corner5_stroke1_gray"
+            app:layout_constraintTop_toBottomOf="@+id/dividerTime">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvAdultLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/adult_25qar"
+                android:textSize="20sp"
+                android:gravity="center_vertical"
+                android:textColor="@color/black"
+                android:drawableTint="@color/black"
+                android:drawableStart="@drawable/ic_baseline_person_24"
+                android:drawablePadding="5dp"
+                android:layout_weight="1"/>
+
+
+            <com.example.uidemo.view.CustomNumberPicker
+                android:id="@+id/npAdult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/corner_gray_15"
+                android:paddingHorizontal="10dp"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutTicketChildQuantity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="15dp"
+            android:gravity="center_vertical"
+            android:padding="5dp"
+            android:background="@drawable/drawable_corner5_stroke1_gray"
+            app:layout_constraintTop_toBottomOf="@+id/layoutTicketAdultQuantity">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvChildLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/child_20qar"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:drawableTint="@color/black"
+                android:gravity="center_vertical"
+                android:drawableStart="@drawable/ic_baseline_family_restroom_24"
+                android:drawablePadding="5dp"
+                android:layout_weight="1"/>
+
+
+            <com.example.uidemo.view.CustomNumberPicker
+                android:id="@+id/npChild"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/corner_gray_15"
+                android:paddingHorizontal="10dp"/>
+
+        </LinearLayout>
+        
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:cardElevation="10dp"
+            android:elevation="20dp"
+            app:layout_constraintTop_toBottomOf="@id/layoutTicketChildQuantity">
+            
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="10dp">
+                
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvTicketAmountLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:drawableTint="@color/teal_500"
+                    android:drawableStart="@drawable/icons8_ticket_24"
+                    android:gravity="center_vertical"
+                    android:drawablePadding="10dp"
+                    android:text="@string/total_amount"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"/>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvTicketAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp"
+                    android:text="@string/_90_qar"
+                    android:textColor="@color/black"
+                    app:layout_constraintTop_toBottomOf="@id/tvTicketAmountLabel"
+                    app:layout_constraintLeft_toLeftOf="parent"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnAddToCart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/yellow"
+                    android:text="@string/add_to_cart"
+                    android:textColor="@color/black"
+                    android:paddingVertical="15dp"
+                    app:cornerRadius="10dp"
+                    android:textStyle="bold"
+                    android:drawableEnd="@drawable/ic_baseline_shopping_cart_24"
+                    app:layout_constraintTop_toTopOf="@id/tvTicketAmountLabel"
+                    app:layout_constraintBottom_toBottomOf="@id/tvTicketAmount"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+                
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

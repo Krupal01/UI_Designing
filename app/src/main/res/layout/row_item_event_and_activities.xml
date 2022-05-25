@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="android.text.Html"/>
+        <variable
+            name="eventModel"
+            type="com.example.uidemo.model.EventAndActivitiesModel" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        app:cardCornerRadius="5dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="15dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgEvent"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:setBitmap="@{eventModel.eventImage}"
+                android:scaleType="fitXY"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/imgDivider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@{eventModel.EventIsActive ? @color/Brown : @color/gray }"
+                android:layout_marginVertical="5dp"
+                app:layout_constraintTop_toBottomOf="@id/imgEvent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvEventDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{@string/_2jan2020_25fab2020_(eventModel.EventStartDate,eventModel.EventEndDate)}"
+                android:background="@{eventModel.EventIsActive ? @drawable/drawable_brown_5 : @drawable/dropdown_search_drawable }"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:padding="8dp"
+                android:layout_marginHorizontal="20dp"
+                app:layout_constraintTop_toTopOf="@id/imgDivider"
+                app:layout_constraintBottom_toBottomOf="@id/imgDivider"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvEventName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{eventModel.eventName}"
+                android:textColor="@{eventModel.EventIsActive ? @color/black : @color/gray }"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginVertical="10dp"
+                app:layout_constraintTop_toBottomOf="@id/tvEventDate"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvEventDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{eventModel.eventDetails}"
+                android:layout_marginHorizontal="15dp"
+                android:textColor="@{eventModel.EventIsActive ? @color/black : @color/gray }"
+                android:lines="3"
+                android:ellipsize="end"
+                app:layout_constraintTop_toBottomOf="@id/tvEventName"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnBuyTicket"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@{eventModel.EventIsActive ? @color/yellow : @color/gray }"
+                android:layout_marginHorizontal="15dp"
+                android:text="@{eventModel.EventIsActive ? @string/buy_ticket : @string/past_event}"
+                android:paddingHorizontal="30dp"
+                app:cornerRadius="8dp"
+                android:enabled="@{eventModel.eventIsActive}"
+                android:textColor="@{eventModel.EventIsActive ? @color/black : @color/white }"
+                app:icon="@drawable/icons8_ticket_24"
+                app:iconTint="@{eventModel.EventIsActive ? @color/black : @color/white }"
+                app:iconGravity="textStart"
+                app:layout_constraintTop_toBottomOf="@id/tvEventDetails"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvEventPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text='@{Html.fromHtml(@string/_99_qar(eventModel.EventPrice))}'
+                android:textColor="@{eventModel.EventIsActive ? @color/teal_500 : @color/gray }"
+                android:textSize="20sp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="10dp"
+                app:layout_constraintTop_toBottomOf="@id/tvEventDetails"
+                app:layout_constraintRight_toRightOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>
