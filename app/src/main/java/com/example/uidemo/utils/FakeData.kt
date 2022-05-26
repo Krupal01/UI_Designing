@@ -347,6 +347,33 @@ class FakeData {
 
         )
 
-
+        var fakeWrap = arrayListOf(
+            WrapperModel(null,"New Year Wrap",10,true,"gray"),
+            WrapperModel(null,"Gift wrap 1",6,null,"gray"),
+            WrapperModel(null,"Gift wrap 2",null,null,"gray"),
+            WrapperModel(null,"Gift wrap 3",null,null,"gray"),
+        )
+        var fakeCartItem = CartItemModel(
+            null,
+            "samsung galaxy watch 46mm (new edition)",
+            "gray",
+            WrapperModel(
+                null,
+                "New Year Wrap",
+                10,
+                true,
+                "gray"
+            ),
+            arrayListOf(
+                CartItemOption(
+                    null,
+                    "samsung galaxy watch 46mm (new edition)",
+                    2520,
+                    2000
+                )
+            ),
+            false,
+            1959
+        )
     }
 }

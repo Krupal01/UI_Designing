@@ -32,7 +32,8 @@ class MainActivity : AppCompatActivity() {
         navHostFragment.navController.addOnDestinationChangedListener{_, destination, _ ->
             if(destination.id == R.id.addNewCardFragment
                 || destination.id == R.id.cardSettingFragment
-                || destination.id == R.id.editAddressFragment) {
+                || destination.id == R.id.editAddressFragment
+                || destination.id == R.id.addGiftWrapperFragment) {
                 binding.mainBottomNav.visibility = View.GONE
             } else {
                 binding.mainBottomNav.visibility = View.VISIBLE

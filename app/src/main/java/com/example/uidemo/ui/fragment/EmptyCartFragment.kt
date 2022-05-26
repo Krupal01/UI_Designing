@@ -5,11 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.uidemo.R
 import com.example.uidemo.adapter.WishListAdapter
-import com.example.uidemo.databinding.FragmentCartBinding
-import com.example.uidemo.ui.activity.MainActivity
+import com.example.uidemo.databinding.FragmentEmptyCartBinding
 import com.example.uidemo.utils.FakeData
 
 // TODO: Rename parameter arguments, choose names that match
@@ -19,10 +19,10 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [CartFragment.newInstance] factory method to
+ * Use the [EmptyCartFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class CartFragment : Fragment() {
+class EmptyCartFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -35,24 +35,35 @@ class CartFragment : Fragment() {
         }
     }
 
-    private lateinit var binding: FragmentCartBinding
+    private lateinit var binding : FragmentEmptyCartBinding
+    private lateinit var recentListlayoutManager: LinearLayoutManager
+    private var recentListAdapter= WishListAdapter()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         // Inflate the layout for this fragment
-        binding = FragmentCartBinding.inflate(inflater,container,false)
+        binding = FragmentEmptyCartBinding.inflate(inflater,container,false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        (activity as MainActivity).setToolbar(binding.toolbar,true)
-
+        setRecentRecycler()
+        binding.btnShopCategories.setOnClickListener {
+            findNavController().navigate(R.id.filledCartFragment)
+        }
     }
 
+    private fun setRecentRecycler() {
+        recentListlayoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+        binding.rcvRecentList.layoutManager = recentListlayoutManager
+        binding.rcvRecentList.adapter = recentListAdapter
+        recentListAdapter.submitData(FakeData.data)
+
+    }
 
     companion object {
         /**
@@ -61,12 +72,12 @@ class CartFragment : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment CartFragment.
+         * @return A new instance of fragment EmptyCartFragment.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            CartFragment().apply {
+            EmptyCartFragment().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)

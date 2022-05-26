@@ -166,4 +166,9 @@
         android:name="com.example.uidemo.ui.fragment.EventAndActivitiesDetailsFragment"
         android:label="fragment_event_and_activities_details"
         tools:layout="@layout/fragment_event_and_activities_details" />
+    <fragment
+        android:id="@+id/addGiftWrapperFragment"
+        android:name="com.example.uidemo.ui.fragment.AddGiftWrapperFragment"
+        android:label="fragment_add_gift_wrapper"
+        tools:layout="@layout/fragment_add_gift_wrapper" />
 </navigation>

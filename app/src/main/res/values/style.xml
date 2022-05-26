@@ -7,6 +7,12 @@
         <item name="android:textColor">@color/chip_text_color</item>
     </style>
 
+    <style name="CustomChipChoiceStyleTealWhite" parent="@style/Widget.MaterialComponents.Chip.Choice">
+
+        <item name="chipBackgroundColor">@color/chip_teal_white</item>
+        <item name="android:textColor">@color/chip_text_color</item>
+    </style>
+
 
     <style name="custom_rating_bar">
         <item name="android:scaleX">.5</item>

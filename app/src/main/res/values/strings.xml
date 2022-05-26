@@ -273,6 +273,27 @@
     <string name="total_amount">Total Amount</string>
     <string name="_90_qar">90 QAR</string>
     <string name="customer_reviews">Customer Reviews</string>
+    <string name="shopping_cart">Shopping Cart</string>
+    <string name="your_cart_is_empty">Your Cart is empty</string>
+    <string name="_15_discount_on_first_purchase_applied">15% Discount On First Purchase Applied</string>
+    <string name="_2_items_for_total_2500_qar">2 items for total 2500 QAR</string>
+    <string name="option_name">Option Name :</string>
+    <string name="_2520_qar"><strike>%s QAR</strike></string>
+    <string name="color_space_gray">Color: Space Gray</string>
+    <string name="new_year_wrapping">New Year Wrapping</string>
+    <string name="you_might_be_interested_in">You might be interested in</string>
+    <string name="add_a_gift_wrap">Add a Gift Wrap</string>
+    <string name="all_wraps">All Wraps</string>
+    <string name="birthday">Birthday</string>
+    <string name="christmas">Christmas</string>
+    <string name="valentine_s">Valentine\'s</string>
+    <string name="add_a_message">Add a message</string>
+    <string name="write_your_message_here">Write your message here</string>
+    <string name="cancel">cancel</string>
+    <string name="add_wrap">Add Wrap</string>
+    <string name="_100_qar">100 QAR</string>
+    <string name="new_year_wrap">New Year Wrap</string>
+    <string name="color_">Color: %s</string>
 
 
 </resources>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_cart"
+    app:startDestination="@id/emptyCartFragment">
+
+    <fragment
+        android:id="@+id/emptyCartFragment"
+        android:name="com.example.uidemo.ui.fragment.EmptyCartFragment"
+        android:label="fragment_empty_cart"
+        tools:layout="@layout/fragment_empty_cart" />
+    <fragment
+        android:id="@+id/filledCartFragment"
+        android:name="com.example.uidemo.ui.fragment.FilledCartFragment"
+        android:label="fragment_filled_cart"
+        tools:layout="@layout/fragment_filled_cart" />
+</navigation>
