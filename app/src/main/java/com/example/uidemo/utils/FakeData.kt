@@ -375,5 +375,10 @@ class FakeData {
             false,
             1959
         )
+
+        var fakeAddress = arrayListOf(
+            CheckOutAddressModel("First Floor, Office 108, Building#B Gate 3,  Salwa Road,  Wolesale Market R/A, Doha, Qatar",59,true),
+            CheckOutAddressModel("3/26 salva road, Zone 1, Doha, Qatar",27,false)
+        )
     }
 }

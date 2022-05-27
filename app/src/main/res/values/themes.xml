@@ -14,5 +14,10 @@
         <item name="android:homeAsUpIndicator">@drawable/ic_baseline_arrow_back_24</item>
         <!-- Customize your theme here. -->
         <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+
+
+<!--        <item name="android:textColorSecondary">@color/teal_700</item>-->
+
+
     </style>
 </resources>

@@ -10,5 +10,8 @@ class Keys {
         var MY_ORDER_KEY = "my order key"
         var EVENT_AND_ACTIVITIES_KEY = "EVENT_AND_ACTIVITIES_KEY"
         var CART_KEY = "CART KEY"
+        var ADDRESS_TITLE_KEY = "ADDRESS TITLE KEY"
+        var EDIT_ADDRESS_KEY = "EDIT ADDRESS KEY"
+        var NEW_ADDRESS_KEY = "NEW ADDRESS KEY"
     }
 }

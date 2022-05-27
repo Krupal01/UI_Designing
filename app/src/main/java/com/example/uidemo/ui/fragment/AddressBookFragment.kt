@@ -15,6 +15,7 @@ import com.example.uidemo.databinding.FragmentAddressBookBinding
 import com.example.uidemo.model.AddressCardModel
 import com.example.uidemo.ui.activity.MainActivity
 import com.example.uidemo.utils.FakeData
+import com.example.uidemo.utils.Keys
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -139,6 +140,8 @@ class AddressBookFragment : Fragment(), AltrernateAddresAdapter.AlternateItemCli
     }
 
     override fun onDefaultAddressEditClick(addressCardModel: AddressCardModel) {
-        (activity as MainActivity).findNavController(R.id.nav_host_fragment).navigate(R.id.editAddressFragment)
+        val bundle = Bundle()
+        bundle.putString(Keys.ADDRESS_TITLE_KEY, Keys.EDIT_ADDRESS_KEY)
+        (activity as MainActivity).findNavController(R.id.nav_host_fragment).navigate(R.id.editAddressFragment,bundle)
     }
 }

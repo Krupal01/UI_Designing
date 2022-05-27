@@ -21,20 +21,22 @@
             android:padding="2dp">
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginVertical="2dp"
                 android:background="@drawable/searchview_drawable"
                 android:gravity="center"
+                android:layout_gravity="center_horizontal"
                 android:orientation="vertical">
 
                 <com.google.android.material.textview.MaterialTextView
-                    android:layout_width="match_parent"
+                    android:id="@+id/tvToolbarTitle"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
                     android:gravity="center"
                     android:textColor="@color/black"
-                    android:text="@string/edit_shipping_address"/>
+                    android:text="@string/new_shipping_address"/>
             </LinearLayout>
         </androidx.appcompat.widget.Toolbar>
 

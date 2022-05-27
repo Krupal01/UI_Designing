@@ -4,7 +4,7 @@
 
     <item android:id="@+id/NotificationSearchMenu"
         android:title="@string/search"
-        android:icon="@drawable/ic_baseline_search_24"
+        android:icon="@drawable/ic_baseline_search_24_teal500"
         app:showAsAction="always"/>
 
 </menu>

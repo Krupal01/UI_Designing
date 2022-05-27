@@ -171,4 +171,9 @@
         android:name="com.example.uidemo.ui.fragment.AddGiftWrapperFragment"
         android:label="fragment_add_gift_wrapper"
         tools:layout="@layout/fragment_add_gift_wrapper" />
+    <fragment
+        android:id="@+id/checkOutFragment"
+        android:name="com.example.uidemo.ui.fragment.CheckOutFragment"
+        android:label="fragment_check_out"
+        tools:layout="@layout/fragment_check_out" />
 </navigation>

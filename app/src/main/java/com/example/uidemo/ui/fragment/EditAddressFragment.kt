@@ -10,6 +10,7 @@ import com.example.uidemo.R
 import com.example.uidemo.databinding.FragmentEditAddressBinding
 import com.example.uidemo.ui.activity.MainActivity
 import com.example.uidemo.utils.FakeData
+import com.example.uidemo.utils.Keys
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -50,7 +51,14 @@ class EditAddressFragment : Fragment() {
         (activity as MainActivity).setToolbar(binding.Notificationtoolbar,false)
         (activity as MainActivity).supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-
+        val title = requireArguments().getString(Keys.ADDRESS_TITLE_KEY)
+        if (title != null) {
+            if (title == Keys.EDIT_ADDRESS_KEY){
+                binding.tvToolbarTitle.text = resources.getString(R.string.edit_shipping_address)
+            }else if (title == Keys.NEW_ADDRESS_KEY){
+                binding.tvToolbarTitle.text = resources.getString(R.string.new_shipping_address)
+            }
+        }
         val adapter1 = ArrayAdapter(requireContext(),android.R.layout.simple_dropdown_item_1line,FakeData.zoneNumber)
         binding.etZoneNumber.setAdapter(adapter1)
 
