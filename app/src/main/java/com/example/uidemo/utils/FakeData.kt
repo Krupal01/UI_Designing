@@ -129,10 +129,13 @@ class FakeData {
             PastNotificationModel("4th","4th Notification")
         )
 
+        var VISA = "Visa"
+        var MASTER = "MasterCard"
+
         var cards : ArrayList<DebitCardModel> = arrayListOf(
-            DebitCardModel("5454 5412 8552 5856" , "dfdfdg" , "12/2/2022","684"),
-            DebitCardModel("8484 5623 8563 5233" , "dfdfdg" , "12/2/2022","684"),
-            DebitCardModel("9652 6333 5526 5853" , "dfdfdg" , "12/2/2022","684")
+            DebitCardModel("5454 5412 8552 5856" , "dfdfdg" , "12/2/2022","684",VISA,true),
+            DebitCardModel("8484 5623 8563 5233" , "dfdfdg" , "12/2/2022","684", MASTER,false),
+            DebitCardModel("9652 6333 5526 5853" , "dfdfdg" , "12/2/2022","684", VISA,false)
         )
 
         var transactions : ArrayList<TransactionModel> = arrayListOf(

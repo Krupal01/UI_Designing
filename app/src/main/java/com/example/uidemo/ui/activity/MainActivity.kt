@@ -13,6 +13,7 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.example.uidemo.R
 import com.example.uidemo.databinding.ActivityMainBinding
+import com.example.uidemo.utils.FunctionDataItems
 
 
 class MainActivity : AppCompatActivity() {
@@ -30,10 +31,7 @@ class MainActivity : AppCompatActivity() {
         setCartBadges(2)
 
         navHostFragment.navController.addOnDestinationChangedListener{_, destination, _ ->
-            if(destination.id == R.id.addNewCardFragment
-                || destination.id == R.id.cardSettingFragment
-                || destination.id == R.id.editAddressFragment
-                || destination.id == R.id.addGiftWrapperFragment) {
+            if(FunctionDataItems.bottomNavbarFilter.contains(destination.id) ) {
                 binding.mainBottomNav.visibility = View.GONE
             } else {
                 binding.mainBottomNav.visibility = View.VISIBLE

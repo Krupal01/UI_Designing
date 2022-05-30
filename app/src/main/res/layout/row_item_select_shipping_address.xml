@@ -28,6 +28,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/drawable_custom_uncheck_radio_back"
                 android:gravity="center"
+                android:checked="@{address.isSelected}"
                 android:minWidth="32dp"
                 android:maxWidth="32dp"
                 android:minHeight="5dp"

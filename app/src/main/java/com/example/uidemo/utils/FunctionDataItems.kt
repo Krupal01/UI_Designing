@@ -16,5 +16,14 @@ class FunctionDataItems {
             AccountFunctionModel("Live Support", R.drawable.ic_baseline_headset_mic_24),
             AccountFunctionModel("Event & Activities", R.drawable.ic_baseline_event_note_24)
         )
+
+        val bottomNavbarFilter  = arrayListOf(
+            R.id.addNewCardFragment,
+            R.id.cardSettingFragment,
+            R.id.editAddressFragment,
+            R.id.addGiftWrapperFragment,
+            R.id.checkOutFragment,
+            R.id.addPromoCodeBottomSheetFragment
+        )
     }
 }

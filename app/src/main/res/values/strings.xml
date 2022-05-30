@@ -300,6 +300,28 @@
     <string name="courier_delivery">Courier Delivery</string>
     <string name="select_your_shipping_address">Select your Shipping Address</string>
     <string name="new_shipping_address">New Shipping Address</string>
+    <string name="proceed">Proceed</string>
+    <string name="order_subtotal_3_items">Order Subtotal (3 items)</string>
+    <string name="select_your_payment_method">Select your Payment Method</string>
+    <string name="my_shipping_and_billing_address_are_the_same">My Shipping and billing address are the same</string>
+    <string name="visa_mastercard">Visa / MasterCard</string>
+    <string name="cash_on_delivery">Cash on Delivery</string>
+    <string name="gift_card">Gift Card</string>
+    <string name="_253_pts">253 PTS</string>
+    <string name="use_reward_points">Use Reward Points</string>
+    <string name="use_store_credit">Use Store Credit</string>
+    <string name="payment_method">Payment Method</string>
+    <string name="no_fee">No fee</string>
+    <string name="select_your_payment_card">Select your Payment Card</string>
+    <string name="saved_visa">Saved %s</string>
+    <string name="_3512">**** **** **** 3512</string>
+    <string name="use_promo_code">Use Promo Code</string>
+    <string name="enter_promo_code">Enter Promo Code</string>
+    <string name="saving_180_qar">Saving <![CDATA[<font color= "#03B6A5">%s QAR</font>]]></string>
+    <string name="points_to_use">Points To Use</string>
+    <string name="worth_180_qar">Worth <![CDATA[<font color= "#03B6A5">%s QAR</font>]]></string>
+    <string name="_2520_pts_remaining"><![CDATA[<b>%s</b>]]> PTS Remaining</string>
+    <string name="apply">Apply</string>
 
 
 </resources>

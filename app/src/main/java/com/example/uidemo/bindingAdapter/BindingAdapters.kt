@@ -6,6 +6,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.databinding.BindingAdapter
 import com.example.uidemo.R
+import com.example.uidemo.utils.FakeData
 
 
 @BindingAdapter("android:setBitmap")
@@ -46,6 +47,20 @@ fun SetDebitCardNumber(view: TextView , number : String?){
         view.text = "**** **** **** "+ number.split(" ").last()
     }else{
         view.text = "0"
+    }
+}
+
+
+@SuppressLint("SetTextI18n")
+@BindingAdapter("android:setCardLogo")
+fun setCardLogo(view: ImageView,cardType : String){
+    when (cardType){
+        FakeData.VISA -> {
+            view.setImageResource(R.drawable.icons8_visa_24)
+        }
+        FakeData.MASTER -> {
+            view.setImageResource(R.drawable.icons8_mastercard_logo_48)
+        }
     }
 }
 

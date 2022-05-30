@@ -14,7 +14,7 @@ class CheckOutAddressAdapter : RecyclerView.Adapter<CheckOutAddressAdapter.Addre
 
     var data : ArrayList<CheckOutAddressModel> = arrayListOf()
     private var lastChecked: MaterialRadioButton? = null
-    private var lastCheckedPos = 0
+    private var lastCheckedPos : Int? = null
 
     @SuppressLint("NotifyDataSetChanged")
     fun submitData(data : ArrayList<CheckOutAddressModel>){
@@ -31,28 +31,32 @@ class CheckOutAddressAdapter : RecyclerView.Adapter<CheckOutAddressAdapter.Addre
         holder.bind(data[position])
         holder.binding.rbAddress.tag = position
 
-        if(position == 0 && data[position].isSelected == true && holder.binding.rbAddress.isChecked) {
+        if(data[position].isSelected == true) {
             lastChecked = holder.binding.rbAddress
-            lastCheckedPos = 0;
+            lastCheckedPos = position
+            holder.binding.rbAddress.setBackgroundResource(R.drawable.drawable_custom_check_radio)
         }
 
         holder.binding.rbAddress.setOnClickListener {
             val cb = it as MaterialRadioButton
-            val clickPos = (cb.tag as Int).toInt()
-            if (cb.isChecked){
+            val clickPos = cb.tag as Int
+            if (cb.isChecked && lastCheckedPos != clickPos){
                 if(lastChecked != null)
                 {
                     lastChecked!!.isChecked = false
                     lastChecked!!.setBackgroundResource(R.drawable.drawable_custom_uncheck_radio_back)
-                    data[lastCheckedPos].isSelected = false
+                    data[lastCheckedPos!!].isSelected = false
                 }
                 lastChecked = cb
                 lastCheckedPos = clickPos
-                holder.binding.rbAddress.setBackgroundResource(R.drawable.drawable_custom_check_radio)
+                data[clickPos].isSelected = true
+                cb.setBackgroundResource(R.drawable.drawable_custom_check_radio)
             }else{
                 lastChecked = null
+                lastCheckedPos = null
                 data[clickPos].isSelected = false
-                holder.binding.rbAddress.setBackgroundResource(R.drawable.drawable_custom_uncheck_radio_back)
+                cb.isChecked = false
+                cb.setBackgroundResource(R.drawable.drawable_custom_uncheck_radio_back)
             }
         }
     }

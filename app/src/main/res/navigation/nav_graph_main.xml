@@ -176,4 +176,14 @@
         android:name="com.example.uidemo.ui.fragment.CheckOutFragment"
         android:label="fragment_check_out"
         tools:layout="@layout/fragment_check_out" />
+    <dialog
+        android:id="@+id/addPromoCodeBottomSheetFragment"
+        android:name="com.example.uidemo.ui.bottomsheet.AddPromoCodeBottomSheetFragment"
+        android:label="bottomsheet_dialog_add_promo_code"
+        tools:layout="@layout/bottomsheet_dialog_add_promo_code" />
+    <dialog
+        android:id="@+id/useRewardPointBottomSheetFragment"
+        android:name="com.example.uidemo.ui.bottomsheet.UseRewardPointBottomSheetFragment"
+        android:label="bottomsheet_dialog_use_reward_point"
+        tools:layout="@layout/bottomsheet_dialog_use_reward_point" />
 </navigation>
