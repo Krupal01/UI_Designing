@@ -6,10 +6,9 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.uidemo.R
 import com.example.uidemo.databinding.RowItemMyOrderParentProcessingBinding
-import com.example.uidemo.model.AccountFunctionModel
 import com.example.uidemo.model.MyOrderItemModel
 
-class MyOrderProcessingItemAdapter : RecyclerView.Adapter<MyOrderProcessingItemAdapter.MyOrderProcessingItemViewHolder>() {
+class MyOrderProcessingItemAdapter(val listener : OnOrderItemClick) : RecyclerView.Adapter<MyOrderProcessingItemAdapter.MyOrderProcessingItemViewHolder>() {
 
     var data : ArrayList<MyOrderItemModel> = arrayListOf()
 
@@ -17,6 +16,10 @@ class MyOrderProcessingItemAdapter : RecyclerView.Adapter<MyOrderProcessingItemA
     fun submitData(data : ArrayList<MyOrderItemModel>){
         this.data = data
         notifyDataSetChanged()
+    }
+
+    interface OnOrderItemClick{
+        fun setOnOrderItemClick(myOrderItemModel: MyOrderItemModel)
     }
 
     override fun onCreateViewHolder(
@@ -31,7 +34,7 @@ class MyOrderProcessingItemAdapter : RecyclerView.Adapter<MyOrderProcessingItemA
         holder: MyOrderProcessingItemAdapter.MyOrderProcessingItemViewHolder,
         position: Int
     ) {
-        holder.bind(data[position])
+        holder.bind(data[position],listener)
     }
 
     override fun getItemCount(): Int {
@@ -39,7 +42,7 @@ class MyOrderProcessingItemAdapter : RecyclerView.Adapter<MyOrderProcessingItemA
     }
 
     class MyOrderProcessingItemViewHolder(val binding : RowItemMyOrderParentProcessingBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(myOrderItemModel: MyOrderItemModel) {
+        fun bind(myOrderItemModel: MyOrderItemModel, listener: OnOrderItemClick) {
             binding.orderItem = myOrderItemModel
 
             binding.btnItemFavorite.setOnClickListener {
@@ -50,6 +53,10 @@ class MyOrderProcessingItemAdapter : RecyclerView.Adapter<MyOrderProcessingItemA
                     myOrderItemModel.isFavorite = true
                     binding.btnItemFavorite.setImageResource(R.drawable.ic_baseline_favorite_24)
                 }
+            }
+
+            binding.root.setOnClickListener {
+                listener.setOnOrderItemClick(myOrderItemModel)
             }
 
         }

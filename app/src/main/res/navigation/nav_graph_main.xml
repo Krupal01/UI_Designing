@@ -186,4 +186,9 @@
         android:name="com.example.uidemo.ui.bottomsheet.UseRewardPointBottomSheetFragment"
         android:label="bottomsheet_dialog_use_reward_point"
         tools:layout="@layout/bottomsheet_dialog_use_reward_point" />
+    <fragment
+        android:id="@+id/orderPlacedFragment"
+        android:name="com.example.uidemo.ui.fragment.OrderPlacedFragment"
+        android:label="fragment_order_placed"
+        tools:layout="@layout/fragment_order_placed" />
 </navigation>

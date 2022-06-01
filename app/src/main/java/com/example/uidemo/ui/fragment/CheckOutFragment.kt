@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import androidx.viewpager.widget.ViewPager
 import com.example.uidemo.adapter.CheckOutViewPagerAdapter
 import com.example.uidemo.databinding.FragmentCheckOutBinding
 import com.example.uidemo.ui.activity.MainActivity
@@ -61,6 +62,8 @@ class CheckOutFragment : Fragment() {
         viewPagerAdapter.submitData("3. REVIEW ORDER",ReviewOrderFragment())
         binding.viewpager.adapter = viewPagerAdapter
         binding.tabLayout.setupWithViewPager(binding.viewpager)
+
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {

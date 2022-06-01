@@ -13,5 +13,6 @@ class Keys {
         var ADDRESS_TITLE_KEY = "ADDRESS TITLE KEY"
         var EDIT_ADDRESS_KEY = "EDIT ADDRESS KEY"
         var NEW_ADDRESS_KEY = "NEW ADDRESS KEY"
+        var DESTINATION_KEY = "DESTINATION KEY"
     }
 }

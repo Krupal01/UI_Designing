@@ -52,7 +52,8 @@
 
         </com.google.android.material.appbar.AppBarLayout>
 
-        <ScrollView
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scrollViewMain"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -470,7 +471,7 @@
 
             </LinearLayout>
 
-        </ScrollView>
+        </androidx.core.widget.NestedScrollView>
 
     </LinearLayout>
 </layout>

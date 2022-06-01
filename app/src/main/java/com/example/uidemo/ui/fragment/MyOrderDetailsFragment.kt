@@ -25,7 +25,7 @@ private const val ARG_PARAM2 = "param2"
  * Use the [MyOrderDetailsFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class MyOrderDetailsFragment : Fragment() {
+class MyOrderDetailsFragment : Fragment(),MyOrderProcessingItemAdapter.OnOrderItemClick {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -40,7 +40,7 @@ class MyOrderDetailsFragment : Fragment() {
 
     private lateinit var binding : FragmentMyOrderDetailsBinding
     private var myOrderItemParentAdapter = MyOrderItemParentAdapter()
-    private var myOrderProcessingItemAdapter = MyOrderProcessingItemAdapter()
+    private var myOrderProcessingItemAdapter = MyOrderProcessingItemAdapter(this)
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -118,5 +118,9 @@ class MyOrderDetailsFragment : Fragment() {
                     putString(ARG_PARAM2, param2)
                 }
             }
+    }
+
+    override fun setOnOrderItemClick(myOrderItemModel: MyOrderItemModel) {
+
     }
 }

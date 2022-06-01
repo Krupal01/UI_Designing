@@ -15,4 +15,11 @@
         android:name="com.example.uidemo.ui.fragment.FilledCartFragment"
         android:label="fragment_filled_cart"
         tools:layout="@layout/fragment_filled_cart" />
+    <fragment
+        android:id="@+id/shoppingCart2PreOrderFragment"
+        android:name="com.example.uidemo.ui.fragment.ShoppingCart2PreOrderFragment"
+        android:label="fragment_shopping_cart2_pre_order"
+        tools:layout="@layout/fragment_shopping_cart2_pre_order" />
+
+
 </navigation>

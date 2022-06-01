@@ -37,6 +37,7 @@
                     android:id="@+id/imgCardIcon"
                     android:layout_width="60dp"
                     android:layout_height="60dp"
+                    android:padding="10dp"
                     android:src="@drawable/icons8_bank_cards_50"
                     android:tint="@color/teal_500"
                     app:layout_constraintTop_toBottomOf="@id/labelPaymentMethod"
