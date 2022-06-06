@@ -1,13 +1,14 @@
 package com.example.uidemo.adapter
 
-import android.view.View
-import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.FragmentPagerAdapter
-import androidx.viewpager.widget.PagerAdapter
+import androidx.lifecycle.Lifecycle
+import androidx.viewpager2.adapter.FragmentStateAdapter
 
-class CheckOutViewPagerAdapter( fm : FragmentManager) : FragmentPagerAdapter(fm) {
+class CheckOutViewPagerFragmentAdapter(
+    fragmentManager: FragmentManager,
+    lifecycle: Lifecycle
+) : FragmentStateAdapter(fragmentManager, lifecycle) {
 
     var fragmentName  = arrayListOf<String>()
     var fragments = arrayListOf<Fragment>()
@@ -17,17 +18,12 @@ class CheckOutViewPagerAdapter( fm : FragmentManager) : FragmentPagerAdapter(fm)
         this.fragments.add(fragment)
     }
 
-    override fun getCount(): Int {
+    override fun getItemCount(): Int {
         return fragments.size
     }
 
-    override fun getItem(position: Int): Fragment {
+    override fun createFragment(position: Int): Fragment {
         return fragments[position]
     }
-
-    override fun getPageTitle(position: Int): CharSequence? {
-        return fragmentName[position]
-    }
-
-
+    
 }

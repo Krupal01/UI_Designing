@@ -383,5 +383,25 @@ class FakeData {
             CheckOutAddressModel("First Floor, Office 108, Building#B Gate 3,  Salwa Road,  Wolesale Market R/A, Doha, Qatar",59,true),
             CheckOutAddressModel("3/26 salva road, Zone 1, Doha, Qatar",27,false)
         )
+
+        var fakeSpecificationData = arrayListOf(
+            ProductSpecificationModel("Display Diagonal (inch)","15.6"),
+            ProductSpecificationModel("Diaplay Resolution (pix)","1920×1080"),
+            ProductSpecificationModel("Display technology","IPS"),
+            ProductSpecificationModel("Processor manufacture","Whether its work or play , fast 2*2 antenna and up to 13 hours & 45 minutes mixed usage battery like keep you connected with your content all day"),
+            ProductSpecificationModel("Maximum Frequency (MHz)","4500")
+        )
+
+        var fakeReview = CustomerReviews(
+            4f,
+            42,
+            5,
+            3,
+            0,
+            1,
+            arrayListOf(
+                EventReview("Really Liteweight - i like it",4f,"A good laptop for the money . The screen is excellent , it doesn't make much noise , it doesn't get very hot , there is a button to turn on all the fans at once to the full , then it buy a cooling pad . makes noise , but I don't need it . In extreme cases , you can buy a cooling pad","Alex","01/04/2020")
+            )
+        )
     }
 }

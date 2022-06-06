@@ -33,6 +33,11 @@
 
     </style>
 
+    <style name="custom_rating_bar_theme" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/gray</item>
+        <item name="colorControlActivated">@color/yellow</item>
+    </style>
+
     <style name="EnabledBtnTicketDownload">
         <item name="icon">@drawable/icons8_ticket_24</item>
         <item name="iconGravity">textStart</item>

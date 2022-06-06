@@ -4,10 +4,10 @@ import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import androidx.viewpager.widget.ViewPager
-import com.example.uidemo.adapter.CheckOutViewPagerAdapter
+import com.example.uidemo.adapter.CheckOutViewPagerFragmentAdapter
 import com.example.uidemo.databinding.FragmentCheckOutBinding
 import com.example.uidemo.ui.activity.MainActivity
+import com.google.android.material.tabs.TabLayoutMediator
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -33,7 +33,7 @@ class CheckOutFragment : Fragment() {
     }
 
     private lateinit var binding : FragmentCheckOutBinding
-    private lateinit var viewPagerAdapter: CheckOutViewPagerAdapter
+    private lateinit var viewPager2Adapter : CheckOutViewPagerFragmentAdapter
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -56,12 +56,14 @@ class CheckOutFragment : Fragment() {
     }
 
     private fun setViewPager(){
-        viewPagerAdapter = CheckOutViewPagerAdapter(childFragmentManager)
-        viewPagerAdapter.submitData("1. SHIPPING & BILLING",ShippingAndBillingFragment())
-        viewPagerAdapter.submitData("2. PAYMENT METHOD",PaymentMethodFragment())
-        viewPagerAdapter.submitData("3. REVIEW ORDER",ReviewOrderFragment())
-        binding.viewpager.adapter = viewPagerAdapter
-        binding.tabLayout.setupWithViewPager(binding.viewpager)
+        viewPager2Adapter = CheckOutViewPagerFragmentAdapter(childFragmentManager,lifecycle)
+        viewPager2Adapter.submitData("1. SHIPPING & BILLING",ShippingAndBillingFragment())
+        viewPager2Adapter.submitData("2. PAYMENT METHOD",PaymentMethodFragment())
+        viewPager2Adapter.submitData("3. REVIEW ORDER",ReviewOrderFragment())
+        binding.viewpager.adapter = viewPager2Adapter
+        TabLayoutMediator(binding.tabLayout,binding.viewpager){tab,position->
+            tab.text = viewPager2Adapter.fragmentName[position]
+        }.attach()
 
 
     }

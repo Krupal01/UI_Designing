@@ -5,7 +5,6 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="categories">Categories</string>
     <string name="deals">Deals</string>
-    <string name="cart">Cart</string>
     <string name="account">Account</string>
     <string name="notifications">Notifications</string>
     <string name="just_check">just check</string>
@@ -335,6 +334,19 @@
     <string name="_00015388">00015388</string>
     <string name="your_order_number_is">Your Order Number is:</string>
     <string name="thank_you_for_shopping_with_us_we_ll_send_you_a_confirmation_email_with_details_amp_tracking_information_shortly"><![CDATA[Thank you for Shopping with us. We\'ll send you a Confirmation Email with Details & Tracking Information shortly]]></string>
+    <string name="share">Share</string>
+    <string name="cart">Cart</string>
+    <string name="read_more">Read More</string>
+    <string name="in_stoke">In Stoke</string>
+    <string name="total_capital">TOTAL :</string>
+    <string name="related_products">Related Products</string>
+    <string name="specification">Specification</string>
+    <string name="buy_now">Buy Now</string>
+    <string name="product_details">Product Details</string>
+    <string name="reviews">Reviews</string>
+    <string name="_15_4_laptop_apple_macbook_pro_samsung_zov1000ye_space_gray">15.4 Laptop Apple MacBook Pro samsung ( ZOV1000YE ) , space gray</string>
+    <string name="_15_6_intel_core_i7_9750h_nvidia_geforce_gtx_1050_3_gbi_128_gb_pcie_nvme_m_2_hdd">15.6 Intel Core i7-9750H , NVIDIA GeForce GTX 1050 ( 3 GBI 128 GB PCIe NVMe M.2 HDD</string>
+    <string name="__12">(12)</string>
 
 
 </resources>

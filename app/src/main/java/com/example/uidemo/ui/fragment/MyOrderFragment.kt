@@ -100,7 +100,7 @@ class MyOrderFragment : Fragment(), MyOrderAdapter.OrderItemClick {
     }
 
     override fun setOnItemClickListener(myOrderModel: MyOrderModel) {
-
+        (activity as MainActivity).findNavController(R.id.nav_host_fragment).navigate(R.id.groupedProductDetailsFragment)
     }
 
     override fun setOnViewDetailsListener(myOrderModel: MyOrderModel) {

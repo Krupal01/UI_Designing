@@ -191,4 +191,9 @@
         android:name="com.example.uidemo.ui.fragment.OrderPlacedFragment"
         android:label="fragment_order_placed"
         tools:layout="@layout/fragment_order_placed" />
+    <fragment
+        android:id="@+id/groupedProductDetailsFragment"
+        android:name="com.example.uidemo.ui.fragment.GroupedProductDetailsFragment"
+        android:label="fragment_grouped_product_details"
+        tools:layout="@layout/fragment_grouped_product_details" />
 </navigation>

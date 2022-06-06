@@ -394,10 +394,10 @@
                         android:backgroundTint="@color/yellow"
                         app:shapeAppearance="@style/order_card_corner">
 
-                        <RelativeLayout
+                        <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:background="@color/yellow"
+                            android:background="@drawable/card_bg_image"
                             android:padding="15dp"
                             android:gravity="center_vertical">
 
@@ -410,9 +410,9 @@
                                 android:background="@drawable/order_drawable"
                                 android:padding="8dp"
                                 app:tint="@color/white"
-                                android:layout_alignParentStart="true"
-                                android:layout_alignParentTop="true"
-                                android:layout_alignParentBottom="true" />
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent" />
 
                             <com.google.android.material.textview.MaterialTextView
                                 android:id="@+id/tvPointBalanceTitle"
@@ -423,8 +423,8 @@
                                 android:textColor="@color/black"
                                 android:textSize="12sp"
                                 android:text="@string/your_point_balance"
-                                android:layout_toRightOf="@id/imgTrophy"
-                                android:layout_alignParentTop="true" />
+                                app:layout_constraintLeft_toRightOf="@id/imgTrophy"
+                                app:layout_constraintTop_toTopOf="parent"/>
 
                             <com.google.android.material.textview.MaterialTextView
                                 android:id="@+id/tvPointBalanceTxt"
@@ -435,11 +435,11 @@
                                 android:layout_marginStart="10dp"
                                 android:textSize="18sp"
                                 android:text="@string/b_3000_b_worth_6oo_qar"
-                                android:layout_toRightOf="@id/imgTrophy"
-                                android:layout_below="@id/tvPointBalanceTitle"
-                                android:layout_alignParentBottom="true" />
+                                app:layout_constraintLeft_toRightOf="@id/imgTrophy"
+                                app:layout_constraintTop_toBottomOf="@id/tvPointBalanceTitle"
+                                app:layout_constraintBottom_toBottomOf="parent" />
 
-                        </RelativeLayout>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
                     </com.google.android.material.card.MaterialCardView>
 
 

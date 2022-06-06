@@ -23,7 +23,17 @@ class FunctionDataItems {
             R.id.editAddressFragment,
             R.id.addGiftWrapperFragment,
             R.id.checkOutFragment,
-            R.id.addPromoCodeBottomSheetFragment
+            R.id.addPromoCodeBottomSheetFragment,
+            R.id.groupedProductDetailsFragment
+        )
+
+        val productOption = arrayListOf(
+            AccountFunctionModel("Earn 300 point with this purchase", R.drawable.icons8_trust_30),
+            AccountFunctionModel("Gift Wrapping Available", R.drawable.icons8_gift_30_1),
+            AccountFunctionModel("1 year warranty", R.drawable.icons8_verified_account_48),
+            AccountFunctionModel("Payment Option : ", R.drawable.icons8_receive_dollar_48),
+            AccountFunctionModel("Delivery within 2 working days", R.drawable.icons8_delivery_30),
+            AccountFunctionModel("Contact us on whatsapp if you have any questions", R.drawable.icons8_whatsapp_48),
         )
     }
 }

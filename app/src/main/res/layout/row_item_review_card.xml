@@ -110,6 +110,7 @@
                         android:layout_height="wrap_content"
                         style="?android:attr/ratingBarStyleSmall"
                         android:numStars="5"
+                        android:theme="@style/custom_rating_bar_theme"
                         android:stepSize="0.1"
                         android:rating="@{reviewModel.rating}"
                         android:isIndicator="true" />
